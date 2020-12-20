@@ -1,27 +1,45 @@
 import grequests
 from bs4 import BeautifulSoup
-from config import *
+import config
+import time
 
-logger = get_logger(__name__)
+logger = config.get_logger(__name__)
 
 
-def find_all_links_recipes(url_to_get):
+def get_all_links_recipes(url_to_get):
     """The function receives url_to_get:str
      collects all recipes links from page with all recipes
      :returns recipes_links:list[str] """
     try:
         page = grequests.get(url_to_get)
-        response = grequests.map([page], size=BATCHES)
+        response = grequests.map([page], size=config.BATCHES)
     except:
-        logger.info("Can't collect `recipes_links` from a page")
-        teams = '0'
+        logger.warning("Can't collect `recipes_links` from a page")
+
     soup = [BeautifulSoup(res.text, 'html.parser') for res in response]
     recipes_links = [link.get('href') for link in soup[0].find_all('a') if
-                     str(link.get('href')).startswith(LINK_PATTERN)]
+                     str(link.get('href')).startswith(config.LINK_PATTERN)]
 
     logger.info(f"Collected {len(recipes_links)} `recipes_links` from recipes page")
     return recipes_links
 
 
+def extract_links_to_file(file_name=config.FILE_LINKS_NAME):
+    """
+    Function receives a file_name:str
+    extract links to file_name.txt file
+    :return: void
+    """
+    all_links = get_all_links_recipes(config.URL)
+    output_links = open(file_name, 'w')
+    for link in all_links:
+        output_links.write(link + '\n')
+    output_links.close()
+    logger.info(f'Links were written into file {config.FILE_LINKS_NAME} finished')
+
+
 if __name__ == '__main__':
-    find_all_links_recipes(URL)
+    start_time = time.process_time()
+    extract_links_to_file()
+    logger.info(f"The program was executed {time.process_time() - start_time} seconds")
+
