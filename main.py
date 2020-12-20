@@ -16,9 +16,9 @@ def get_all_links_recipes(url_to_get):
     except:
         logger.warning("Can't collect `recipes_links` from a page")
 
-    soup = [BeautifulSoup(res.text, 'html.parser') for res in response]
-    recipes_links = [link.get('href') for link in soup[0].find_all('a') if
-                     str(link.get('href')).startswith(config.LINK_PATTERN)]
+    soup = [BeautifulSoup(res.text, "html.parser") for res in response]
+    recipes_links = [link.get("href") for link in soup[0].find_all('a') if
+                     str(link.get("href")).startswith(config.LINK_PATTERN)]
 
     logger.info(f"Collected {len(recipes_links)} `recipes_links` from recipes page")
     return recipes_links
@@ -35,11 +35,11 @@ def extract_links_to_file(file_name=config.FILE_LINKS_NAME):
     for link in all_links:
         output_links.write(link + '\n')
     output_links.close()
-    logger.info(f'Links were written into file {config.FILE_LINKS_NAME} finished')
+    logger.info(f"Links were written into file {config.FILE_LINKS_NAME} finished")
 
 
 if __name__ == '__main__':
     start_time = time.process_time()
     extract_links_to_file()
-    logger.info(f"The program was executed {time.process_time() - start_time} seconds")
+    logger.info(f"Collecting all links was executed {time.process_time() - start_time} seconds")
 
