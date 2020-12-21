@@ -32,8 +32,7 @@ def extract_links_to_file(file_name=config.FILE_LINKS_NAME):
     """
     all_links = get_all_links_recipes(config.URL)
     output_links = open(file_name, 'w')
-    for link in all_links:
-        output_links.write(link + '\n')
+    [output_links.write(link + '\n') for link in all_links]
     output_links.close()
     logger.info(f"Links were written into file {config.FILE_LINKS_NAME} finished")
 
