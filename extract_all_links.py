@@ -1,7 +1,7 @@
 import grequests
 from bs4 import BeautifulSoup
 import config
-import time
+from extract_one_recipe import check_dir_path
 
 logger = config.get_logger(__name__)
 
@@ -30,15 +30,14 @@ def extract_links_to_file(file_name=config.FILE_LINKS_NAME):
     extract links to file_name.txt file
     :return: void
     """
+    output_links, path = check_dir_path(file_name, 'w+')
     all_links = get_all_links_recipes(config.URL)
-    output_links = open(file_name, 'w')
+
+    # writing down all links into txt file
     [output_links.write(link + '\n') for link in all_links]
     output_links.close()
-    logger.info(f"Links were written into file {config.FILE_LINKS_NAME} finished")
-
+    logger.info(f"Links were written into file {path} finished")
+    return path
 
 if __name__ == '__main__':
-    start_time = time.process_time()
-    extract_links_to_file()
-    logger.info(f"Collecting all links was executed {time.process_time() - start_time} seconds")
-
+    pass
