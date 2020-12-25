@@ -1,9 +1,9 @@
 import datetime
 import sys
-from extract_all_links import extract_links_to_file
 from extract_one_recipe import *
+from utils import save_data_to_pkl
 
-# # log-file will be created in the same dir
+#  log-file will be created in the same dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -14,8 +14,8 @@ def main():
     start_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
     path_to_all_links = extract_links_to_file()
     stop_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-    total_time = (datetime.datetime.strptime(stop_time, '%H:%M:%S.%f') - datetime.datetime.strptime(start_time,
-                                                                                                    '%H:%M:%S.%f'))
+    total_time = (datetime.datetime.strptime(stop_time, '%H:%M:%S.%f') -
+                  datetime.datetime.strptime(start_time,'%H:%M:%S.%f'))
     logging.info(f"Collecting all links was executed {total_time} ")
 
     # writing down recipe data from each page
