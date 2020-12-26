@@ -1,0 +1,2116 @@
+2020-12-26 11:42:51,664 - INFO - Collected 1036 `recipes_links` from recipes page
+2020-12-26 11:42:51,664 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/all_recipes_links.txt finished
+2020-12-26 11:42:51,666 - INFO - Collecting all links was executed 0:00:01.929234 
+2020-12-26 11:42:53,611 - INFO - Recipe from recipe page 0.https://www.loveandlemons.com/almond-butter-cookies/
+ Collected
+2020-12-26 11:42:55,728 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/french-toast/
+ Collected
+2020-12-26 11:42:57,667 - INFO - Recipe from recipe page 2.https://www.loveandlemons.com/cinnamon-rolls/
+ Collected
+2020-12-26 11:42:59,578 - INFO - Recipe from recipe page 3.https://www.loveandlemons.com/roasted-vegetables/
+ Collected
+2020-12-26 11:43:01,497 - INFO - Recipe from recipe page 4.https://www.loveandlemons.com/focaccia/
+ Collected
+2020-12-26 11:43:03,768 - INFO - Recipe from recipe page 5.https://www.loveandlemons.com/easy-cookie-recipes/
+ Collected
+2020-12-26 11:43:05,686 - INFO - Recipe from recipe page 6.https://www.loveandlemons.com/orecchiette-with-broccoli-rabe/
+ Collected
+2020-12-26 11:43:07,598 - INFO - Recipe from recipe page 7.https://www.loveandlemons.com/broccoli-rabe-recipe/
+ Collected
+2020-12-26 11:43:09,849 - INFO - Recipe from recipe page 8.https://www.loveandlemons.com/french-onion-dip-recipe/
+ Collected
+2020-12-26 11:43:12,057 - INFO - Recipe from recipe page 9.https://www.loveandlemons.com/caramelized-onions/
+ Collected
+2020-12-26 11:43:14,331 - INFO - Recipe from recipe page 10.https://www.loveandlemons.com/mulled-wine-recipe/
+ Collected
+2020-12-26 11:43:16,629 - INFO - Recipe from recipe page 11.https://www.loveandlemons.com/molasses-cookies/
+ Collected
+2020-12-26 11:43:18,587 - INFO - Recipe from recipe page 12.https://www.loveandlemons.com/thumbprint-cookies/
+ Collected
+2020-12-26 11:43:20,742 - INFO - Recipe from recipe page 13.https://www.loveandlemons.com/kohlrabi-slaw/
+ Collected
+2020-12-26 11:43:22,673 - INFO - Recipe from recipe page 14.https://www.loveandlemons.com/thanksgiving-salad-recipes/
+ Collected
+2020-12-26 11:43:24,959 - INFO - Recipe from recipe page 15.https://www.loveandlemons.com/vegan-thanksgiving-recipes/
+ Collected
+2020-12-26 11:43:27,022 - INFO - Recipe from recipe page 16.https://www.loveandlemons.com/dinner-rolls-recipe/
+ Collected
+2020-12-26 11:43:29,064 - INFO - Recipe from recipe page 17.https://www.loveandlemons.com/green-bean-salad-recipe/
+ Collected
+2020-12-26 11:43:31,016 - INFO - Recipe from recipe page 18.https://www.loveandlemons.com/honey-mustard-dressing-recipe/
+ Collected
+2020-12-26 11:43:33,188 - INFO - Recipe from recipe page 19.https://www.loveandlemons.com/how-to-cook-green-beans/
+ Collected
+2020-12-26 11:43:35,078 - INFO - Recipe from recipe page 20.https://www.loveandlemons.com/stuffed-acorn-squash/
+ Collected
+2020-12-26 11:43:37,272 - INFO - Recipe from recipe page 21.https://www.loveandlemons.com/how-to-cut-a-pomegranate/
+ Collected
+2020-12-26 11:43:39,554 - INFO - Recipe from recipe page 22.https://www.loveandlemons.com/cranberry-sauce/
+ Collected
+2020-12-26 11:43:40,446 - INFO - No ingredients or INSTRUCTIONS on recipe page 1. https://www.loveandlemons.com/avocado-chickpea-salad-sandwich
+2020-12-26 11:43:40,447 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 11:43:40,447 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/avocado-chickpea-salad-sandwich Collected
+2020-12-26 11:43:41,518 - INFO - Recipe from recipe page 23.https://www.loveandlemons.com/mashed-sweet-potatoes/
+ Collected
+2020-12-26 11:43:43,869 - INFO - Recipe from recipe page 24.https://www.loveandlemons.com/stuffing-recipe/
+ Collected
+2020-12-26 11:43:45,823 - INFO - Recipe from recipe page 25.https://www.loveandlemons.com/what-are-leeks/
+ Collected
+2020-12-26 11:43:47,946 - INFO - Recipe from recipe page 26.https://www.loveandlemons.com/mushroom-gravy/
+ Collected
+2020-12-26 11:43:48,781 - INFO - No ingredients or INSTRUCTIONS on recipe page 1. https://www.loveandlemons.com/avocado-chickpea-salad-sandwich/
+2020-12-26 11:43:48,783 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 11:43:48,783 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/avocado-chickpea-salad-sandwich/ Collected
+2020-12-26 11:43:50,410 - INFO - Recipe from recipe page 27.https://www.loveandlemons.com/mashed-cauliflower-recipe/
+ Collected
+2020-12-26 11:43:52,366 - INFO - Recipe from recipe page 28.https://www.loveandlemons.com/roasted-garlic-recipe/
+ Collected
+2020-12-26 11:43:54,978 - INFO - Recipe from recipe page 29.https://www.loveandlemons.com/butternut-squash-pasta/
+ Collected
+2020-12-26 11:43:57,220 - INFO - Recipe from recipe page 30.https://www.loveandlemons.com/sauteed-broccoli/
+ Collected
+2020-12-26 11:43:59,644 - INFO - Recipe from recipe page 31.https://www.loveandlemons.com/pumpkin-bars-recipe/
+ Collected
+2020-12-26 11:44:02,356 - INFO - Recipe from recipe page 32.https://www.loveandlemons.com/vegan-cream-cheese-frosting/
+ Collected
+2020-12-26 11:44:04,645 - INFO - Recipe from recipe page 33.https://www.loveandlemons.com/wheat-berry-salad/
+ Collected
+2020-12-26 11:44:06,955 - INFO - Recipe from recipe page 34.https://www.loveandlemons.com/how-to-cook-wheat-berries/
+ Collected
+2020-12-26 11:44:09,414 - INFO - Recipe from recipe page 35.https://www.loveandlemons.com/apple-cider-vinegar-dressing/
+ Collected
+2020-12-26 11:44:12,729 - INFO - Recipe from recipe page 36.https://www.loveandlemons.com/apple-cake-recipe/
+ Collected
+2020-12-26 11:44:15,487 - INFO - Recipe from recipe page 37.https://www.loveandlemons.com/beet-recipes/
+ Collected
+2020-12-26 11:44:17,770 - INFO - Recipe from recipe page 38.https://www.loveandlemons.com/beet-greens/
+ Collected
+2020-12-26 11:44:20,648 - INFO - Recipe from recipe page 39.https://www.loveandlemons.com/black-bean-soup-recipe/
+ Collected
+2020-12-26 11:44:24,092 - INFO - Recipe from recipe page 40.https://www.loveandlemons.com/butternut-squash-ravioli/
+ Collected
+2020-12-26 11:44:26,531 - INFO - Recipe from recipe page 41.https://www.loveandlemons.com/sauteed-kale/
+ Collected
+2020-12-26 11:44:29,235 - INFO - Recipe from recipe page 42.https://www.loveandlemons.com/almond-flour-pancakes/
+ Collected
+2020-12-26 11:44:33,130 - INFO - Recipe from recipe page 43.https://www.loveandlemons.com/roasted-delicata-squash/
+ Collected
+2020-12-26 11:44:38,436 - INFO - Recipe from recipe page 44.https://www.loveandlemons.com/soup-recipes/
+ Collected
+2020-12-26 11:44:40,656 - INFO - Recipe from recipe page 45.https://www.loveandlemons.com/pear-salad-recipe/
+ Collected
+2020-12-26 11:44:42,759 - INFO - Recipe from recipe page 46.https://www.loveandlemons.com/cornbread-recipe/
+ Collected
+2020-12-26 11:44:44,931 - INFO - Recipe from recipe page 47.https://www.loveandlemons.com/apple-crumble/
+ Collected
+2020-12-26 11:44:47,125 - INFO - Recipe from recipe page 48.https://www.loveandlemons.com/pumpkin-soup-recipe/
+ Collected
+2020-12-26 11:44:49,232 - INFO - Recipe from recipe page 49.https://www.loveandlemons.com/soft-pretzels-recipe/
+ Collected
+2020-12-26 11:44:51,300 - INFO - Recipe from recipe page 50.https://www.loveandlemons.com/baked-jalapeno-poppers/
+ Collected
+2020-12-26 11:44:53,321 - INFO - Recipe from recipe page 51.https://www.loveandlemons.com/pumpkin-muffins/
+ Collected
+2020-12-26 11:44:55,270 - INFO - Recipe from recipe page 52.https://www.loveandlemons.com/pumpkin-pie-spice/
+ Collected
+2020-12-26 11:44:57,291 - INFO - Recipe from recipe page 53.https://www.loveandlemons.com/fall-recipes/
+ Collected
+2020-12-26 11:44:59,212 - INFO - Recipe from recipe page 54.https://www.loveandlemons.com/sweet-potato-salad-recipe/
+ Collected
+2020-12-26 11:45:01,497 - INFO - Recipe from recipe page 55.https://www.loveandlemons.com/roasted-sweet-potatoes/
+ Collected
+2020-12-26 11:45:03,833 - INFO - Recipe from recipe page 56.https://www.loveandlemons.com/tahini-dressing/
+ Collected
+2020-12-26 11:45:06,195 - INFO - Recipe from recipe page 57.https://www.loveandlemons.com/air-fryer-cauliflower/
+ Collected
+2020-12-26 11:45:08,130 - INFO - Recipe from recipe page 58.https://www.loveandlemons.com/tartar-sauce/
+ Collected
+2020-12-26 11:45:10,112 - INFO - Recipe from recipe page 59.https://www.loveandlemons.com/tomato-basil-soup-recipe/
+ Collected
+2020-12-26 11:45:12,051 - INFO - Recipe from recipe page 60.https://www.loveandlemons.com/gluten-free-banana-bread/
+ Collected
+2020-12-26 11:45:14,358 - INFO - Recipe from recipe page 61.https://www.loveandlemons.com/cast-iron-pizza/
+ Collected
+2020-12-26 11:45:16,460 - INFO - Recipe from recipe page 62.https://www.loveandlemons.com/migas-recipe/
+ Collected
+2020-12-26 11:45:18,569 - INFO - Recipe from recipe page 63.https://www.loveandlemons.com/grill-recipes/
+ Collected
+2020-12-26 11:45:20,588 - INFO - Recipe from recipe page 64.https://www.loveandlemons.com/homemade-salsa-recipe/
+ Collected
+2020-12-26 11:45:22,832 - INFO - Recipe from recipe page 65.https://www.loveandlemons.com/quinoa-salad-recipe/
+ Collected
+2020-12-26 11:45:25,206 - INFO - Recipe from recipe page 66.https://www.loveandlemons.com/italian-dressing-recipe/
+ Collected
+2020-12-26 11:45:27,472 - INFO - Recipe from recipe page 67.https://www.loveandlemons.com/stuffed-peppers-recipe/
+ Collected
+2020-12-26 11:45:29,706 - INFO - Recipe from recipe page 68.https://www.loveandlemons.com/edible-cookie-dough/
+ Collected
+2020-12-26 11:45:31,644 - INFO - Recipe from recipe page 69.https://www.loveandlemons.com/cowboy-caviar-recipe/
+ Collected
+2020-12-26 11:45:33,589 - INFO - Recipe from recipe page 70.https://www.loveandlemons.com/easy-eggplant-recipes/
+ Collected
+2020-12-26 11:45:35,568 - INFO - Recipe from recipe page 71.https://www.loveandlemons.com/grilled-peaches/
+ Collected
+2020-12-26 11:45:37,637 - INFO - Recipe from recipe page 72.https://www.loveandlemons.com/grilled-eggplant/
+ Collected
+2020-12-26 11:45:39,635 - INFO - Recipe from recipe page 73.https://www.loveandlemons.com/ratatouille-recipe/
+ Collected
+2020-12-26 11:45:41,871 - INFO - Recipe from recipe page 74.https://www.loveandlemons.com/yellow-squash-recipe/
+ Collected
+2020-12-26 11:45:43,867 - INFO - Recipe from recipe page 75.https://www.loveandlemons.com/grilled-watermelon/
+ Collected
+2020-12-26 11:45:46,023 - INFO - Recipe from recipe page 76.https://www.loveandlemons.com/cucumber-tomato-salad/
+ Collected
+2020-12-26 11:45:49,732 - INFO - Recipe from recipe page 77.https://www.loveandlemons.com/homemade-croutons/
+ Collected
+2020-12-26 11:45:54,396 - INFO - Recipe from recipe page 78.https://www.loveandlemons.com/grilled-corn-on-the-cob/
+ Collected
+2020-12-26 11:46:00,578 - INFO - Recipe from recipe page 79.https://www.loveandlemons.com/vegan-ranch-dressing/
+ Collected
+2020-12-26 11:46:08,020 - INFO - Recipe from recipe page 80.https://www.loveandlemons.com/cherry-clafoutis/
+ Collected
+2020-12-26 11:46:10,775 - INFO - Recipe from recipe page 81.https://www.loveandlemons.com/gazpacho-recipe/
+ Collected
+2020-12-26 11:46:14,518 - INFO - Recipe from recipe page 82.https://www.loveandlemons.com/fresh-tomato-recipes/
+ Collected
+2020-12-26 11:46:21,093 - INFO - Recipe from recipe page 83.https://www.loveandlemons.com/bruschetta-recipe/
+ Collected
+2020-12-26 11:46:26,500 - INFO - Recipe from recipe page 84.https://www.loveandlemons.com/what-are-capers/
+ Collected
+2020-12-26 11:46:29,714 - INFO - Recipe from recipe page 85.https://www.loveandlemons.com/zucchini-recipes/
+ Collected
+2020-12-26 11:46:33,496 - INFO - Recipe from recipe page 86.https://www.loveandlemons.com/baked-zucchini-chips/
+ Collected
+2020-12-26 11:46:36,128 - INFO - Recipe from recipe page 87.https://www.loveandlemons.com/romesco-sauce/
+ Collected
+2020-12-26 11:46:38,037 - INFO - Recipe from recipe page 88.https://www.loveandlemons.com/mojito-recipe/
+ Collected
+2020-12-26 11:46:40,448 - INFO - Recipe from recipe page 89.https://www.loveandlemons.com/zucchini-salad/
+ Collected
+2020-12-26 11:46:42,566 - INFO - Recipe from recipe page 90.https://www.loveandlemons.com/veggie-noodles/
+ Collected
+2020-12-26 11:46:45,104 - INFO - Recipe from recipe page 91.https://www.loveandlemons.com/black-bean-burger-recipe/
+ Collected
+2020-12-26 11:46:47,233 - INFO - Recipe from recipe page 92.https://www.loveandlemons.com/dill-pickles-recipe/
+ Collected
+2020-12-26 11:46:49,357 - INFO - Recipe from recipe page 93.https://www.loveandlemons.com/nicoise-salad/
+ Collected
+2020-12-26 11:46:51,337 - INFO - Recipe from recipe page 94.https://www.loveandlemons.com/grilled-potatoes/
+ Collected
+2020-12-26 11:46:53,279 - INFO - Recipe from recipe page 95.https://www.loveandlemons.com/fruit-salad-recipe/
+ Collected
+2020-12-26 11:46:55,551 - INFO - Recipe from recipe page 96.https://www.loveandlemons.com/coleslaw-recipe/
+ Collected
+2020-12-26 11:46:57,334 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/spaghetti-bolognese/ Collected
+2020-12-26 11:46:57,451 - INFO - Recipe from recipe page 97.https://www.loveandlemons.com/coleslaw-dressing/
+ Collected
+2020-12-26 11:46:59,984 - INFO - Recipe from recipe page 98.https://www.loveandlemons.com/strawberry-shortcake/
+ Collected
+2020-12-26 11:47:02,217 - INFO - Recipe from recipe page 99.https://www.loveandlemons.com/socca-recipe/
+ Collected
+2020-12-26 11:47:04,332 - INFO - Recipe from recipe page 100.https://www.loveandlemons.com/green-goddess-dressing/
+ Collected
+2020-12-26 11:47:06,260 - INFO - Recipe from recipe page 101.https://www.loveandlemons.com/macaroni-salad-recipe/
+ Collected
+2020-12-26 11:47:08,381 - INFO - Recipe from recipe page 102.https://www.loveandlemons.com/vegan-mayo/
+ Collected
+2020-12-26 11:47:10,280 - INFO - Recipe from recipe page 103.https://www.loveandlemons.com/grilled-asparagus/
+ Collected
+2020-12-26 11:47:14,027 - INFO - Recipe from recipe page 104.https://www.loveandlemons.com/picnic-food-ideas/
+ Collected
+2020-12-26 11:47:16,195 - INFO - Recipe from recipe page 105.https://www.loveandlemons.com/watermelon-margarita/
+ Collected
+2020-12-26 11:47:18,365 - INFO - Recipe from recipe page 106.https://www.loveandlemons.com/caprese-sandwich/
+ Collected
+2020-12-26 11:47:20,327 - INFO - Recipe from recipe page 107.https://www.loveandlemons.com/vegan-pesto/
+ Collected
+2020-12-26 11:47:22,399 - INFO - Recipe from recipe page 108.https://www.loveandlemons.com/radish-salad/
+ Collected
+2020-12-26 11:47:25,012 - INFO - Recipe from recipe page 109.https://www.loveandlemons.com/lemon-vinaigrette/
+ Collected
+2020-12-26 11:47:26,958 - INFO - Recipe from recipe page 110.https://www.loveandlemons.com/roasted-radishes/
+ Collected
+2020-12-26 11:47:30,067 - INFO - Recipe from recipe page 111.https://www.loveandlemons.com/radish-greens/
+ Collected
+2020-12-26 11:47:32,284 - INFO - Recipe from recipe page 112.https://www.loveandlemons.com/zaatar-spice/
+ Collected
+2020-12-26 11:47:34,384 - INFO - Recipe from recipe page 113.https://www.loveandlemons.com/labneh-recipe/
+ Collected
+2020-12-26 11:47:37,205 - INFO - Recipe from recipe page 114.https://www.loveandlemons.com/pita-bread-recipe/
+ Collected
+2020-12-26 11:47:40,821 - INFO - Recipe from recipe page 115.https://www.loveandlemons.com/best-healthy-snacks/
+ Collected
+2020-12-26 11:47:43,171 - INFO - Recipe from recipe page 116.https://www.loveandlemons.com/homemade-hamburger-buns/
+ Collected
+2020-12-26 11:47:46,010 - INFO - Recipe from recipe page 117.https://www.loveandlemons.com/air-fryer-french-fries/
+ Collected
+2020-12-26 11:47:49,192 - INFO - Recipe from recipe page 118.https://www.loveandlemons.com/best-veggie-burger-recipe/
+ Collected
+2020-12-26 11:47:52,865 - INFO - Recipe from recipe page 119.https://www.loveandlemons.com/granola-bars-recipe/
+ Collected
+2020-12-26 11:47:55,319 - INFO - Recipe from recipe page 120.https://www.loveandlemons.com/homemade-peanut-butter-recipe/
+ Collected
+2020-12-26 11:47:58,211 - INFO - Recipe from recipe page 121.https://www.loveandlemons.com/chopped-salad/
+ Collected
+2020-12-26 11:48:01,315 - INFO - Recipe from recipe page 122.https://www.loveandlemons.com/spring-salad/
+ Collected
+2020-12-26 11:48:04,302 - INFO - Recipe from recipe page 123.https://www.loveandlemons.com/bagel-recipe/
+ Collected
+2020-12-26 11:48:06,949 - INFO - Recipe from recipe page 124.https://www.loveandlemons.com/everything-bagel-seasoning/
+ Collected
+2020-12-26 11:48:09,772 - INFO - Recipe from recipe page 125.https://www.loveandlemons.com/carrot-lox/
+ Collected
+2020-12-26 11:48:11,753 - INFO - Recipe from recipe page 126.https://www.loveandlemons.com/sides-for-tacos/
+ Collected
+2020-12-26 11:48:14,568 - INFO - Recipe from recipe page 127.https://www.loveandlemons.com/vegetarian-tacos/
+ Collected
+2020-12-26 11:48:17,724 - INFO - Recipe from recipe page 128.https://www.loveandlemons.com/classic-margarita-recipe/
+ Collected
+2020-12-26 11:48:20,114 - INFO - Recipe from recipe page 129.https://www.loveandlemons.com/homemade-tortillas-recipe/
+ Collected
+2020-12-26 11:48:22,349 - INFO - Recipe from recipe page 130.https://www.loveandlemons.com/tagliatelle/
+ Collected
+2020-12-26 11:48:27,524 - INFO - Recipe from recipe page 131.https://www.loveandlemons.com/homemade-pasta-recipe/
+ Collected
+2020-12-26 11:48:29,833 - INFO - Recipe from recipe page 132.https://www.loveandlemons.com/paloma/
+ Collected
+2020-12-26 11:48:31,841 - INFO - Recipe from recipe page 133.https://www.loveandlemons.com/simple-syrup-recipe/
+ Collected
+2020-12-26 11:48:41,397 - INFO - Recipe from recipe page 134.https://www.loveandlemons.com/how-to-cook-asparagus/
+ Collected
+2020-12-26 11:48:44,790 - INFO - Recipe from recipe page 135.https://www.loveandlemons.com/okonomiyaki/
+ Collected
+2020-12-26 11:48:46,853 - INFO - Recipe from recipe page 136.https://www.loveandlemons.com/matcha-green-tea/
+ Collected
+2020-12-26 11:48:49,993 - INFO - Recipe from recipe page 137.https://www.loveandlemons.com/healthy-banana-muffins/
+ Collected
+2020-12-26 11:48:52,066 - INFO - Recipe from recipe page 138.https://www.loveandlemons.com/egg-salad/
+ Collected
+2020-12-26 11:48:54,650 - INFO - Recipe from recipe page 139.https://www.loveandlemons.com/carrot-cake-recipe/
+ Collected
+2020-12-26 11:48:58,040 - INFO - Recipe from recipe page 140.https://www.loveandlemons.com/broccoli-rice/
+ Collected
+2020-12-26 11:49:01,067 - INFO - Recipe from recipe page 141.https://www.loveandlemons.com/rice-bowl-recipes/
+ Collected
+2020-12-26 11:49:05,213 - INFO - Recipe from recipe page 142.https://www.loveandlemons.com/best-deviled-eggs-recipe/
+ Collected
+2020-12-26 11:49:08,892 - INFO - Recipe from recipe page 143.https://www.loveandlemons.com/how-to-make-hard-boiled-eggs/
+ Collected
+2020-12-26 11:49:12,202 - INFO - Recipe from recipe page 144.https://www.loveandlemons.com/chickpea-recipes/
+ Collected
+2020-12-26 11:49:15,159 - INFO - Recipe from recipe page 145.https://www.loveandlemons.com/spaghetti-aglio-e-olio/
+ Collected
+2020-12-26 11:49:17,157 - INFO - Recipe from recipe page 146.https://www.loveandlemons.com/rice-recipes/
+ Collected
+2020-12-26 11:49:19,424 - INFO - Recipe from recipe page 147.https://www.loveandlemons.com/vegan-chocolate-chip-cookies/
+ Collected
+2020-12-26 11:49:22,780 - INFO - Recipe from recipe page 148.https://www.loveandlemons.com/bean-recipes/
+ Collected
+2020-12-26 11:49:25,912 - INFO - Recipe from recipe page 149.https://www.loveandlemons.com/how-to-cook-beans/
+ Collected
+2020-12-26 11:49:27,877 - INFO - Recipe from recipe page 150.https://www.loveandlemons.com/vegan-mac-and-cheese/
+ Collected
+2020-12-26 11:49:30,199 - INFO - Recipe from recipe page 151.https://www.loveandlemons.com/baking-recipes/
+ Collected
+2020-12-26 11:49:32,699 - INFO - Recipe from recipe page 152.https://www.loveandlemons.com/pantry-recipes/
+ Collected
+2020-12-26 11:49:34,730 - INFO - Recipe from recipe page 153.https://www.loveandlemons.com/citrus-salad/
+ Collected
+2020-12-26 11:49:36,688 - INFO - Recipe from recipe page 154.https://www.loveandlemons.com/what-is-fennel/
+ Collected
+2020-12-26 11:49:38,634 - INFO - Recipe from recipe page 155.https://www.loveandlemons.com/bibimbap-recipe/
+ Collected
+2020-12-26 11:49:40,642 - INFO - Recipe from recipe page 156.https://www.loveandlemons.com/gochujang-sauce/
+ Collected
+2020-12-26 11:49:42,634 - INFO - Recipe from recipe page 157.https://www.loveandlemons.com/how-to-cook-rice/
+ Collected
+2020-12-26 11:49:44,708 - INFO - Recipe from recipe page 158.https://www.loveandlemons.com/sunny-side-up-eggs/
+ Collected
+2020-12-26 11:49:46,790 - INFO - Recipe from recipe page 159.https://www.loveandlemons.com/cream-of-mushroom-soup/
+ Collected
+2020-12-26 11:49:48,801 - INFO - Recipe from recipe page 160.https://www.loveandlemons.com/no-knead-bread-recipe/
+ Collected
+2020-12-26 11:49:50,784 - INFO - Recipe from recipe page 161.https://www.loveandlemons.com/spaghetti-and-meatballs/
+ Collected
+2020-12-26 11:49:52,747 - INFO - Recipe from recipe page 162.https://www.loveandlemons.com/vegan-parmesan-cheese/
+ Collected
+2020-12-26 11:49:55,005 - INFO - Recipe from recipe page 163.https://www.loveandlemons.com/fancy-mushroom-polenta/
+ Collected
+2020-12-26 11:49:56,977 - INFO - Recipe from recipe page 164.https://www.loveandlemons.com/polenta-recipe/
+ Collected
+2020-12-26 11:49:59,184 - INFO - Recipe from recipe page 165.https://www.loveandlemons.com/chimichurri-sauce/
+ Collected
+2020-12-26 11:50:01,403 - INFO - Recipe from recipe page 166.https://www.loveandlemons.com/sauteed-mushrooms/
+ Collected
+2020-12-26 11:50:03,379 - INFO - Recipe from recipe page 167.https://www.loveandlemons.com/freezer-meals/
+ Collected
+2020-12-26 11:50:05,872 - INFO - Recipe from recipe page 168.https://www.loveandlemons.com/bao-buns/
+ Collected
+2020-12-26 11:50:07,818 - INFO - Recipe from recipe page 169.https://www.loveandlemons.com/pasta-recipes/
+ Collected
+2020-12-26 11:50:09,813 - INFO - Recipe from recipe page 170.https://www.loveandlemons.com/vegan-desserts/
+ Collected
+2020-12-26 11:50:11,766 - INFO - Recipe from recipe page 171.https://www.loveandlemons.com/gluten-free-pancakes/
+ Collected
+2020-12-26 11:50:13,655 - INFO - Recipe from recipe page 172.https://www.loveandlemons.com/oat-flour/
+ Collected
+2020-12-26 11:50:15,618 - INFO - Recipe from recipe page 173.https://www.loveandlemons.com/almond-flour/
+ Collected
+2020-12-26 11:50:17,686 - INFO - Recipe from recipe page 174.https://www.loveandlemons.com/fettuccine-alfredo-recipe/
+ Collected
+2020-12-26 11:50:20,098 - INFO - Recipe from recipe page 175.https://www.loveandlemons.com/alfredo-sauce-recipe/
+ Collected
+2020-12-26 11:50:22,148 - INFO - Recipe from recipe page 176.https://www.loveandlemons.com/nachos-recipe/
+ Collected
+2020-12-26 11:50:24,113 - INFO - Recipe from recipe page 177.https://www.loveandlemons.com/pico-de-gallo/
+ Collected
+2020-12-26 11:50:26,574 - INFO - Recipe from recipe page 178.https://www.loveandlemons.com/vegan-cheese/
+ Collected
+2020-12-26 11:50:30,049 - INFO - Recipe from recipe page 179.https://www.loveandlemons.com/brownies-recipe/
+ Collected
+2020-12-26 11:50:32,330 - INFO - Recipe from recipe page 180.https://www.loveandlemons.com/baked-potato/
+ Collected
+2020-12-26 11:50:34,245 - INFO - Recipe from recipe page 181.https://www.loveandlemons.com/cashew-cream/
+ Collected
+2020-12-26 11:50:36,203 - INFO - Recipe from recipe page 182.https://www.loveandlemons.com/vegan-bacon/
+ Collected
+2020-12-26 11:50:38,174 - INFO - Recipe from recipe page 183.https://www.loveandlemons.com/taquitos/
+ Collected
+2020-12-26 11:50:40,481 - INFO - Recipe from recipe page 184.https://www.loveandlemons.com/lentil-salad-recipe/
+ Collected
+2020-12-26 11:50:42,465 - INFO - Recipe from recipe page 185.https://www.loveandlemons.com/healthy-lunch-ideas/
+ Collected
+2020-12-26 11:50:44,537 - INFO - Recipe from recipe page 186.https://www.loveandlemons.com/how-to-cook-lentils/
+ Collected
+2020-12-26 11:50:46,481 - INFO - Recipe from recipe page 187.https://www.loveandlemons.com/granola/
+ Collected
+2020-12-26 11:50:48,577 - INFO - Recipe from recipe page 188.https://www.loveandlemons.com/oat-milk/
+ Collected
+2020-12-26 11:50:50,526 - INFO - Recipe from recipe page 189.https://www.loveandlemons.com/kimchi-brown-rice-bowls/
+ Collected
+2020-12-26 11:50:53,294 - INFO - Recipe from recipe page 190.https://www.loveandlemons.com/how-to-cook-brown-rice/
+ Collected
+2020-12-26 11:50:55,607 - INFO - Recipe from recipe page 191.https://www.loveandlemons.com/tempeh/
+ Collected
+2020-12-26 11:50:57,566 - INFO - Recipe from recipe page 192.https://www.loveandlemons.com/roasted-broccoli/
+ Collected
+2020-12-26 11:50:59,594 - INFO - Recipe from recipe page 193.https://www.loveandlemons.com/peanut-sauce/
+ Collected
+2020-12-26 11:51:01,596 - INFO - Recipe from recipe page 194.https://www.loveandlemons.com/spring-rolls/
+ Collected
+2020-12-26 11:51:04,685 - INFO - Recipe from recipe page 195.https://www.loveandlemons.com/avocado-toast-recipe/
+ Collected
+2020-12-26 11:51:06,603 - INFO - Recipe from recipe page 196.https://www.loveandlemons.com/vegan-recipes/
+ Collected
+2020-12-26 11:51:08,643 - INFO - Recipe from recipe page 197.https://www.loveandlemons.com/how-to-make-cauliflower-rice/
+ Collected
+2020-12-26 11:51:10,884 - INFO - Recipe from recipe page 198.https://www.loveandlemons.com/vegetable-soup/
+ Collected
+2020-12-26 11:51:12,814 - INFO - Recipe from recipe page 199.https://www.loveandlemons.com/mimosa-recipe/
+ Collected
+2020-12-26 11:51:14,808 - INFO - Recipe from recipe page 200.https://www.loveandlemons.com/shakshuka-recipe/
+ Collected
+2020-12-26 11:51:16,830 - INFO - Recipe from recipe page 201.https://www.loveandlemons.com/baked-ziti/
+ Collected
+2020-12-26 11:51:18,710 - INFO - Recipe from recipe page 202.https://www.loveandlemons.com/marinara-sauce/
+ Collected
+2020-12-26 11:51:20,689 - INFO - Recipe from recipe page 203.https://www.loveandlemons.com/caesar-salad/
+ Collected
+2020-12-26 11:51:22,650 - INFO - Recipe from recipe page 204.https://www.loveandlemons.com/caesar-dressing/
+ Collected
+2020-12-26 11:51:24,701 - INFO - Recipe from recipe page 205.https://www.loveandlemons.com/potato-soup-recipe/
+ Collected
+2020-12-26 11:51:26,773 - INFO - Recipe from recipe page 206.https://www.loveandlemons.com/appetizers/
+ Collected
+2020-12-26 11:51:28,748 - INFO - Recipe from recipe page 207.https://www.loveandlemons.com/stuffed-mushrooms/
+ Collected
+2020-12-26 11:51:30,833 - INFO - Recipe from recipe page 208.https://www.loveandlemons.com/french-onion-soup/
+ Collected
+2020-12-26 11:51:32,801 - INFO - Recipe from recipe page 209.https://www.loveandlemons.com/spinach-artichoke-dip/
+ Collected
+2020-12-26 11:51:35,896 - INFO - Recipe from recipe page 210.https://www.loveandlemons.com/how-to-make-oatmeal/
+ Collected
+2020-12-26 11:51:37,964 - INFO - Recipe from recipe page 211.https://www.loveandlemons.com/sugar-cookies/
+ Collected
+2020-12-26 11:51:40,076 - INFO - Recipe from recipe page 212.https://www.loveandlemons.com/baked-brie/
+ Collected
+2020-12-26 11:51:42,376 - INFO - Recipe from recipe page 213.https://www.loveandlemons.com/roasted-potatoes/
+ Collected
+2020-12-26 11:51:44,320 - INFO - Recipe from recipe page 214.https://www.loveandlemons.com/rice-salad-recipe/
+ Collected
+2020-12-26 11:51:46,620 - INFO - Recipe from recipe page 215.https://www.loveandlemons.com/thanksgiving-side-dishes/
+ Collected
+2020-12-26 11:51:48,739 - INFO - Recipe from recipe page 216.https://www.loveandlemons.com/how-to-cook-couscous/
+ Collected
+2020-12-26 11:51:50,803 - INFO - Recipe from recipe page 217.https://www.loveandlemons.com/vegan-stuffing/
+ Collected
+2020-12-26 11:51:52,838 - INFO - Recipe from recipe page 218.https://www.loveandlemons.com/roasted-acorn-squash/
+ Collected
+2020-12-26 11:51:54,951 - INFO - Recipe from recipe page 219.https://www.loveandlemons.com/green-bean-casserole/
+ Collected
+2020-12-26 11:51:56,952 - INFO - Recipe from recipe page 220.https://www.loveandlemons.com/mashed-potatoes/
+ Collected
+2020-12-26 11:51:58,911 - INFO - Recipe from recipe page 221.https://www.loveandlemons.com/creamed-spinach/
+ Collected
+2020-12-26 11:52:00,953 - INFO - Recipe from recipe page 222.https://www.loveandlemons.com/pumpkin-pie/
+ Collected
+2020-12-26 11:52:03,073 - INFO - Recipe from recipe page 223.https://www.loveandlemons.com/sweet-potato-casserole/
+ Collected
+2020-12-26 11:52:05,115 - INFO - Recipe from recipe page 224.https://www.loveandlemons.com/hot-toddy/
+ Collected
+2020-12-26 11:52:07,191 - INFO - Recipe from recipe page 225.https://www.loveandlemons.com/peanut-butter-cookies/
+ Collected
+2020-12-26 11:52:09,365 - INFO - Recipe from recipe page 226.https://www.loveandlemons.com/how-to-cook-tofu/
+ Collected
+2020-12-26 11:52:11,706 - INFO - Recipe from recipe page 227.https://www.loveandlemons.com/brussel-sprouts/
+ Collected
+2020-12-26 11:52:13,659 - INFO - Recipe from recipe page 228.https://www.loveandlemons.com/farro/
+ Collected
+2020-12-26 11:52:15,807 - INFO - Recipe from recipe page 229.https://www.loveandlemons.com/no-bake-cookies/
+ Collected
+2020-12-26 11:52:17,688 - INFO - Recipe from recipe page 230.https://www.loveandlemons.com/roasted-butternut-squash/
+ Collected
+2020-12-26 11:52:19,892 - INFO - Recipe from recipe page 231.https://www.loveandlemons.com/apple-crisp/
+ Collected
+2020-12-26 11:52:21,906 - INFO - Recipe from recipe page 232.https://www.loveandlemons.com/vegetarian-chili-recipe/
+ Collected
+2020-12-26 11:52:24,235 - INFO - Recipe from recipe page 233.https://www.loveandlemons.com/how-to-make-pumpkin-puree/
+ Collected
+2020-12-26 11:52:26,682 - INFO - Recipe from recipe page 234.https://www.loveandlemons.com/butternut-squash-soup/
+ Collected
+2020-12-26 11:52:29,368 - INFO - Recipe from recipe page 235.https://www.loveandlemons.com/pumpkin-bread/
+ Collected
+2020-12-26 11:52:31,378 - INFO - Recipe from recipe page 236.https://www.loveandlemons.com/porridge/
+ Collected
+2020-12-26 11:52:33,492 - INFO - Recipe from recipe page 237.https://www.loveandlemons.com/falafel/
+ Collected
+2020-12-26 11:52:35,482 - INFO - Recipe from recipe page 238.https://www.loveandlemons.com/tahini-sauce/
+ Collected
+2020-12-26 11:52:37,546 - INFO - Recipe from recipe page 239.https://www.loveandlemons.com/pickled-red-onions/
+ Collected
+2020-12-26 11:52:39,811 - INFO - Recipe from recipe page 240.https://www.loveandlemons.com/hummus-recipe/
+ Collected
+2020-12-26 11:52:42,069 - INFO - Recipe from recipe page 241.https://www.loveandlemons.com/blueberry-muffins/
+ Collected
+2020-12-26 11:52:44,290 - INFO - Recipe from recipe page 242.https://www.loveandlemons.com/mac-and-cheese/
+ Collected
+2020-12-26 11:52:46,811 - INFO - Recipe from recipe page 243.https://www.loveandlemons.com/margherita-pizza/
+ Collected
+2020-12-26 11:52:49,467 - INFO - Recipe from recipe page 244.https://www.loveandlemons.com/pizza-sauce/
+ Collected
+2020-12-26 11:52:51,458 - INFO - Recipe from recipe page 245.https://www.loveandlemons.com/pizza-dough/
+ Collected
+2020-12-26 11:52:53,651 - INFO - Recipe from recipe page 246.https://www.loveandlemons.com/eggplant-parmesan/
+ Collected
+2020-12-26 11:52:55,594 - INFO - Recipe from recipe page 247.https://www.loveandlemons.com/easy-dinner-ideas/
+ Collected
+2020-12-26 11:52:57,616 - INFO - Recipe from recipe page 248.https://www.loveandlemons.com/baked-sweet-potato/
+ Collected
+2020-12-26 11:52:59,499 - INFO - Recipe from recipe page 249.https://www.loveandlemons.com/healthy-breakfast-ideas/
+ Collected
+2020-12-26 11:53:01,484 - INFO - Recipe from recipe page 250.https://www.loveandlemons.com/quinoa/
+ Collected
+2020-12-26 11:53:04,090 - INFO - Recipe from recipe page 251.https://www.loveandlemons.com/po-boy-sandwich/
+ Collected
+2020-12-26 11:53:06,160 - INFO - Recipe from recipe page 252.https://www.loveandlemons.com/chickpea-salad-recipe/
+ Collected
+2020-12-26 11:53:08,056 - INFO - Recipe from recipe page 253.https://www.loveandlemons.com/peach-cobbler/
+ Collected
+2020-12-26 11:53:10,238 - INFO - Recipe from recipe page 254.https://www.loveandlemons.com/white-bean-dip/
+ Collected
+2020-12-26 11:53:12,140 - INFO - Recipe from recipe page 255.https://www.loveandlemons.com/cherry-tomatoes/
+ Collected
+2020-12-26 11:53:14,239 - INFO - Recipe from recipe page 256.https://www.loveandlemons.com/zucchini-noodles/
+ Collected
+2020-12-26 11:53:16,334 - INFO - Recipe from recipe page 257.https://www.loveandlemons.com/linguine-pasta/
+ Collected
+2020-12-26 11:53:18,247 - INFO - Recipe from recipe page 258.https://www.loveandlemons.com/corn-salsa/
+ Collected
+2020-12-26 11:53:20,413 - INFO - Recipe from recipe page 259.https://www.loveandlemons.com/roasted-tomatoes/
+ Collected
+2020-12-26 11:53:23,011 - INFO - Recipe from recipe page 260.https://www.loveandlemons.com/caprese-salad/
+ Collected
+2020-12-26 11:53:25,469 - INFO - Recipe from recipe page 261.https://www.loveandlemons.com/grilled-zucchini/
+ Collected
+2020-12-26 11:53:27,613 - INFO - Recipe from recipe page 262.https://www.loveandlemons.com/baba-ganoush/
+ Collected
+2020-12-26 11:53:29,628 - INFO - Recipe from recipe page 263.https://www.loveandlemons.com/burrata/
+ Collected
+2020-12-26 11:53:31,575 - INFO - Recipe from recipe page 264.https://www.loveandlemons.com/gourmet-grilled-cheese/
+ Collected
+2020-12-26 11:53:33,490 - INFO - Recipe from recipe page 265.https://www.loveandlemons.com/cucumber-salad/
+ Collected
+2020-12-26 11:53:35,606 - INFO - Recipe from recipe page 266.https://www.loveandlemons.com/chocolate-zucchini-bread/
+ Collected
+2020-12-26 11:53:37,610 - INFO - Recipe from recipe page 267.https://www.loveandlemons.com/panzanella-salad/
+ Collected
+2020-12-26 11:53:39,925 - INFO - Recipe from recipe page 268.https://www.loveandlemons.com/stuffed-zucchini-boats/
+ Collected
+2020-12-26 11:53:42,187 - INFO - Recipe from recipe page 269.https://www.loveandlemons.com/grilled-vegetables/
+ Collected
+2020-12-26 11:53:44,116 - INFO - Recipe from recipe page 270.https://www.loveandlemons.com/tzatziki-sauce/
+ Collected
+2020-12-26 11:53:46,362 - INFO - Recipe from recipe page 271.https://www.loveandlemons.com/greek-salad/
+ Collected
+2020-12-26 11:53:48,342 - INFO - Recipe from recipe page 272.https://www.loveandlemons.com/greek-salad-dressing/
+ Collected
+2020-12-26 11:53:50,704 - INFO - Recipe from recipe page 273.https://www.loveandlemons.com/basil/
+ Collected
+2020-12-26 11:53:52,824 - INFO - Recipe from recipe page 274.https://www.loveandlemons.com/pesto-recipe/
+ Collected
+2020-12-26 11:53:55,616 - INFO - Recipe from recipe page 275.https://www.loveandlemons.com/crostini-appetizers/
+ Collected
+2020-12-26 11:53:57,506 - INFO - Recipe from recipe page 276.https://www.loveandlemons.com/pineapple-salsa/
+ Collected
+2020-12-26 11:53:59,547 - INFO - Recipe from recipe page 277.https://www.loveandlemons.com/vegan-tacos/
+ Collected
+2020-12-26 11:54:01,744 - INFO - Recipe from recipe page 278.https://www.loveandlemons.com/salad-recipes/
+ Collected
+2020-12-26 11:54:03,750 - INFO - Recipe from recipe page 279.https://www.loveandlemons.com/watermelon-salad/
+ Collected
+2020-12-26 11:54:06,245 - INFO - Recipe from recipe page 280.https://www.loveandlemons.com/oatmeal-cookies/
+ Collected
+2020-12-26 11:54:08,197 - INFO - Recipe from recipe page 281.https://www.loveandlemons.com/corn-on-the-cob/
+ Collected
+2020-12-26 11:54:10,224 - INFO - Recipe from recipe page 282.https://www.loveandlemons.com/homemade-pizza/
+ Collected
+2020-12-26 11:54:12,577 - INFO - Recipe from recipe page 283.https://www.loveandlemons.com/roasted-red-peppers/
+ Collected
+2020-12-26 11:54:14,807 - INFO - Recipe from recipe page 284.https://www.loveandlemons.com/fajita-veggies/
+ Collected
+2020-12-26 11:54:17,492 - INFO - Recipe from recipe page 285.https://www.loveandlemons.com/pickled-jalapenos/
+ Collected
+2020-12-26 11:54:19,536 - INFO - Recipe from recipe page 286.https://www.loveandlemons.com/blueberry-scones/
+ Collected
+2020-12-26 11:54:21,472 - INFO - Recipe from recipe page 287.https://www.loveandlemons.com/strawberry-salad/
+ Collected
+2020-12-26 11:54:23,909 - INFO - Recipe from recipe page 288.https://www.loveandlemons.com/portobello-mushroom-burger/
+ Collected
+2020-12-26 11:54:26,207 - INFO - Recipe from recipe page 289.https://www.loveandlemons.com/breakfast-burrito/
+ Collected
+2020-12-26 11:54:28,344 - INFO - Recipe from recipe page 290.https://www.loveandlemons.com/taco-salad-recipe/
+ Collected
+2020-12-26 11:54:30,396 - INFO - Recipe from recipe page 291.https://www.loveandlemons.com/cilantro-lime-dressing/
+ Collected
+2020-12-26 11:54:32,658 - INFO - Recipe from recipe page 292.https://www.loveandlemons.com/sesame-tofu-recipe/
+ Collected
+2020-12-26 11:54:34,734 - INFO - Recipe from recipe page 293.https://www.loveandlemons.com/cilantro-lime-rice/
+ Collected
+2020-12-26 11:54:36,675 - INFO - Recipe from recipe page 294.https://www.loveandlemons.com/potato-salad-recipe/
+ Collected
+2020-12-26 11:54:38,802 - INFO - Recipe from recipe page 295.https://www.loveandlemons.com/pasta-salad/
+ Collected
+2020-12-26 11:54:41,028 - INFO - Recipe from recipe page 296.https://www.loveandlemons.com/broccoli-salad/
+ Collected
+2020-12-26 11:54:43,006 - INFO - Recipe from recipe page 297.https://www.loveandlemons.com/asparagus-soup/
+ Collected
+2020-12-26 11:54:45,216 - INFO - Recipe from recipe page 298.https://www.loveandlemons.com/sesame-soba-noodles/
+ Collected
+2020-12-26 11:54:47,276 - INFO - Recipe from recipe page 299.https://www.loveandlemons.com/brunch-recipes/
+ Collected
+2020-12-26 11:54:49,771 - INFO - Recipe from recipe page 300.https://www.loveandlemons.com/avocado-recipes/
+ Collected
+2020-12-26 11:54:53,223 - INFO - Recipe from recipe page 301.https://www.loveandlemons.com/mint-julep/
+ Collected
+2020-12-26 11:54:56,755 - INFO - Recipe from recipe page 302.https://www.loveandlemons.com/flatbread-pizza-recipe/
+ Collected
+2020-12-26 11:55:00,091 - INFO - Recipe from recipe page 303.https://www.loveandlemons.com/guacamole-recipe/
+ Collected
+2020-12-26 11:55:04,544 - INFO - Recipe from recipe page 304.https://www.loveandlemons.com/mango-salsa/
+ Collected
+2020-12-26 11:55:07,888 - INFO - Recipe from recipe page 305.https://www.loveandlemons.com/tamago-kake-gohan/
+ Collected
+2020-12-26 11:55:10,612 - INFO - Recipe from recipe page 306.https://www.loveandlemons.com/pasta-pomodoro/
+ Collected
+2020-12-26 11:55:14,186 - INFO - Recipe from recipe page 307.https://www.loveandlemons.com/coconut-cream/
+ Collected
+2020-12-26 11:55:18,072 - INFO - Recipe from recipe page 308.https://www.loveandlemons.com/broccoli-pesto-quinoa-salad/
+ Collected
+2020-12-26 11:55:22,079 - INFO - Recipe from recipe page 309.https://www.loveandlemons.com/strawberry-banana-smoothie/
+ Collected
+2020-12-26 11:55:24,270 - INFO - Recipe from recipe page 310.https://www.loveandlemons.com/frittata-recipe/
+ Collected
+2020-12-26 11:55:26,152 - INFO - Recipe from recipe page 311.https://www.loveandlemons.com/carrot-smorrebrod-crisps/
+ Collected
+2020-12-26 11:55:28,164 - INFO - Recipe from recipe page 312.https://www.loveandlemons.com/vegan-egg-salad/
+ Collected
+2020-12-26 11:55:30,597 - INFO - Recipe from recipe page 313.https://www.loveandlemons.com/falafel-flatbread/
+ Collected
+2020-12-26 11:55:32,990 - INFO - Recipe from recipe page 314.https://www.loveandlemons.com/vegan-chocolate-cake/
+ Collected
+2020-12-26 11:55:35,380 - INFO - Recipe from recipe page 315.https://www.loveandlemons.com/baked-oatmeal/
+ Collected
+2020-12-26 11:55:37,853 - INFO - Recipe from recipe page 316.https://www.loveandlemons.com/healthy-banana-bread-recipe/
+ Collected
+2020-12-26 11:55:39,925 - INFO - Recipe from recipe page 317.https://www.loveandlemons.com/chipotle-sauce/
+ Collected
+2020-12-26 11:55:41,884 - INFO - Recipe from recipe page 318.https://www.loveandlemons.com/baked-sweet-potato-fries/
+ Collected
+2020-12-26 11:55:43,917 - INFO - Recipe from recipe page 319.https://www.loveandlemons.com/matcha-baked-doughnuts/
+ Collected
+2020-12-26 11:55:46,074 - INFO - Recipe from recipe page 320.https://www.loveandlemons.com/veggie-bowl/
+ Collected
+2020-12-26 11:55:48,022 - INFO - Recipe from recipe page 321.https://www.loveandlemons.com/cauliflower-recipes/
+ Collected
+2020-12-26 11:55:50,176 - INFO - Recipe from recipe page 322.https://www.loveandlemons.com/roasted-cauliflower/
+ Collected
+2020-12-26 11:55:52,272 - INFO - Recipe from recipe page 323.https://www.loveandlemons.com/banana-pancakes/
+ Collected
+2020-12-26 11:55:54,550 - INFO - Recipe from recipe page 324.https://www.loveandlemons.com/best-lentil-soup/
+ Collected
+2020-12-26 11:55:57,084 - INFO - Recipe from recipe page 325.https://www.loveandlemons.com/avocado-sweet-potato-tacos/
+ Collected
+2020-12-26 11:55:59,419 - INFO - Recipe from recipe page 326.https://www.loveandlemons.com/banh-mi/
+ Collected
+2020-12-26 11:56:01,639 - INFO - Recipe from recipe page 327.https://www.loveandlemons.com/roasted-chickpeas/
+ Collected
+2020-12-26 11:56:03,521 - INFO - Recipe from recipe page 328.https://www.loveandlemons.com/healthy-meal-prep-ideas/
+ Collected
+2020-12-26 11:56:05,863 - INFO - Recipe from recipe page 329.https://www.loveandlemons.com/how-to-cook-spaghetti-squash/
+ Collected
+2020-12-26 11:56:08,249 - INFO - Recipe from recipe page 330.https://www.loveandlemons.com/maki-sushi-recipe/
+ Collected
+2020-12-26 11:56:10,249 - INFO - Recipe from recipe page 331.https://www.loveandlemons.com/kale-salad/
+ Collected
+2020-12-26 11:56:12,275 - INFO - Recipe from recipe page 332.https://www.loveandlemons.com/baked-feta/
+ Collected
+2020-12-26 11:56:14,538 - INFO - Recipe from recipe page 333.https://www.loveandlemons.com/sesame-orange-noodle-bowl/
+ Collected
+2020-12-26 11:56:16,516 - INFO - Recipe from recipe page 334.https://www.loveandlemons.com/golden-turmeric-noodle-miso-soup/
+ Collected
+2020-12-26 11:56:18,483 - INFO - Recipe from recipe page 335.https://www.loveandlemons.com/overnight-oats-recipe/
+ Collected
+2020-12-26 11:56:20,488 - INFO - Recipe from recipe page 336.https://www.loveandlemons.com/vegan-lemon-muffins/
+ Collected
+2020-12-26 11:56:22,563 - INFO - Recipe from recipe page 337.https://www.loveandlemons.com/roasted-cauliflower-salad/
+ Collected
+2020-12-26 11:56:24,820 - INFO - Recipe from recipe page 338.https://www.loveandlemons.com/roasted-red-pepper-soup/
+ Collected
+2020-12-26 11:56:27,009 - INFO - Recipe from recipe page 339.https://www.loveandlemons.com/cauliflower-dip/
+ Collected
+2020-12-26 11:56:28,972 - INFO - Recipe from recipe page 340.https://www.loveandlemons.com/tahini-cookies/
+ Collected
+2020-12-26 11:56:30,900 - INFO - Recipe from recipe page 341.https://www.loveandlemons.com/shortbread-cookies/
+ Collected
+2020-12-26 11:56:32,907 - INFO - Recipe from recipe page 342.https://www.loveandlemons.com/sun-dried-tomato-pasta/
+ Collected
+2020-12-26 11:56:34,837 - INFO - Recipe from recipe page 343.https://www.loveandlemons.com/lemon-cookies/
+ Collected
+2020-12-26 11:56:36,930 - INFO - Recipe from recipe page 344.https://www.loveandlemons.com/wild-rice-soup/
+ Collected
+2020-12-26 11:56:39,033 - INFO - Recipe from recipe page 345.https://www.loveandlemons.com/roasted-delicata-squash-creamy-blue-cheese-sauce/
+ Collected
+2020-12-26 11:56:41,013 - INFO - Recipe from recipe page 346.https://www.loveandlemons.com/roasted-brussels-sprouts/
+ Collected
+2020-12-26 11:56:43,018 - INFO - Recipe from recipe page 347.https://www.loveandlemons.com/kale-olive-oil-vegan-mashed-potatoes/
+ Collected
+2020-12-26 11:56:45,279 - INFO - Recipe from recipe page 348.https://www.loveandlemons.com/acorn-squash-chickpeas-chimichurri/
+ Collected
+2020-12-26 11:56:47,448 - INFO - Recipe from recipe page 349.https://www.loveandlemons.com/creamy-vegan-butternut-squash-pudding/
+ Collected
+2020-12-26 11:56:49,708 - INFO - Recipe from recipe page 350.https://www.loveandlemons.com/pomegranate-salad-recipe/
+ Collected
+2020-12-26 11:56:51,919 - INFO - Recipe from recipe page 351.https://www.loveandlemons.com/butternut-squash-pasta-with-chili-oil-feta-mint/
+ Collected
+2020-12-26 11:56:53,968 - INFO - Recipe from recipe page 352.https://www.loveandlemons.com/pumpkin-french-toast/
+ Collected
+2020-12-26 11:56:56,108 - INFO - Recipe from recipe page 353.https://www.loveandlemons.com/sweet-potato-chili-fries/
+ Collected
+2020-12-26 11:56:58,052 - INFO - Recipe from recipe page 354.https://www.loveandlemons.com/oyster-mushroom-soup/
+ Collected
+2020-12-26 11:57:00,105 - INFO - Recipe from recipe page 355.https://www.loveandlemons.com/butternut-apple-cranberry-sandwich/
+ Collected
+2020-12-26 11:57:02,115 - INFO - Recipe from recipe page 356.https://www.loveandlemons.com/curry-recipe/
+ Collected
+2020-12-26 11:57:04,131 - INFO - Recipe from recipe page 357.https://www.loveandlemons.com/red-lentil-hummus/
+ Collected
+2020-12-26 11:57:06,061 - INFO - Recipe from recipe page 358.https://www.loveandlemons.com/yellow-split-pea-soup/
+ Collected
+2020-12-26 11:57:08,288 - INFO - Recipe from recipe page 359.https://www.loveandlemons.com/pumpkin-pancakes/
+ Collected
+2020-12-26 11:57:11,921 - INFO - Recipe from recipe page 360.https://www.loveandlemons.com/vegan-pizza/
+ Collected
+2020-12-26 11:57:14,148 - INFO - Recipe from recipe page 361.https://www.loveandlemons.com/carrot-coconut-soup/
+ Collected
+2020-12-26 11:57:16,309 - INFO - Recipe from recipe page 362.https://www.loveandlemons.com/peanut-butter-chocolate-chip-cookie-bars/
+ Collected
+2020-12-26 11:57:18,342 - INFO - Recipe from recipe page 363.https://www.loveandlemons.com/avocado-tomatillo-breakfast-tacos/
+ Collected
+2020-12-26 11:57:20,383 - INFO - Recipe from recipe page 364.https://www.loveandlemons.com/shiitake-bacon-egg-breakfast-tacos/
+ Collected
+2020-12-26 11:57:22,201 - INFO - Recipe from recipe page 365.https://www.loveandlemons.com/roasted-sweet-potato-poblano-breakfast-tacos/
+ Collected
+2020-12-26 11:57:24,662 - INFO - Recipe from recipe page 366.https://www.loveandlemons.com/oatmeal-breakfast-cookies/
+ Collected
+2020-12-26 11:57:26,617 - INFO - Recipe from recipe page 367.https://www.loveandlemons.com/roasted-vegetable-pasta/
+ Collected
+2020-12-26 11:57:28,652 - INFO - Recipe from recipe page 368.https://www.loveandlemons.com/shawarma/
+ Collected
+2020-12-26 11:57:30,539 - INFO - Recipe from recipe page 369.https://www.loveandlemons.com/summer-fennel-salad/
+ Collected
+2020-12-26 11:57:32,478 - INFO - Recipe from recipe page 370.https://www.loveandlemons.com/bbq-jackfruit-recipes/
+ Collected
+2020-12-26 11:57:34,433 - INFO - Recipe from recipe page 371.https://www.loveandlemons.com/watermelon-tomato-salad/
+ Collected
+2020-12-26 11:57:36,392 - INFO - Recipe from recipe page 372.https://www.loveandlemons.com/couscous-salad/
+ Collected
+2020-12-26 11:57:38,288 - INFO - Recipe from recipe page 373.https://www.loveandlemons.com/zucchini-pizza/
+ Collected
+2020-12-26 11:57:40,110 - INFO - Recipe from recipe page 374.https://www.loveandlemons.com/guacamole-beyond-burgers-w-spicy-sweet-potato-wedges/
+ Collected
+2020-12-26 11:57:42,441 - INFO - Recipe from recipe page 375.https://www.loveandlemons.com/summer-rolls/
+ Collected
+2020-12-26 11:57:44,312 - INFO - Recipe from recipe page 376.https://www.loveandlemons.com/asian-slaw/
+ Collected
+2020-12-26 11:57:46,318 - INFO - Recipe from recipe page 377.https://www.loveandlemons.com/sweet-corn-panzanella/
+ Collected
+2020-12-26 11:57:48,526 - INFO - Recipe from recipe page 378.https://www.loveandlemons.com/vegan-burrito-bowl-recipe/
+ Collected
+2020-12-26 11:57:50,803 - INFO - Recipe from recipe page 379.https://www.loveandlemons.com/farmers-market-breakfast-bowls/
+ Collected
+2020-12-26 11:57:53,072 - INFO - Recipe from recipe page 380.https://www.loveandlemons.com/pound-cake-recipe/
+ Collected
+2020-12-26 11:57:55,299 - INFO - Recipe from recipe page 381.https://www.loveandlemons.com/cucumber-gazpacho/
+ Collected
+2020-12-26 11:57:57,506 - INFO - Recipe from recipe page 382.https://www.loveandlemons.com/vegan-ice-cream/
+ Collected
+2020-12-26 11:57:59,394 - INFO - Recipe from recipe page 383.https://www.loveandlemons.com/crudite-platter/
+ Collected
+2020-12-26 11:58:01,409 - INFO - Recipe from recipe page 384.https://www.loveandlemons.com/strawberry-rhubarb-crumble-bars/
+ Collected
+2020-12-26 11:58:03,516 - INFO - Recipe from recipe page 385.https://www.loveandlemons.com/vegan-pasta-salad/
+ Collected
+2020-12-26 11:58:05,397 - INFO - Recipe from recipe page 386.https://www.loveandlemons.com/chipotle-cauliflower-nachos/
+ Collected
+2020-12-26 11:58:08,016 - INFO - Recipe from recipe page 387.https://www.loveandlemons.com/stuffed-mini-peppers/
+ Collected
+2020-12-26 11:58:09,955 - INFO - Recipe from recipe page 388.https://www.loveandlemons.com/vegan-sugar-cookies/
+ Collected
+2020-12-26 11:58:12,211 - INFO - Recipe from recipe page 389.https://www.loveandlemons.com/four-simple-summer-snacks/
+ Collected
+2020-12-26 11:58:14,168 - INFO - Recipe from recipe page 390.https://www.loveandlemons.com/spicy-mango-black-bean-avocado-tacos/
+ Collected
+2020-12-26 11:58:16,429 - INFO - Recipe from recipe page 391.https://www.loveandlemons.com/nori-wraps/
+ Collected
+2020-12-26 11:58:18,455 - INFO - Recipe from recipe page 392.https://www.loveandlemons.com/rice-bowl/
+ Collected
+2020-12-26 11:58:20,685 - INFO - Recipe from recipe page 393.https://www.loveandlemons.com/strawberry-rhubarb-oat-parfaits/
+ Collected
+2020-12-26 11:58:22,616 - INFO - Recipe from recipe page 394.https://www.loveandlemons.com/grilled-potato-salad-scallion-vinaigrette/
+ Collected
+2020-12-26 11:58:24,542 - INFO - Recipe from recipe page 395.https://www.loveandlemons.com/grilled-avocado/
+ Collected
+2020-12-26 11:58:26,888 - INFO - Recipe from recipe page 396.https://www.loveandlemons.com/farro-salad-grilled-asparagus/
+ Collected
+2020-12-26 11:58:29,170 - INFO - Recipe from recipe page 397.https://www.loveandlemons.com/asparagus-ribbon-mint-pea-pesto-toasts/
+ Collected
+2020-12-26 11:58:31,101 - INFO - Recipe from recipe page 398.https://www.loveandlemons.com/chickpea-salad-sandwich/
+ Collected
+2020-12-26 11:58:33,323 - INFO - Recipe from recipe page 399.https://www.loveandlemons.com/breakfast-casserole/
+ Collected
+2020-12-26 11:58:35,828 - INFO - Recipe from recipe page 400.https://www.loveandlemons.com/strawberry-tart-recipe/
+ Collected
+2020-12-26 11:58:38,133 - INFO - Recipe from recipe page 401.https://www.loveandlemons.com/cashew-broccoli-soba-noodles/
+ Collected
+2020-12-26 11:58:40,305 - INFO - Recipe from recipe page 402.https://www.loveandlemons.com/turmeric-cauliflower-fried-rice/
+ Collected
+2020-12-26 11:58:42,329 - INFO - Recipe from recipe page 403.https://www.loveandlemons.com/gabys-strawberry-shortcake/
+ Collected
+2020-12-26 11:58:44,462 - INFO - Recipe from recipe page 404.https://www.loveandlemons.com/vegetarian-lasagna/
+ Collected
+2020-12-26 11:58:46,813 - INFO - Recipe from recipe page 405.https://www.loveandlemons.com/curried-cauliflower-soup/
+ Collected
+2020-12-26 11:58:48,714 - INFO - Recipe from recipe page 406.https://www.loveandlemons.com/orecchiette-pasta/
+ Collected
+2020-12-26 11:58:50,741 - INFO - Recipe from recipe page 407.https://www.loveandlemons.com/quinoa-kale-veggie-quesadillas/
+ Collected
+2020-12-26 11:58:52,709 - INFO - Recipe from recipe page 408.https://www.loveandlemons.com/kale-quinoa-salad/
+ Collected
+2020-12-26 11:58:54,619 - INFO - Recipe from recipe page 409.https://www.loveandlemons.com/grain-bowl/
+ Collected
+2020-12-26 11:58:56,554 - INFO - Recipe from recipe page 410.https://www.loveandlemons.com/creamy-vegan-pasta-bake-brussels-sprouts/
+ Collected
+2020-12-26 11:58:58,859 - INFO - Recipe from recipe page 411.https://www.loveandlemons.com/kale-pesto-mushroom-pistachio-bowls/
+ Collected
+2020-12-26 11:59:01,327 - INFO - Recipe from recipe page 412.https://www.loveandlemons.com/chocolate-zucchini-cake/
+ Collected
+2020-12-26 11:59:03,724 - INFO - Recipe from recipe page 413.https://www.loveandlemons.com/cauliflower-rice-kimchi-bowls/
+ Collected
+2020-12-26 11:59:06,597 - INFO - Recipe from recipe page 414.https://www.loveandlemons.com/3-layer-fruit-smoothie/
+ Collected
+2020-12-26 11:59:09,324 - INFO - Recipe from recipe page 415.https://www.loveandlemons.com/falafel-burger-recipe/
+ Collected
+2020-12-26 11:59:11,362 - INFO - Recipe from recipe page 416.https://www.loveandlemons.com/seven-layer-dip/
+ Collected
+2020-12-26 11:59:13,724 - INFO - Recipe from recipe page 417.https://www.loveandlemons.com/kale-guacamole/
+ Collected
+2020-12-26 11:59:15,647 - INFO - Recipe from recipe page 418.https://www.loveandlemons.com/loaded-potato-skins/
+ Collected
+2020-12-26 11:59:17,792 - INFO - Recipe from recipe page 419.https://www.loveandlemons.com/adzuki-beans-recipe/
+ Collected
+2020-12-26 11:59:19,831 - INFO - Recipe from recipe page 420.https://www.loveandlemons.com/creamy-tomato-soup/
+ Collected
+2020-12-26 11:59:21,801 - INFO - Recipe from recipe page 421.https://www.loveandlemons.com/pesto-pasta/
+ Collected
+2020-12-26 11:59:23,809 - INFO - Recipe from recipe page 422.https://www.loveandlemons.com/sweet-potato-lasagna/
+ Collected
+2020-12-26 11:59:26,051 - INFO - Recipe from recipe page 423.https://www.loveandlemons.com/french-toast-bake/
+ Collected
+2020-12-26 11:59:28,341 - INFO - Recipe from recipe page 424.https://www.loveandlemons.com/cranberry-cookies/
+ Collected
+2020-12-26 11:59:30,270 - INFO - Recipe from recipe page 425.https://www.loveandlemons.com/spiralized-zucchini-vegetable-noodle-soup/
+ Collected
+2020-12-26 11:59:32,489 - INFO - Recipe from recipe page 426.https://www.loveandlemons.com/shaved-brussels-sprout-salad/
+ Collected
+2020-12-26 11:59:35,086 - INFO - Recipe from recipe page 427.https://www.loveandlemons.com/apple-cinnamon-crunch-overnight-oats/
+ Collected
+2020-12-26 11:59:37,475 - INFO - Recipe from recipe page 428.https://www.loveandlemons.com/vanilla-pecan-milk-chai-lattes/
+ Collected
+2020-12-26 11:59:39,404 - INFO - Recipe from recipe page 429.https://www.loveandlemons.com/butternut-squash-hummus-with-feta-pomegranates/
+ Collected
+2020-12-26 11:59:41,322 - INFO - Recipe from recipe page 430.https://www.loveandlemons.com/apple-crumble-pie/
+ Collected
+2020-12-26 11:59:43,315 - INFO - Recipe from recipe page 431.https://www.loveandlemons.com/roasted-beets/
+ Collected
+2020-12-26 11:59:45,255 - INFO - Recipe from recipe page 432.https://www.loveandlemons.com/stuffed-sweet-potatoes/
+ Collected
+2020-12-26 11:59:47,215 - INFO - Recipe from recipe page 433.https://www.loveandlemons.com/butternut-squash-casserole/
+ Collected
+2020-12-26 11:59:49,247 - INFO - Recipe from recipe page 434.https://www.loveandlemons.com/parsnip-puree/
+ Collected
+2020-12-26 11:59:51,755 - INFO - Recipe from recipe page 435.https://www.loveandlemons.com/butternut-squash-salad/
+ Collected
+2020-12-26 11:59:53,974 - INFO - Recipe from recipe page 436.https://www.loveandlemons.com/vegan-broccoli-soup/
+ Collected
+2020-12-26 11:59:55,897 - INFO - Recipe from recipe page 437.https://www.loveandlemons.com/harvest-haven-salad-trip-madison/
+ Collected
+2020-12-26 11:59:57,943 - INFO - Recipe from recipe page 438.https://www.loveandlemons.com/herb-garlic-mushroom-pasta/
+ Collected
+2020-12-26 11:59:59,902 - INFO - No ingredients or INSTRUCTIONS on recipe page 439. https://www.loveandlemons.com/how-to-make-matcha/
+
+2020-12-26 11:59:59,902 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 11:59:59,902 - INFO - Recipe from recipe page 439.https://www.loveandlemons.com/how-to-make-matcha/
+ Collected
+2020-12-26 12:00:02,054 - INFO - Recipe from recipe page 440.https://www.loveandlemons.com/pumpkin-tortilla-soup/
+ Collected
+2020-12-26 12:00:03,957 - INFO - Recipe from recipe page 441.https://www.loveandlemons.com/crispy-butternut-squash-poblano-tacos/
+ Collected
+2020-12-26 12:00:05,961 - INFO - Recipe from recipe page 442.https://www.loveandlemons.com/vegan-pasta/
+ Collected
+2020-12-26 12:00:07,932 - INFO - Recipe from recipe page 443.https://www.loveandlemons.com/apple-oatmeal-cookies/
+ Collected
+2020-12-26 12:00:09,882 - INFO - Recipe from recipe page 444.https://www.loveandlemons.com/spicy-chipotle-cornbread/
+ Collected
+2020-12-26 12:00:12,141 - INFO - Recipe from recipe page 445.https://www.loveandlemons.com/veggie-frittata-muffins/
+ Collected
+2020-12-26 12:00:14,117 - INFO - Recipe from recipe page 446.https://www.loveandlemons.com/spinach-hummus-wrap/
+ Collected
+2020-12-26 12:00:16,107 - INFO - Recipe from recipe page 447.https://www.loveandlemons.com/peach-affogato/
+ Collected
+2020-12-26 12:00:18,033 - INFO - Recipe from recipe page 448.https://www.loveandlemons.com/overnight-oats-blueberry-chia-jam/
+ Collected
+2020-12-26 12:00:20,242 - INFO - Recipe from recipe page 449.https://www.loveandlemons.com/zucchini-lasagna/
+ Collected
+2020-12-26 12:00:22,333 - INFO - Recipe from recipe page 450.https://www.loveandlemons.com/breakfast-panzanella/
+ Collected
+2020-12-26 12:00:24,311 - INFO - Recipe from recipe page 451.https://www.loveandlemons.com/sweet-corn-gazpacho/
+ Collected
+2020-12-26 12:00:26,673 - INFO - Recipe from recipe page 452.https://www.loveandlemons.com/iced-tea-fancy-herbal-fruity-ice/
+ Collected
+2020-12-26 12:00:28,782 - INFO - Recipe from recipe page 453.https://www.loveandlemons.com/grilled-corn-tacos/
+ Collected
+2020-12-26 12:00:30,711 - INFO - Recipe from recipe page 454.https://www.loveandlemons.com/avocado-smoothie/
+ Collected
+2020-12-26 12:00:33,576 - INFO - Recipe from recipe page 455.https://www.loveandlemons.com/orzo-recipe/
+ Collected
+2020-12-26 12:00:36,145 - INFO - Recipe from recipe page 456.https://www.loveandlemons.com/zucchini-bread/
+ Collected
+2020-12-26 12:00:38,489 - INFO - Recipe from recipe page 457.https://www.loveandlemons.com/blackberry-basil-pizza/
+ Collected
+2020-12-26 12:00:40,796 - INFO - Recipe from recipe page 458.https://www.loveandlemons.com/quesadilla-recipe/
+ Collected
+2020-12-26 12:00:42,976 - INFO - Recipe from recipe page 459.https://www.loveandlemons.com/taco-salad/
+ Collected
+2020-12-26 12:00:45,094 - INFO - Recipe from recipe page 460.https://www.loveandlemons.com/heirloom-tomato-sandwich/
+ Collected
+2020-12-26 12:00:46,942 - INFO - Recipe from recipe page 461.https://www.loveandlemons.com/festive-fruit-salad-lemon-ginger/
+ Collected
+2020-12-26 12:00:48,927 - INFO - Recipe from recipe page 462.https://www.loveandlemons.com/cucumber-mango-miso-noodle-bowls/
+ Collected
+2020-12-26 12:00:51,231 - INFO - Recipe from recipe page 463.https://www.loveandlemons.com/skinny-lemongrass-mojitos/
+ Collected
+2020-12-26 12:00:53,178 - INFO - Recipe from recipe page 464.https://www.loveandlemons.com/grilled-ratatouille-tartines/
+ Collected
+2020-12-26 12:00:55,188 - INFO - Recipe from recipe page 465.https://www.loveandlemons.com/farmers-market-asparagus-potato-pizza/
+ Collected
+2020-12-26 12:00:57,186 - INFO - Recipe from recipe page 466.https://www.loveandlemons.com/dark-chocolate-olive-oil-cake/
+ Collected
+2020-12-26 12:00:59,168 - INFO - Recipe from recipe page 467.https://www.loveandlemons.com/super-fun-summer-smoothies/
+ Collected
+2020-12-26 12:01:01,091 - INFO - Recipe from recipe page 468.https://www.loveandlemons.com/pb-cookie-dough-vegan-milkshake/
+ Collected
+2020-12-26 12:01:02,829 - INFO - Recipe from recipe page 469.https://www.loveandlemons.com/orange-peel-black-tea-sangria/
+ Collected
+2020-12-26 12:01:05,001 - INFO - Recipe from recipe page 470.https://www.loveandlemons.com/vegan-meatballs/
+ Collected
+2020-12-26 12:01:07,168 - INFO - Recipe from recipe page 471.https://www.loveandlemons.com/healthy-breakfast-tacos/
+ Collected
+2020-12-26 12:01:09,411 - INFO - Recipe from recipe page 472.https://www.loveandlemons.com/peanut-butter-chocolate-chip-cookies/
+ Collected
+2020-12-26 12:01:11,304 - INFO - Recipe from recipe page 473.https://www.loveandlemons.com/blueberry-fennel-flatbread-w-whipped-feta/
+ Collected
+2020-12-26 12:01:13,062 - INFO - Recipe from recipe page 474.https://www.loveandlemons.com/pimento-cheese/
+ Collected
+2020-12-26 12:01:15,208 - INFO - Recipe from recipe page 475.https://www.loveandlemons.com/coconut-mango-muffins/
+ Collected
+2020-12-26 12:01:17,732 - INFO - Recipe from recipe page 476.https://www.loveandlemons.com/sweet-potato-appetizer-bites/
+ Collected
+2020-12-26 12:01:20,004 - INFO - Recipe from recipe page 477.https://www.loveandlemons.com/kentucky-derby-party-recipes/
+ Collected
+2020-12-26 12:01:22,295 - INFO - Recipe from recipe page 478.https://www.loveandlemons.com/sweet-potato-noodles-garlic-kale/
+ Collected
+2020-12-26 12:01:24,264 - INFO - Recipe from recipe page 479.https://www.loveandlemons.com/chickpea-salad-wraps-avocado-dill-sauce/
+ Collected
+2020-12-26 12:01:26,205 - INFO - Recipe from recipe page 480.https://www.loveandlemons.com/club-sandwich/
+ Collected
+2020-12-26 12:01:28,181 - INFO - Recipe from recipe page 481.https://www.loveandlemons.com/almost-raw-carrot-cake-bliss-balls/
+ Collected
+2020-12-26 12:01:30,560 - INFO - Recipe from recipe page 482.https://www.loveandlemons.com/buddha-bowl-recipe/
+ Collected
+2020-12-26 12:01:32,800 - INFO - Recipe from recipe page 483.https://www.loveandlemons.com/lemongrass-banh-mi-spring-rolls/
+ Collected
+2020-12-26 12:01:34,760 - INFO - Recipe from recipe page 484.https://www.loveandlemons.com/creamy-vegan-shiitake-kale-pasta/
+ Collected
+2020-12-26 12:01:36,892 - INFO - Recipe from recipe page 485.https://www.loveandlemons.com/romesco-cauliflower-sandwiches/
+ Collected
+2020-12-26 12:01:38,855 - INFO - Recipe from recipe page 486.https://www.loveandlemons.com/quinoa-risotto/
+ Collected
+2020-12-26 12:01:41,121 - INFO - Recipe from recipe page 487.https://www.loveandlemons.com/basil-zucchini-soup/
+ Collected
+2020-12-26 12:01:43,417 - INFO - Recipe from recipe page 488.https://www.loveandlemons.com/black-pepper-turmeric-latte/
+ Collected
+2020-12-26 12:01:45,390 - INFO - Recipe from recipe page 489.https://www.loveandlemons.com/jessicas-pistachio-oat-squares/
+ Collected
+2020-12-26 12:01:47,313 - INFO - Recipe from recipe page 490.https://www.loveandlemons.com/sweet-sesame-tahini-noodles/
+ Collected
+2020-12-26 12:01:49,611 - INFO - Recipe from recipe page 491.https://www.loveandlemons.com/napa-cabbage-salad/
+ Collected
+2020-12-26 12:01:51,721 - INFO - Recipe from recipe page 492.https://www.loveandlemons.com/miso-dressing/
+ Collected
+2020-12-26 12:01:53,760 - INFO - Recipe from recipe page 493.https://www.loveandlemons.com/easy-power-lunch-bowls/
+ Collected
+2020-12-26 12:01:55,903 - INFO - Recipe from recipe page 494.https://www.loveandlemons.com/vegan-cheesecake/
+ Collected
+2020-12-26 12:01:58,023 - INFO - Recipe from recipe page 495.https://www.loveandlemons.com/lemon-shortbread-cookies/
+ Collected
+2020-12-26 12:01:59,956 - INFO - Recipe from recipe page 496.https://www.loveandlemons.com/creamy-polenta/
+ Collected
+2020-12-26 12:02:02,547 - INFO - Recipe from recipe page 497.https://www.loveandlemons.com/sustenence-sweet-potato-soup/
+ Collected
+2020-12-26 12:02:04,738 - INFO - Recipe from recipe page 498.https://www.loveandlemons.com/buckwheat-apple-cranberry-avocado-salad/
+ Collected
+2020-12-26 12:02:07,955 - INFO - Recipe from recipe page 499.https://www.loveandlemons.com/cauliflower-soup/
+ Collected
+2020-12-26 12:02:10,657 - INFO - Recipe from recipe page 500.https://www.loveandlemons.com/winter-spiced-moscow-mule/
+ Collected
+2020-12-26 12:02:14,694 - INFO - Recipe from recipe page 501.https://www.loveandlemons.com/coffee-smoothie/
+ Collected
+2020-12-26 12:02:17,477 - INFO - Recipe from recipe page 502.https://www.loveandlemons.com/vegan-gingerbread-cookies/
+ Collected
+2020-12-26 12:02:21,603 - INFO - Recipe from recipe page 503.https://www.loveandlemons.com/spaghetti-bolognese/
+ Collected
+2020-12-26 12:02:25,939 - INFO - Recipe from recipe page 504.https://www.loveandlemons.com/brussels-sprout-salad-avocado-toast/
+ Collected
+2020-12-26 12:02:29,991 - INFO - Recipe from recipe page 505.https://www.loveandlemons.com/vegetarian-enchiladas/
+ Collected
+2020-12-26 12:02:34,359 - INFO - Recipe from recipe page 506.https://www.loveandlemons.com/nacho-snacks-vegan-queso/
+ Collected
+2020-12-26 12:02:37,655 - INFO - Recipe from recipe page 507.https://www.loveandlemons.com/healthy-hot-chocolate/
+ Collected
+2020-12-26 12:02:40,814 - INFO - Recipe from recipe page 508.https://www.loveandlemons.com/apple-sage-grilled-cheese/
+ Collected
+2020-12-26 12:02:44,514 - INFO - Recipe from recipe page 509.https://www.loveandlemons.com/twice-baked-sweet-potatoes/
+ Collected
+2020-12-26 12:02:47,245 - INFO - Recipe from recipe page 510.https://www.loveandlemons.com/red-curry-kuri-squash-soup/
+ Collected
+2020-12-26 12:02:50,668 - INFO - Recipe from recipe page 511.https://www.loveandlemons.com/pumpkin-pudding/
+ Collected
+2020-12-26 12:02:55,324 - INFO - Recipe from recipe page 512.https://www.loveandlemons.com/quinoa-salad-stuffed-acorn-squash/
+ Collected
+2020-12-26 12:02:59,541 - INFO - Recipe from recipe page 513.https://www.loveandlemons.com/balsamic-brussels-sprouts/
+ Collected
+2020-12-26 12:03:04,564 - INFO - Recipe from recipe page 514.https://www.loveandlemons.com/lemon-cake/
+ Collected
+2020-12-26 12:03:07,819 - INFO - Recipe from recipe page 515.https://www.loveandlemons.com/fall-wine-party/
+ Collected
+2020-12-26 12:03:10,980 - INFO - Recipe from recipe page 516.https://www.loveandlemons.com/pumpkin-waffles/
+ Collected
+2020-12-26 12:03:15,001 - INFO - Recipe from recipe page 517.https://www.loveandlemons.com/collard-green-wraps/
+ Collected
+2020-12-26 12:03:18,599 - INFO - Recipe from recipe page 518.https://www.loveandlemons.com/coconut-macaroons/
+ Collected
+2020-12-26 12:03:22,361 - INFO - Recipe from recipe page 519.https://www.loveandlemons.com/white-bean-tomato-mushroom-soup/
+ Collected
+2020-12-26 12:03:26,867 - INFO - Recipe from recipe page 520.https://www.loveandlemons.com/farro-fried-rice-brussels-sprouts/
+ Collected
+2020-12-26 12:03:30,393 - INFO - Recipe from recipe page 521.https://www.loveandlemons.com/alannas-pumpkin-cranberry-nut-seed-loaf/
+ Collected
+2020-12-26 12:03:34,631 - INFO - Recipe from recipe page 522.https://www.loveandlemons.com/roasted-delicata-squash-kale-salad/
+ Collected
+2020-12-26 12:03:38,914 - INFO - Recipe from recipe page 523.https://www.loveandlemons.com/mollys-cauliflower-shawarma-tacos/
+ Collected
+2020-12-26 12:03:43,398 - INFO - Recipe from recipe page 524.https://www.loveandlemons.com/chana-masala/
+ Collected
+2020-12-26 12:03:47,877 - INFO - Recipe from recipe page 525.https://www.loveandlemons.com/jennys-broccolini-chickpea-pizza/
+ Collected
+2020-12-26 12:03:50,999 - INFO - Recipe from recipe page 526.https://www.loveandlemons.com/homemade-crackers-recipe/
+ Collected
+2020-12-26 12:03:55,657 - INFO - Recipe from recipe page 527.https://www.loveandlemons.com/pumpkin-chocolate-chip-cookies/
+ Collected
+2020-12-26 12:03:59,268 - INFO - Recipe from recipe page 528.https://www.loveandlemons.com/heidis-spicy-green-soup/
+ Collected
+2020-12-26 12:04:04,362 - INFO - Recipe from recipe page 529.https://www.loveandlemons.com/almond-butter-brown-rice-crispy-treats/
+ Collected
+2020-12-26 12:04:07,823 - INFO - Recipe from recipe page 530.https://www.loveandlemons.com/vegan-poke-bowl/
+ Collected
+2020-12-26 12:04:11,549 - INFO - Recipe from recipe page 531.https://www.loveandlemons.com/vegetable-penne-pasta/
+ Collected
+2020-12-26 12:04:15,173 - INFO - Recipe from recipe page 532.https://www.loveandlemons.com/no-bake-sweet-pea-enchiladas/
+ Collected
+2020-12-26 12:04:19,327 - INFO - Recipe from recipe page 533.https://www.loveandlemons.com/peach-tostadas-saveur-nomination/
+ Collected
+2020-12-26 12:04:25,308 - INFO - Recipe from recipe page 534.https://www.loveandlemons.com/chocolate-pudding-pop/
+ Collected
+2020-12-26 12:04:29,818 - INFO - Recipe from recipe page 535.https://www.loveandlemons.com/watermelon-gazpacho/
+ Collected
+2020-12-26 12:04:34,245 - INFO - Recipe from recipe page 536.https://www.loveandlemons.com/tomato-basil-artichoke-picnic-sandwich/
+ Collected
+2020-12-26 12:04:37,441 - INFO - Recipe from recipe page 537.https://www.loveandlemons.com/mix-match-crostini/
+ Collected
+2020-12-26 12:04:41,029 - INFO - Recipe from recipe page 538.https://www.loveandlemons.com/tart-cherry-tabbouleh/
+ Collected
+2020-12-26 12:04:47,713 - INFO - Recipe from recipe page 539.https://www.loveandlemons.com/pumpkin-pasta-sauce/
+ Collected
+2020-12-26 12:04:50,856 - INFO - Recipe from recipe page 540.https://www.loveandlemons.com/stuffed-poblano-peppers/
+ Collected
+2020-12-26 12:04:55,038 - INFO - Recipe from recipe page 541.https://www.loveandlemons.com/rainbow-bowls-almond-ginger-dressing/
+ Collected
+2020-12-26 12:04:57,985 - INFO - Recipe from recipe page 542.https://www.loveandlemons.com/tomatillo-salsa-verde/
+ Collected
+2020-12-26 12:05:02,131 - INFO - Recipe from recipe page 543.https://www.loveandlemons.com/corn-salad/
+ Collected
+2020-12-26 12:05:03,785 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/broccoli-rabe-recipe/ Collected
+2020-12-26 12:05:05,394 - INFO - Recipe from recipe page 544.https://www.loveandlemons.com/chili-lime-corn/
+ Collected
+2020-12-26 12:05:08,496 - INFO - Recipe from recipe page 545.https://www.loveandlemons.com/vegan-cobb-salad-w-coconut-bacon/
+ Collected
+2020-12-26 12:05:11,373 - INFO - Recipe from recipe page 546.https://www.loveandlemons.com/homemade-vanilla-hazelnut-milk-latte/
+ Collected
+2020-12-26 12:05:15,666 - INFO - Recipe from recipe page 547.https://www.loveandlemons.com/strawberry-crumble/
+ Collected
+2020-12-26 12:05:19,172 - INFO - Recipe from recipe page 548.https://www.loveandlemons.com/avocado-sandwich/
+ Collected
+2020-12-26 12:05:21,254 - INFO - Recipe from recipe page 549.https://www.loveandlemons.com/broccoli-pasta-salad/
+ Collected
+2020-12-26 12:05:25,145 - INFO - Recipe from recipe page 550.https://www.loveandlemons.com/tart-cherry-mint-sorbet/
+ Collected
+2020-12-26 12:05:27,952 - INFO - Recipe from recipe page 551.https://www.loveandlemons.com/red-curry-lemongrass-soup/
+ Collected
+2020-12-26 12:05:31,960 - INFO - Recipe from recipe page 552.https://www.loveandlemons.com/avocado-cucumber-sushi-roll/
+ Collected
+2020-12-26 12:05:34,754 - INFO - Recipe from recipe page 553.https://www.loveandlemons.com/berry-superfood-smoothie-bowl/
+ Collected
+2020-12-26 12:05:36,728 - INFO - Recipe from recipe page 554.https://www.loveandlemons.com/spiralized-daikon-noodle-bowl/
+ Collected
+2020-12-26 12:05:38,764 - INFO - Recipe from recipe page 555.https://www.loveandlemons.com/kiwi-avocado-salsa-verde/
+ Collected
+2020-12-26 12:05:40,727 - INFO - Recipe from recipe page 556.https://www.loveandlemons.com/burrito-bowl-recipe/
+ Collected
+2020-12-26 12:05:42,667 - INFO - Recipe from recipe page 557.https://www.loveandlemons.com/energy-balls-recipe/
+ Collected
+2020-12-26 12:05:44,572 - INFO - Recipe from recipe page 558.https://www.loveandlemons.com/boozy-root-beer-floats/
+ Collected
+2020-12-26 12:05:46,795 - INFO - Recipe from recipe page 559.https://www.loveandlemons.com/artichoke-avocado-toast/
+ Collected
+2020-12-26 12:05:48,985 - INFO - Recipe from recipe page 560.https://www.loveandlemons.com/vegan-scones/
+ Collected
+2020-12-26 12:05:51,059 - INFO - Recipe from recipe page 561.https://www.loveandlemons.com/collard-wrap-tacos-citrus-slaw/
+ Collected
+2020-12-26 12:05:52,926 - INFO - Recipe from recipe page 562.https://www.loveandlemons.com/chickpea-flour-pizza-asparagus/
+ Collected
+2020-12-26 12:05:55,118 - INFO - Recipe from recipe page 563.https://www.loveandlemons.com/vegan-carrot-waffles/
+ Collected
+2020-12-26 12:05:57,526 - INFO - Recipe from recipe page 564.https://www.loveandlemons.com/tagliatelle-recipe/
+ Collected
+2020-12-26 12:05:59,614 - INFO - Recipe from recipe page 565.https://www.loveandlemons.com/prettiest-spring-veggie-party-platter/
+ Collected
+2020-12-26 12:06:01,484 - INFO - Recipe from recipe page 566.https://www.loveandlemons.com/best-green-smoothie-recipe/
+ Collected
+2020-12-26 12:06:03,737 - INFO - Recipe from recipe page 567.https://www.loveandlemons.com/quinoa-breakfast-cookies/
+ Collected
+2020-12-26 12:06:06,010 - INFO - Recipe from recipe page 568.https://www.loveandlemons.com/whole-wheat-shells-roasted-cauliflower/
+ Collected
+2020-12-26 12:06:08,093 - INFO - Recipe from recipe page 569.https://www.loveandlemons.com/lemon-ginger-gimlets/
+ Collected
+2020-12-26 12:06:10,309 - INFO - Recipe from recipe page 570.https://www.loveandlemons.com/easy-vegetarian-pho/
+ Collected
+2020-12-26 12:06:12,300 - INFO - Recipe from recipe page 571.https://www.loveandlemons.com/meyer-lemon-madeleines/
+ Collected
+2020-12-26 12:06:14,398 - INFO - Recipe from recipe page 572.https://www.loveandlemons.com/tart-cherry-tartelettes/
+ Collected
+2020-12-26 12:06:16,459 - INFO - Recipe from recipe page 573.https://www.loveandlemons.com/healthy-loaded-vegan-nachos/
+ Collected
+2020-12-26 12:06:18,585 - INFO - Recipe from recipe page 574.https://www.loveandlemons.com/roasted-cauliflower-steaks/
+ Collected
+2020-12-26 12:06:20,517 - INFO - Recipe from recipe page 575.https://www.loveandlemons.com/greek-salad-flatbread-pizza/
+ Collected
+2020-12-26 12:06:22,820 - INFO - Recipe from recipe page 576.https://www.loveandlemons.com/beet-hummus/
+ Collected
+2020-12-26 12:06:24,909 - INFO - Recipe from recipe page 577.https://www.loveandlemons.com/chia-pudding/
+ Collected
+2020-12-26 12:06:27,151 - INFO - Recipe from recipe page 578.https://www.loveandlemons.com/linguine-fennel-winter-greens/
+ Collected
+2020-12-26 12:06:29,151 - INFO - Recipe from recipe page 579.https://www.loveandlemons.com/lemon-pesto-spaghetti-squash/
+ Collected
+2020-12-26 12:06:31,307 - INFO - Recipe from recipe page 580.https://www.loveandlemons.com/healthy-apple-cinnamon-muffins/
+ Collected
+2020-12-26 12:06:34,235 - INFO - Recipe from recipe page 581.https://www.loveandlemons.com/bok-choy-stir-fry/
+ Collected
+2020-12-26 12:06:36,447 - INFO - Recipe from recipe page 582.https://www.loveandlemons.com/chickpea-cauliflower-minestrone-soup/
+ Collected
+2020-12-26 12:06:38,576 - INFO - Recipe from recipe page 583.https://www.loveandlemons.com/nut-free-hemp-seed-kale-pesto/
+ Collected
+2020-12-26 12:06:40,439 - INFO - Recipe from recipe page 584.https://www.loveandlemons.com/sparkling-paloma-cocktail/
+ Collected
+2020-12-26 12:06:42,529 - INFO - Recipe from recipe page 585.https://www.loveandlemons.com/sweet-potato-pomegranate-crostini/
+ Collected
+2020-12-26 12:06:44,429 - INFO - Recipe from recipe page 586.https://www.loveandlemons.com/winter-farro-kale-salad/
+ Collected
+2020-12-26 12:06:46,691 - INFO - Recipe from recipe page 587.https://www.loveandlemons.com/edible-diy-gift-ideas/
+ Collected
+2020-12-26 12:06:48,895 - INFO - Recipe from recipe page 588.https://www.loveandlemons.com/creamy-white-bean-tomato-soup/
+ Collected
+2020-12-26 12:06:50,859 - INFO - Recipe from recipe page 589.https://www.loveandlemons.com/lemony-white-wine-capellini/
+ Collected
+2020-12-26 12:06:52,927 - INFO - Recipe from recipe page 590.https://www.loveandlemons.com/sweet-spicy-popcorn/
+ Collected
+2020-12-26 12:06:54,939 - INFO - Recipe from recipe page 591.https://www.loveandlemons.com/roasted-delicata-squash-tacos/
+ Collected
+2020-12-26 12:06:57,484 - INFO - Recipe from recipe page 592.https://www.loveandlemons.com/squash-stuffed-shells/
+ Collected
+2020-12-26 12:06:59,473 - INFO - Recipe from recipe page 593.https://www.loveandlemons.com/apple-mimosas-butternut-baked-eggs/
+ Collected
+2020-12-26 12:07:01,442 - INFO - Recipe from recipe page 594.https://www.loveandlemons.com/pumpkin-spiced-corn-muffins/
+ Collected
+2020-12-26 12:07:03,501 - INFO - Recipe from recipe page 595.https://www.loveandlemons.com/arugula-salad/
+ Collected
+2020-12-26 12:07:05,519 - INFO - Recipe from recipe page 596.https://www.loveandlemons.com/quinoa-bowl-recipe/
+ Collected
+2020-12-26 12:07:08,134 - INFO - Recipe from recipe page 597.https://www.loveandlemons.com/pumpkin-avocado-tostadas/
+ Collected
+2020-12-26 12:07:10,479 - INFO - Recipe from recipe page 598.https://www.loveandlemons.com/carrot-ginger-soup/
+ Collected
+2020-12-26 12:07:12,625 - INFO - Recipe from recipe page 599.https://www.loveandlemons.com/butternut-squash-breakfast-hash/
+ Collected
+2020-12-26 12:07:14,812 - INFO - Recipe from recipe page 600.https://www.loveandlemons.com/curried-red-lentil-sweet-potato-stew/
+ Collected
+2020-12-26 12:07:17,384 - INFO - Recipe from recipe page 601.https://www.loveandlemons.com/ribollita-tuscan-white-bean-soup/
+ Collected
+2020-12-26 12:07:19,308 - INFO - Recipe from recipe page 602.https://www.loveandlemons.com/black-bean-chipotle-stuffed-sweet-potato/
+ Collected
+2020-12-26 12:07:21,213 - INFO - Recipe from recipe page 603.https://www.loveandlemons.com/pumpkin-coconut-curry-bowls/
+ Collected
+2020-12-26 12:07:23,183 - INFO - Recipe from recipe page 604.https://www.loveandlemons.com/tahini-noodles-roasted-carrots-chickpeas/
+ Collected
+2020-12-26 12:07:25,467 - INFO - Recipe from recipe page 605.https://www.loveandlemons.com/broccoli-pesto-mac-cheese/
+ Collected
+2020-12-26 12:07:27,684 - INFO - Recipe from recipe page 606.https://www.loveandlemons.com/vegan-chili/
+ Collected
+2020-12-26 12:07:29,746 - INFO - Recipe from recipe page 607.https://www.loveandlemons.com/easy-vegan-apple-crisp/
+ Collected
+2020-12-26 12:07:31,772 - INFO - Recipe from recipe page 608.https://www.loveandlemons.com/stuffed-spaghetti-squash/
+ Collected
+2020-12-26 12:07:34,045 - INFO - Recipe from recipe page 609.https://www.loveandlemons.com/chipotle-apple-sweet-potato-salad/
+ Collected
+2020-12-26 12:07:36,100 - INFO - Recipe from recipe page 610.https://www.loveandlemons.com/fig-feta-mint-crostini/
+ Collected
+2020-12-26 12:07:38,024 - INFO - Recipe from recipe page 611.https://www.loveandlemons.com/pattypan-squash-panzanella/
+ Collected
+2020-12-26 12:07:40,032 - INFO - Recipe from recipe page 612.https://www.loveandlemons.com/healthy-vegetarian-grilling-recipes/
+ Collected
+2020-12-26 12:07:42,501 - INFO - Recipe from recipe page 613.https://www.loveandlemons.com/vegetarian-stuffed-peppers/
+ Collected
+2020-12-26 12:07:44,415 - INFO - Recipe from recipe page 614.https://www.loveandlemons.com/quinoa-veggie-wrap/
+ Collected
+2020-12-26 12:07:46,527 - INFO - Recipe from recipe page 615.https://www.loveandlemons.com/heirloom-tomato-mango-pico-de-gallo/
+ Collected
+2020-12-26 12:07:48,811 - INFO - Recipe from recipe page 616.https://www.loveandlemons.com/portobello-mushroom-tacos/
+ Collected
+2020-12-26 12:07:50,734 - INFO - Recipe from recipe page 617.https://www.loveandlemons.com/vegan-cherry-chocolate-oatmeal-cookies/
+ Collected
+2020-12-26 12:07:52,893 - INFO - Recipe from recipe page 618.https://www.loveandlemons.com/jalapeno-margarita/
+ Collected
+2020-12-26 12:07:54,888 - INFO - Recipe from recipe page 619.https://www.loveandlemons.com/eggplant-salad/
+ Collected
+2020-12-26 12:07:56,924 - INFO - Recipe from recipe page 620.https://www.loveandlemons.com/cinnamon-quinoa-breakfast-bowl/
+ Collected
+2020-12-26 12:07:58,968 - INFO - Recipe from recipe page 621.https://www.loveandlemons.com/curried-avocado-chickpea-salad-sliders/
+ Collected
+2020-12-26 12:08:00,876 - INFO - Recipe from recipe page 622.https://www.loveandlemons.com/insalata-di-pesche-radicchio/
+ Collected
+2020-12-26 12:08:03,135 - INFO - Recipe from recipe page 623.https://www.loveandlemons.com/sweet-corn-hummus-tostada-recipe/
+ Collected
+2020-12-26 12:08:05,077 - INFO - Recipe from recipe page 624.https://www.loveandlemons.com/peach-crisp/
+ Collected
+2020-12-26 12:08:07,180 - INFO - Recipe from recipe page 625.https://www.loveandlemons.com/summer-squash-vegetable-pizza/
+ Collected
+2020-12-26 12:08:09,562 - INFO - Recipe from recipe page 626.https://www.loveandlemons.com/cucumber-apple-green-gazpacho/
+ Collected
+2020-12-26 12:08:11,594 - INFO - Recipe from recipe page 627.https://www.loveandlemons.com/erins-adobo-eggplant-quesadillas/
+ Collected
+2020-12-26 12:08:13,679 - INFO - Recipe from recipe page 628.https://www.loveandlemons.com/almond-milk-cold-brew-coffee-latte/
+ Collected
+2020-12-26 12:08:15,945 - INFO - Recipe from recipe page 629.https://www.loveandlemons.com/peach-plum-caprese-salad/
+ Collected
+2020-12-26 12:08:18,062 - INFO - Recipe from recipe page 630.https://www.loveandlemons.com/pineapple-smoothie/
+ Collected
+2020-12-26 12:08:20,234 - INFO - Recipe from recipe page 631.https://www.loveandlemons.com/mix-match-mini-pizzas/
+ Collected
+2020-12-26 12:08:22,500 - INFO - Recipe from recipe page 632.https://www.loveandlemons.com/tart-cherry-cheesecake-parfaits/
+ Collected
+2020-12-26 12:08:24,853 - INFO - Recipe from recipe page 633.https://www.loveandlemons.com/herb-garden-peach-tomato-crostini/
+ Collected
+2020-12-26 12:08:26,811 - INFO - Recipe from recipe page 634.https://www.loveandlemons.com/oyster-mushroom-po-boys/
+ Collected
+2020-12-26 12:08:29,075 - INFO - Recipe from recipe page 635.https://www.loveandlemons.com/zucchini-noodles-lemon-ricotta/
+ Collected
+2020-12-26 12:08:31,307 - INFO - Recipe from recipe page 636.https://www.loveandlemons.com/3-healthy-green-juice-recipes/
+ Collected
+2020-12-26 12:08:33,689 - INFO - Recipe from recipe page 637.https://www.loveandlemons.com/strawberry-basil-avocado-toast/
+ Collected
+2020-12-26 12:08:35,752 - INFO - Recipe from recipe page 638.https://www.loveandlemons.com/watermelon-feta-salad-kale-avocado/
+ Collected
+2020-12-26 12:08:38,027 - INFO - Recipe from recipe page 639.https://www.loveandlemons.com/healthy-breakfast-smoothies/
+ Collected
+2020-12-26 12:08:40,121 - INFO - Recipe from recipe page 640.https://www.loveandlemons.com/sesame-basil-soba-noodles/
+ Collected
+2020-12-26 12:08:42,234 - INFO - Recipe from recipe page 641.https://www.loveandlemons.com/green-bean-purple-potato-salad/
+ Collected
+2020-12-26 12:08:44,705 - INFO - Recipe from recipe page 642.https://www.loveandlemons.com/homemade-waffle-recipe/
+ Collected
+2020-12-26 12:08:47,011 - INFO - Recipe from recipe page 643.https://www.loveandlemons.com/saras-strawberry-tabbouleh/
+ Collected
+2020-12-26 12:08:49,232 - INFO - Recipe from recipe page 644.https://www.loveandlemons.com/annas-avocado-lemon-zest-spaghetti/
+ Collected
+2020-12-26 12:08:51,158 - INFO - No ingredients or INSTRUCTIONS on recipe page 645. https://www.loveandlemons.com/vegetarian-memorial-day-recipes/
+
+2020-12-26 12:08:51,158 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:08:51,158 - INFO - Recipe from recipe page 645.https://www.loveandlemons.com/vegetarian-memorial-day-recipes/
+ Collected
+2020-12-26 12:08:53,360 - INFO - Recipe from recipe page 646.https://www.loveandlemons.com/matcha-milkshakes/
+ Collected
+2020-12-26 12:08:55,686 - INFO - Recipe from recipe page 647.https://www.loveandlemons.com/vegan-spinach-mac-cheese/
+ Collected
+2020-12-26 12:08:57,889 - INFO - Recipe from recipe page 648.https://www.loveandlemons.com/grilled-corn-poblano-tacos/
+ Collected
+2020-12-26 12:09:00,090 - INFO - Recipe from recipe page 649.https://www.loveandlemons.com/artichoke-salad/
+ Collected
+2020-12-26 12:09:02,357 - INFO - Recipe from recipe page 650.https://www.loveandlemons.com/breakfast-bowl-amaranth-granola/
+ Collected
+2020-12-26 12:09:04,543 - INFO - Recipe from recipe page 651.https://www.loveandlemons.com/mango-peanut-tempeh-tacos/
+ Collected
+2020-12-26 12:09:06,563 - INFO - Recipe from recipe page 652.https://www.loveandlemons.com/spicy-mango-avocado-rice-bowl/
+ Collected
+2020-12-26 12:09:08,573 - INFO - Recipe from recipe page 653.https://www.loveandlemons.com/toast-radishes-dandelion-greens/
+ Collected
+2020-12-26 12:09:10,669 - INFO - Recipe from recipe page 654.https://www.loveandlemons.com/watercress-farro-salad-tart-cherries/
+ Collected
+2020-12-26 12:09:13,026 - INFO - Recipe from recipe page 655.https://www.loveandlemons.com/mini-spinach-sun-dried-tomato-frittatas/
+ Collected
+2020-12-26 12:09:15,244 - INFO - Recipe from recipe page 656.https://www.loveandlemons.com/corn-chowder/
+ Collected
+2020-12-26 12:09:17,201 - INFO - Recipe from recipe page 657.https://www.loveandlemons.com/almond-milk-chai-latte/
+ Collected
+2020-12-26 12:09:19,403 - INFO - Recipe from recipe page 658.https://www.loveandlemons.com/lemon-broccoli-pasta-exciting-news/
+ Collected
+2020-12-26 12:09:21,574 - INFO - Recipe from recipe page 659.https://www.loveandlemons.com/pavlovas-lemon-coconut-cream/
+ Collected
+2020-12-26 12:09:23,942 - INFO - Recipe from recipe page 660.https://www.loveandlemons.com/kale-salad-avocado-tahini-sauce/
+ Collected
+2020-12-26 12:09:25,943 - INFO - Recipe from recipe page 661.https://www.loveandlemons.com/matcha-green-tea-ice-cream-coconut/
+ Collected
+2020-12-26 12:09:27,881 - INFO - Recipe from recipe page 662.https://www.loveandlemons.com/simple-swiss-chard-pasta/
+ Collected
+2020-12-26 12:09:30,166 - INFO - Recipe from recipe page 663.https://www.loveandlemons.com/tart-cherry-grilled-cheese-sage/
+ Collected
+2020-12-26 12:09:32,403 - INFO - Recipe from recipe page 664.https://www.loveandlemons.com/seasonal-favorites-carrot-top-pesto/
+ Collected
+2020-12-26 12:09:34,374 - INFO - Recipe from recipe page 665.https://www.loveandlemons.com/vegan-spelt-cookies/
+ Collected
+2020-12-26 12:09:36,410 - INFO - Recipe from recipe page 666.https://www.loveandlemons.com/loaded-sweet-potato-avocado-toast/
+ Collected
+2020-12-26 12:09:38,935 - INFO - Recipe from recipe page 667.https://www.loveandlemons.com/millet-cakes/
+ Collected
+2020-12-26 12:09:41,709 - INFO - Recipe from recipe page 668.https://www.loveandlemons.com/butternut-squash-kale-quinoa-stew/
+ Collected
+2020-12-26 12:09:43,995 - INFO - Recipe from recipe page 669.https://www.loveandlemons.com/molten-chocolate-cakes/
+ Collected
+2020-12-26 12:09:45,947 - INFO - Recipe from recipe page 670.https://www.loveandlemons.com/saffron-couscous-spinach-stew/
+ Collected
+2020-12-26 12:09:47,990 - INFO - Recipe from recipe page 671.https://www.loveandlemons.com/rainbow-chard-bowls/
+ Collected
+2020-12-26 12:09:50,022 - INFO - Recipe from recipe page 672.https://www.loveandlemons.com/pear-arugula-chickpea-salad/
+ Collected
+2020-12-26 12:09:52,292 - INFO - Recipe from recipe page 673.https://www.loveandlemons.com/goji-mango-guacamole/
+ Collected
+2020-12-26 12:09:54,501 - INFO - Recipe from recipe page 674.https://www.loveandlemons.com/green-quesadillas/
+ Collected
+2020-12-26 12:09:56,715 - INFO - Recipe from recipe page 675.https://www.loveandlemons.com/jalapeno-cauliflower-shells-and-cheese/
+ Collected
+2020-12-26 12:09:58,653 - INFO - Recipe from recipe page 676.https://www.loveandlemons.com/roasted-cauliflower-kale-salad/
+ Collected
+2020-12-26 12:10:01,172 - INFO - Recipe from recipe page 677.https://www.loveandlemons.com/miso-soup/
+ Collected
+2020-12-26 12:10:03,056 - INFO - No ingredients or INSTRUCTIONS on recipe page 678. https://www.loveandlemons.com/peanut-butter-goji-granola-bars/
+
+2020-12-26 12:10:03,057 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:10:03,057 - INFO - Recipe from recipe page 678.https://www.loveandlemons.com/peanut-butter-goji-granola-bars/
+ Collected
+2020-12-26 12:10:05,433 - INFO - Recipe from recipe page 679.https://www.loveandlemons.com/minty-millet-pomegranate-salad/
+ Collected
+2020-12-26 12:10:07,647 - INFO - Recipe from recipe page 680.https://www.loveandlemons.com/buttercup-squash-crumble-bars/
+ Collected
+2020-12-26 12:10:09,685 - INFO - Recipe from recipe page 681.https://www.loveandlemons.com/white-chocolate-matcha-almond-butter-cups/
+ Collected
+2020-12-26 12:10:11,729 - INFO - Recipe from recipe page 682.https://www.loveandlemons.com/vegan-kale-artichoke-dip/
+ Collected
+2020-12-26 12:10:13,993 - INFO - Recipe from recipe page 683.https://www.loveandlemons.com/matcha-white-hot-chocolate/
+ Collected
+2020-12-26 12:10:15,946 - INFO - Recipe from recipe page 684.https://www.loveandlemons.com/cranberry-pistachio-chocolate-bark/
+ Collected
+2020-12-26 12:10:18,013 - INFO - Recipe from recipe page 685.https://www.loveandlemons.com/mini-sweet-potato-pizzas/
+ Collected
+2020-12-26 12:10:20,198 - INFO - Recipe from recipe page 686.https://www.loveandlemons.com/holiday-cocktail-cookie-swap/
+ Collected
+2020-12-26 12:10:22,211 - INFO - Recipe from recipe page 687.https://www.loveandlemons.com/sweet-harvest-pumpkin-ice-cream/
+ Collected
+2020-12-26 12:10:24,282 - INFO - Recipe from recipe page 688.https://www.loveandlemons.com/vegetarian-stuffed-acorn-squash/
+ Collected
+2020-12-26 12:10:26,259 - INFO - Recipe from recipe page 689.https://www.loveandlemons.com/pistachio-cranberry-cookies/
+ Collected
+2020-12-26 12:10:28,453 - INFO - Recipe from recipe page 690.https://www.loveandlemons.com/farmhouse-farro-salad/
+ Collected
+2020-12-26 12:10:30,680 - INFO - Recipe from recipe page 691.https://www.loveandlemons.com/cauliflower-mashed-potatoes/
+ Collected
+2020-12-26 12:10:32,623 - INFO - Recipe from recipe page 692.https://www.loveandlemons.com/pear-crisp/
+ Collected
+2020-12-26 12:10:34,738 - INFO - Recipe from recipe page 693.https://www.loveandlemons.com/shredded-brussels-sprout-apple-salad/
+ Collected
+2020-12-26 12:10:36,974 - INFO - Recipe from recipe page 694.https://www.loveandlemons.com/forbidden-rice-pumpkin-salad/
+ Collected
+2020-12-26 12:10:39,677 - INFO - Recipe from recipe page 695.https://www.loveandlemons.com/roasted-spaghetti-squash-w-chickpeas-kale/
+ Collected
+2020-12-26 12:10:41,855 - INFO - Recipe from recipe page 696.https://www.loveandlemons.com/pumpkin-hummus-quesadillas/
+ Collected
+2020-12-26 12:10:44,319 - INFO - Recipe from recipe page 697.https://www.loveandlemons.com/gluten-free-pumpkin-pancakes/
+ Collected
+2020-12-26 12:10:46,316 - INFO - Recipe from recipe page 698.https://www.loveandlemons.com/harissa-spiced-fall-veggie-pitas/
+ Collected
+2020-12-26 12:10:48,393 - INFO - Recipe from recipe page 699.https://www.loveandlemons.com/butternut-pasta-walnuts-sage/
+ Collected
+2020-12-26 12:10:50,776 - INFO - Recipe from recipe page 700.https://www.loveandlemons.com/cinnamon-apple-tart-cherry-crumble/
+ Collected
+2020-12-26 12:10:52,680 - INFO - Recipe from recipe page 701.https://www.loveandlemons.com/tea-tails-celestial-tea-tour/
+ Collected
+2020-12-26 12:10:54,619 - INFO - Recipe from recipe page 702.https://www.loveandlemons.com/butternut-squash-burrito-bowls/
+ Collected
+2020-12-26 12:10:56,570 - INFO - Recipe from recipe page 703.https://www.loveandlemons.com/ginger-apple-pumpkin-soup/
+ Collected
+2020-12-26 12:10:58,865 - INFO - Recipe from recipe page 704.https://www.loveandlemons.com/chocolate-pbj-cups/
+ Collected
+2020-12-26 12:11:00,907 - INFO - Recipe from recipe page 705.https://www.loveandlemons.com/fig-arugula-pistachio-pesto-salad/
+ Collected
+2020-12-26 12:11:03,005 - INFO - Recipe from recipe page 706.https://www.loveandlemons.com/roasted-chickpea-ratatouille/
+ Collected
+2020-12-26 12:11:05,217 - INFO - Recipe from recipe page 707.https://www.loveandlemons.com/gluten-free-blueberry-banana-muffins/
+ Collected
+2020-12-26 12:11:07,444 - INFO - Recipe from recipe page 708.https://www.loveandlemons.com/butternut-squash-quinoa-salad-w-tart-cherries/
+ Collected
+2020-12-26 12:11:09,732 - INFO - Recipe from recipe page 709.https://www.loveandlemons.com/wheat-vegan-waffles/
+ Collected
+2020-12-26 12:11:11,889 - INFO - Recipe from recipe page 710.https://www.loveandlemons.com/grilled-eggplant-pesto-sandwiches/
+ Collected
+2020-12-26 12:11:13,923 - INFO - Recipe from recipe page 711.https://www.loveandlemons.com/healthy-granola/
+ Collected
+2020-12-26 12:11:17,347 - INFO - Recipe from recipe page 712.https://www.loveandlemons.com/tart-cherry-mint-iced-tea/
+ Collected
+2020-12-26 12:11:19,575 - INFO - Recipe from recipe page 713.https://www.loveandlemons.com/soba-noodles-shishito-peppers-avocado/
+ Collected
+2020-12-26 12:11:21,738 - INFO - Recipe from recipe page 714.https://www.loveandlemons.com/portobello-mushroom-dogs/
+ Collected
+2020-12-26 12:11:23,766 - INFO - Recipe from recipe page 715.https://www.loveandlemons.com/zucchini-casserole/
+ Collected
+2020-12-26 12:11:25,767 - INFO - Recipe from recipe page 716.https://www.loveandlemons.com/spicy-sweet-potato-tostadas/
+ Collected
+2020-12-26 12:11:27,885 - INFO - Recipe from recipe page 717.https://www.loveandlemons.com/heirloom-tomato-suncheese-toasts/
+ Collected
+2020-12-26 12:11:29,845 - INFO - Recipe from recipe page 718.https://www.loveandlemons.com/peach-jam/
+ Collected
+2020-12-26 12:11:32,117 - INFO - Recipe from recipe page 719.https://www.loveandlemons.com/frozen-yogurt-recipe/
+ Collected
+2020-12-26 12:11:33,963 - INFO - Recipe from recipe page 720.https://www.loveandlemons.com/watermelon-st-germain-cocktails/
+ Collected
+2020-12-26 12:11:35,917 - INFO - Recipe from recipe page 721.https://www.loveandlemons.com/gluten-free-fig-ricotta-flatbread-pizza/
+ Collected
+2020-12-26 12:11:38,122 - INFO - Recipe from recipe page 722.https://www.loveandlemons.com/lemony-summer-squash-orecchiette/
+ Collected
+2020-12-26 12:11:40,121 - INFO - Recipe from recipe page 723.https://www.loveandlemons.com/wine-ey-peaches-cream/
+ Collected
+2020-12-26 12:11:42,328 - INFO - Recipe from recipe page 724.https://www.loveandlemons.com/peach-sangria/
+ Collected
+2020-12-26 12:11:44,558 - INFO - Recipe from recipe page 725.https://www.loveandlemons.com/sweet-potato-avocado-salad/
+ Collected
+2020-12-26 12:11:46,457 - INFO - Recipe from recipe page 726.https://www.loveandlemons.com/peach-salad-mint-pistachios/
+ Collected
+2020-12-26 12:11:48,604 - INFO - No ingredients or INSTRUCTIONS on recipe page 727. https://www.loveandlemons.com/peach-crumble-summery-links/
+
+2020-12-26 12:11:48,604 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:11:48,604 - INFO - Recipe from recipe page 727.https://www.loveandlemons.com/peach-crumble-summery-links/
+ Collected
+2020-12-26 12:11:50,528 - INFO - Recipe from recipe page 728.https://www.loveandlemons.com/zucchini-grilled-corn-salad/
+ Collected
+2020-12-26 12:11:52,521 - INFO - Recipe from recipe page 729.https://www.loveandlemons.com/tomato-zucchini-frittata/
+ Collected
+2020-12-26 12:11:54,796 - INFO - Recipe from recipe page 730.https://www.loveandlemons.com/sweet-pepper-panzanella/
+ Collected
+2020-12-26 12:11:56,730 - INFO - Recipe from recipe page 731.https://www.loveandlemons.com/mango-habanero-black-bean-tacos/
+ Collected
+2020-12-26 12:11:58,674 - INFO - Recipe from recipe page 732.https://www.loveandlemons.com/roasted-cherry-tomato-bowls/
+ Collected
+2020-12-26 12:12:00,867 - INFO - Recipe from recipe page 733.https://www.loveandlemons.com/stuffed-peppers-green-sals/
+ Collected
+2020-12-26 12:12:03,198 - INFO - Recipe from recipe page 734.https://www.loveandlemons.com/kale-smoothie/
+ Collected
+2020-12-26 12:12:05,194 - INFO - Recipe from recipe page 735.https://www.loveandlemons.com/orzo-salad/
+ Collected
+2020-12-26 12:12:07,802 - INFO - Recipe from recipe page 736.https://www.loveandlemons.com/fancy-smores-whole-foods-giveaway/
+ Collected
+2020-12-26 12:12:09,882 - INFO - Recipe from recipe page 737.https://www.loveandlemons.com/gluten-free-skillet-cookies/
+ Collected
+2020-12-26 12:12:11,818 - INFO - Recipe from recipe page 738.https://www.loveandlemons.com/heirloom-caprese-w-mint-pesto/
+ Collected
+2020-12-26 12:12:13,966 - INFO - Recipe from recipe page 739.https://www.loveandlemons.com/vanilla-peach-pops/
+ Collected
+2020-12-26 12:12:15,886 - INFO - Recipe from recipe page 740.https://www.loveandlemons.com/feta-harissa-fattoush-salad/
+ Collected
+2020-12-26 12:12:18,108 - INFO - Recipe from recipe page 741.https://www.loveandlemons.com/tomato-peach-avocado-bruschetta/
+ Collected
+2020-12-26 12:12:20,130 - INFO - Recipe from recipe page 742.https://www.loveandlemons.com/raspberry-polenta-cake/
+ Collected
+2020-12-26 12:12:22,077 - INFO - Recipe from recipe page 743.https://www.loveandlemons.com/vegan-peanut-butter-bourbon-milkshake/
+ Collected
+2020-12-26 12:12:24,005 - INFO - Recipe from recipe page 744.https://www.loveandlemons.com/mango-smoothie/
+ Collected
+2020-12-26 12:12:26,569 - INFO - Recipe from recipe page 745.https://www.loveandlemons.com/asian-lettuce-wraps/
+ Collected
+2020-12-26 12:12:29,102 - INFO - Recipe from recipe page 746.https://www.loveandlemons.com/grilled-polenta-zucchini-salsa/
+ Collected
+2020-12-26 12:12:31,601 - INFO - Recipe from recipe page 747.https://www.loveandlemons.com/any-vegetable-vinegar-pickles/
+ Collected
+2020-12-26 12:12:33,878 - INFO - Recipe from recipe page 748.https://www.loveandlemons.com/veggie-baked-macaroni/
+ Collected
+2020-12-26 12:12:35,835 - INFO - Recipe from recipe page 749.https://www.loveandlemons.com/arugula-salad-quinoa-apricot-avocado/
+ Collected
+2020-12-26 12:12:38,015 - INFO - Recipe from recipe page 750.https://www.loveandlemons.com/blueberry-smoothie/
+ Collected
+2020-12-26 12:12:39,982 - INFO - Recipe from recipe page 751.https://www.loveandlemons.com/blackberry-lemon-zest-crostini/
+ Collected
+2020-12-26 12:12:42,129 - INFO - Recipe from recipe page 752.https://www.loveandlemons.com/vegan-soft-baked-pretzels/
+ Collected
+2020-12-26 12:12:43,974 - INFO - Recipe from recipe page 753.https://www.loveandlemons.com/spring-quinoa-bowls/
+ Collected
+2020-12-26 12:12:45,879 - INFO - Recipe from recipe page 754.https://www.loveandlemons.com/pickled-chard-stems/
+ Collected
+2020-12-26 12:12:47,808 - INFO - Recipe from recipe page 755.https://www.loveandlemons.com/sambal-salsa-black-bean-tacos/
+ Collected
+2020-12-26 12:12:49,888 - INFO - Recipe from recipe page 756.https://www.loveandlemons.com/almond-ella-spread/
+ Collected
+2020-12-26 12:12:53,059 - INFO - Recipe from recipe page 757.https://www.loveandlemons.com/vegan-carrot-cake/
+ Collected
+2020-12-26 12:12:55,134 - INFO - Recipe from recipe page 758.https://www.loveandlemons.com/kohlrabi-noodle-salad/
+ Collected
+2020-12-26 12:12:57,085 - INFO - Recipe from recipe page 759.https://www.loveandlemons.com/dukkah-spiced-yogurt-dip/
+ Collected
+2020-12-26 12:12:59,009 - INFO - Recipe from recipe page 760.https://www.loveandlemons.com/romanesco-chickpea-salad/
+ Collected
+2020-12-26 12:13:00,987 - INFO - Recipe from recipe page 761.https://www.loveandlemons.com/spring-onion-asparagus-fritatta/
+ Collected
+2020-12-26 12:13:03,350 - INFO - Recipe from recipe page 762.https://www.loveandlemons.com/spring-watercress-salad/
+ Collected
+2020-12-26 12:13:05,334 - INFO - Recipe from recipe page 763.https://www.loveandlemons.com/hazelnut-tahini-pasta/
+ Collected
+2020-12-26 12:13:07,437 - INFO - Recipe from recipe page 764.https://www.loveandlemons.com/rainbow-chard-and-wheatberries/
+ Collected
+2020-12-26 12:13:09,431 - INFO - Recipe from recipe page 765.https://www.loveandlemons.com/ginger-kombucha-cocktails/
+ Collected
+2020-12-26 12:13:11,608 - INFO - Recipe from recipe page 766.https://www.loveandlemons.com/avocado-almondaise-tartines/
+ Collected
+2020-12-26 12:13:13,561 - INFO - Recipe from recipe page 767.https://www.loveandlemons.com/matcha-mint-iced-tea/
+ Collected
+2020-12-26 12:13:15,829 - INFO - Recipe from recipe page 768.https://www.loveandlemons.com/carrot-greens-chimichurri/
+ Collected
+2020-12-26 12:13:17,792 - INFO - Recipe from recipe page 769.https://www.loveandlemons.com/vegan-meyer-lemon-ice-cream/
+ Collected
+2020-12-26 12:13:19,974 - INFO - Recipe from recipe page 770.https://www.loveandlemons.com/pea-tendril-pistachio-pesto/
+ Collected
+2020-12-26 12:13:22,309 - INFO - Recipe from recipe page 771.https://www.loveandlemons.com/aloo-gobi/
+ Collected
+2020-12-26 12:13:24,387 - INFO - Recipe from recipe page 772.https://www.loveandlemons.com/matcha-latte/
+ Collected
+2020-12-26 12:13:26,618 - INFO - Recipe from recipe page 773.https://www.loveandlemons.com/shiitake-napa-cabbage-gyoza/
+ Collected
+2020-12-26 12:13:29,145 - INFO - Recipe from recipe page 774.https://www.loveandlemons.com/baked-parsnip-fries/
+ Collected
+2020-12-26 12:13:31,664 - INFO - Recipe from recipe page 775.https://www.loveandlemons.com/quinoa-burger/
+ Collected
+2020-12-26 12:13:33,665 - INFO - Recipe from recipe page 776.https://www.loveandlemons.com/raspberry-crumble-bars/
+ Collected
+2020-12-26 12:13:35,597 - INFO - Recipe from recipe page 777.https://www.loveandlemons.com/ricotta-stuffed-cabbage/
+ Collected
+2020-12-26 12:13:37,686 - INFO - Recipe from recipe page 778.https://www.loveandlemons.com/vegan-stuffed-shells/
+ Collected
+2020-12-26 12:13:39,740 - INFO - Recipe from recipe page 779.https://www.loveandlemons.com/cold-sesame-noodles-kale-shiitakes/
+ Collected
+2020-12-26 12:13:41,989 - INFO - Recipe from recipe page 780.https://www.loveandlemons.com/roasted-broccoli-bowls/
+ Collected
+2020-12-26 12:13:44,156 - INFO - Recipe from recipe page 781.https://www.loveandlemons.com/spiced-cauliflower-couscous/
+ Collected
+2020-12-26 12:13:46,093 - INFO - Recipe from recipe page 782.https://www.loveandlemons.com/chilaquiles-with-avocado/
+ Collected
+2020-12-26 12:13:48,370 - INFO - Recipe from recipe page 783.https://www.loveandlemons.com/sweet-potato-vegetarian-chili/
+ Collected
+2020-12-26 12:13:50,605 - INFO - Recipe from recipe page 784.https://www.loveandlemons.com/avocado-white-bean-spread/
+ Collected
+2020-12-26 12:13:52,696 - INFO - Recipe from recipe page 785.https://www.loveandlemons.com/chickpea-lemon-miso-noodle-soup/
+ Collected
+2020-12-26 12:13:54,897 - INFO - Recipe from recipe page 786.https://www.loveandlemons.com/cauliflower-mac-and-cheese/
+ Collected
+2020-12-26 12:13:56,829 - INFO - Recipe from recipe page 787.https://www.loveandlemons.com/healthy-loaded-sweet-potatoes/
+ Collected
+2020-12-26 12:13:58,719 - INFO - Recipe from recipe page 788.https://www.loveandlemons.com/dried-chile-salsa/
+ Collected
+2020-12-26 12:14:00,872 - INFO - Recipe from recipe page 789.https://www.loveandlemons.com/spicy-black-bean-soup/
+ Collected
+2020-12-26 12:14:03,389 - INFO - Recipe from recipe page 790.https://www.loveandlemons.com/vegan-coffee-cake-muffins/
+ Collected
+2020-12-26 12:14:05,690 - INFO - Recipe from recipe page 791.https://www.loveandlemons.com/brussels-sprout-avocado-salad/
+ Collected
+2020-12-26 12:14:07,915 - INFO - Recipe from recipe page 792.https://www.loveandlemons.com/easy-pita-lunch-ideas/
+ Collected
+2020-12-26 12:14:10,090 - INFO - Recipe from recipe page 793.https://www.loveandlemons.com/peanut-butter-crispy-treats/
+ Collected
+2020-12-26 12:14:12,191 - INFO - Recipe from recipe page 794.https://www.loveandlemons.com/tomato-chickpea-coconut-soup/
+ Collected
+2020-12-26 12:14:14,291 - INFO - Recipe from recipe page 795.https://www.loveandlemons.com/chili-orange-veggie-bowl/
+ Collected
+2020-12-26 12:14:16,242 - INFO - Recipe from recipe page 796.https://www.loveandlemons.com/moonshine-sweet-tea-cupcakes/
+ Collected
+2020-12-26 12:14:20,238 - INFO - Recipe from recipe page 797.https://www.loveandlemons.com/avocado-steamed-buns/
+ Collected
+2020-12-26 12:14:22,300 - INFO - Recipe from recipe page 798.https://www.loveandlemons.com/miso-soba-soup/
+ Collected
+2020-12-26 12:14:24,545 - INFO - Recipe from recipe page 799.https://www.loveandlemons.com/collard-wraps-carrot-hummus/
+ Collected
+2020-12-26 12:14:26,469 - INFO - Recipe from recipe page 800.https://www.loveandlemons.com/superfood-sunshine-smoothies/
+ Collected
+2020-12-26 12:14:28,845 - INFO - Recipe from recipe page 801.https://www.loveandlemons.com/pistachio-goji-berry-granola/
+ Collected
+2020-12-26 12:14:31,870 - INFO - Recipe from recipe page 802.https://www.loveandlemons.com/minty-pomegranate-spritzer/
+ Collected
+2020-12-26 12:14:34,456 - INFO - Recipe from recipe page 803.https://www.loveandlemons.com/coconut-rice-kale-edamame/
+ Collected
+2020-12-26 12:14:36,678 - INFO - Recipe from recipe page 804.https://www.loveandlemons.com/sweet-potato-vegan-alfredo/
+ Collected
+2020-12-26 12:14:38,684 - INFO - Recipe from recipe page 805.https://www.loveandlemons.com/avocado-pomegranate-crostini/
+ Collected
+2020-12-26 12:14:40,786 - INFO - Recipe from recipe page 806.https://www.loveandlemons.com/cornbread-muffins/
+ Collected
+2020-12-26 12:14:42,834 - INFO - Recipe from recipe page 807.https://www.loveandlemons.com/stuffed-acorn-squash-kale-creminis/
+ Collected
+2020-12-26 12:14:45,066 - INFO - Recipe from recipe page 808.https://www.loveandlemons.com/coconut-creamed-spinach/
+ Collected
+2020-12-26 12:14:47,127 - INFO - Recipe from recipe page 809.https://www.loveandlemons.com/skillet-apple-crisp/
+ Collected
+2020-12-26 12:14:49,044 - INFO - Recipe from recipe page 810.https://www.loveandlemons.com/rosemary-roasted-butternut-squash-cauliflower/
+ Collected
+2020-12-26 12:14:51,263 - INFO - Recipe from recipe page 811.https://www.loveandlemons.com/kale-apple-butternut-salad/
+ Collected
+2020-12-26 12:14:54,846 - INFO - Recipe from recipe page 812.https://www.loveandlemons.com/matcha-macarons/
+ Collected
+2020-12-26 12:14:56,817 - INFO - Recipe from recipe page 813.https://www.loveandlemons.com/butternut-squash-noodles-pasta/
+ Collected
+2020-12-26 12:14:58,845 - INFO - Recipe from recipe page 814.https://www.loveandlemons.com/apple-spice-cocktails/
+ Collected
+2020-12-26 12:15:01,151 - INFO - Recipe from recipe page 815.https://www.loveandlemons.com/roasted-carrot-turmeric-soup/
+ Collected
+2020-12-26 12:15:03,262 - INFO - Recipe from recipe page 816.https://www.loveandlemons.com/quinoa-quesadillas/
+ Collected
+2020-12-26 12:15:05,275 - INFO - Recipe from recipe page 817.https://www.loveandlemons.com/sweet-potato-quinoa-cotija-salad/
+ Collected
+2020-12-26 12:15:07,203 - INFO - Recipe from recipe page 818.https://www.loveandlemons.com/vegan-pumpkin-pie/
+ Collected
+2020-12-26 12:15:09,117 - INFO - Recipe from recipe page 819.https://www.loveandlemons.com/mushroom-chickpea-stew/
+ Collected
+2020-12-26 12:15:11,190 - INFO - Recipe from recipe page 820.https://www.loveandlemons.com/eggplant-summer-squash-tian/
+ Collected
+2020-12-26 12:15:13,144 - INFO - Recipe from recipe page 821.https://www.loveandlemons.com/kale-stem-pesto/
+ Collected
+2020-12-26 12:15:15,101 - INFO - Recipe from recipe page 822.https://www.loveandlemons.com/miso-sesame-salad/
+ Collected
+2020-12-26 12:15:17,124 - INFO - Recipe from recipe page 823.https://www.loveandlemons.com/pear-pizza-with-fried-sage/
+ Collected
+2020-12-26 12:15:19,343 - INFO - Recipe from recipe page 824.https://www.loveandlemons.com/easy-peanut-noodles/
+ Collected
+2020-12-26 12:15:21,281 - INFO - Recipe from recipe page 825.https://www.loveandlemons.com/nasu-dengaku-miso-broiled-eggplant/
+ Collected
+2020-12-26 12:15:23,565 - INFO - Recipe from recipe page 826.https://www.loveandlemons.com/sweet-potato-tahini-crostini/
+ Collected
+2020-12-26 12:15:25,547 - INFO - Recipe from recipe page 827.https://www.loveandlemons.com/migas-breakfast-tacos/
+ Collected
+2020-12-26 12:15:27,906 - INFO - Recipe from recipe page 828.https://www.loveandlemons.com/matcha-smoothie-vanilla/
+ Collected
+2020-12-26 12:15:29,705 - INFO - Recipe from recipe page 829.https://www.loveandlemons.com/jalapeno-margaritas/
+ Collected
+2020-12-26 12:15:31,663 - INFO - Recipe from recipe page 830.https://www.loveandlemons.com/waffles/
+ Collected
+2020-12-26 12:15:33,811 - INFO - Recipe from recipe page 831.https://www.loveandlemons.com/grilled-veggies-basil-miso/
+ Collected
+2020-12-26 12:15:36,503 - INFO - Recipe from recipe page 832.https://www.loveandlemons.com/almond-peach-cake/
+ Collected
+2020-12-26 12:15:38,797 - INFO - Recipe from recipe page 833.https://www.loveandlemons.com/tomato-feta-honey/
+ Collected
+2020-12-26 12:15:40,806 - INFO - Recipe from recipe page 834.https://www.loveandlemons.com/mango-sesame-salsa/
+ Collected
+2020-12-26 12:15:42,966 - INFO - Recipe from recipe page 835.https://www.loveandlemons.com/heirloom-tomato-avocado-chickpea-salad/
+ Collected
+2020-12-26 12:15:44,908 - INFO - Recipe from recipe page 836.https://www.loveandlemons.com/caprese-skewers/
+ Collected
+2020-12-26 12:15:46,859 - INFO - Recipe from recipe page 837.https://www.loveandlemons.com/creamy-roasted-tomato-gazpacho/
+ Collected
+2020-12-26 12:15:49,013 - INFO - Recipe from recipe page 838.https://www.loveandlemons.com/veggie-sandwich-olive-pesto/
+ Collected
+2020-12-26 12:15:50,890 - INFO - Recipe from recipe page 839.https://www.loveandlemons.com/blackberry-lemon-cake/
+ Collected
+2020-12-26 12:15:53,395 - INFO - Recipe from recipe page 840.https://www.loveandlemons.com/stuffed-peppers-chipotle-cashew-cream/
+ Collected
+2020-12-26 12:15:55,565 - INFO - Recipe from recipe page 841.https://www.loveandlemons.com/serrano-corn-salsa/
+ Collected
+2020-12-26 12:15:57,630 - INFO - Recipe from recipe page 842.https://www.loveandlemons.com/slow-roasted-tomato-pasta/
+ Collected
+2020-12-26 12:15:59,661 - INFO - Recipe from recipe page 843.https://www.loveandlemons.com/blueberry-banana-pancakes/
+ Collected
+2020-12-26 12:16:01,685 - INFO - Recipe from recipe page 844.https://www.loveandlemons.com/grilled-potato-arugula-salad/
+ Collected
+2020-12-26 12:16:03,647 - INFO - Recipe from recipe page 845.https://www.loveandlemons.com/zucchini-coconut-noodles/
+ Collected
+2020-12-26 12:16:05,586 - INFO - Recipe from recipe page 846.https://www.loveandlemons.com/tequila-lime-fish-tacos/
+ Collected
+2020-12-26 12:16:07,886 - INFO - Recipe from recipe page 847.https://www.loveandlemons.com/roasted-shishito-peppers-2/
+ Collected
+2020-12-26 12:16:10,090 - INFO - Recipe from recipe page 848.https://www.loveandlemons.com/berries-coconut-cream/
+ Collected
+2020-12-26 12:16:12,069 - INFO - Recipe from recipe page 849.https://www.loveandlemons.com/grilled-veggie-skewers/
+ Collected
+2020-12-26 12:16:13,874 - INFO - Recipe from recipe page 850.https://www.loveandlemons.com/grilled-peach-crumble/
+ Collected
+2020-12-26 12:16:15,840 - INFO - Recipe from recipe page 851.https://www.loveandlemons.com/cherry-tomato-basil-salad/
+ Collected
+2020-12-26 12:16:17,928 - INFO - Recipe from recipe page 852.https://www.loveandlemons.com/pea-pesto/
+ Collected
+2020-12-26 12:16:19,926 - INFO - Recipe from recipe page 853.https://www.loveandlemons.com/mexican-street-corn-salad/
+ Collected
+2020-12-26 12:16:21,890 - INFO - Recipe from recipe page 854.https://www.loveandlemons.com/mango-lime-pops/
+ Collected
+2020-12-26 12:16:23,853 - INFO - Recipe from recipe page 855.https://www.loveandlemons.com/cold-cucumber-soba/
+ Collected
+2020-12-26 12:16:25,965 - INFO - Recipe from recipe page 856.https://www.loveandlemons.com/strawberry-balsamic-crostini/
+ Collected
+2020-12-26 12:16:28,221 - INFO - Recipe from recipe page 857.https://www.loveandlemons.com/green-bean-avocado-quinoa-salad/
+ Collected
+2020-12-26 12:16:30,236 - INFO - Recipe from recipe page 858.https://www.loveandlemons.com/shrimp-po-boy-mango/
+ Collected
+2020-12-26 12:16:32,536 - INFO - Recipe from recipe page 859.https://www.loveandlemons.com/farmers-market-salad-arugula-hummus/
+ Collected
+2020-12-26 12:16:35,031 - INFO - Recipe from recipe page 860.https://www.loveandlemons.com/mango-pesto/
+ Collected
+2020-12-26 12:16:37,008 - INFO - Recipe from recipe page 861.https://www.loveandlemons.com/frozen-chocolate-bananas/
+ Collected
+2020-12-26 12:16:39,297 - INFO - Recipe from recipe page 862.https://www.loveandlemons.com/kale-5-dinners/
+ Collected
+2020-12-26 12:16:41,132 - INFO - Recipe from recipe page 863.https://www.loveandlemons.com/pea-chickpea-pasta-salad/
+ Collected
+2020-12-26 12:16:43,290 - INFO - Recipe from recipe page 864.https://www.loveandlemons.com/mango-salsa-waffle/
+ Collected
+2020-12-26 12:16:45,265 - INFO - Recipe from recipe page 865.https://www.loveandlemons.com/gluten-free-almond-coconut-bars/
+ Collected
+2020-12-26 12:16:47,637 - INFO - Recipe from recipe page 866.https://www.loveandlemons.com/creamy-almond-pasta/
+ Collected
+2020-12-26 12:16:49,750 - INFO - Recipe from recipe page 867.https://www.loveandlemons.com/spiced-carrot-chickpea-salad/
+ Collected
+2020-12-26 12:16:51,984 - INFO - Recipe from recipe page 868.https://www.loveandlemons.com/coconut-mint-ice-cream/
+ Collected
+2020-12-26 12:16:54,223 - INFO - Recipe from recipe page 869.https://www.loveandlemons.com/tortilla-soup/
+ Collected
+2020-12-26 12:16:56,101 - INFO - Recipe from recipe page 870.https://www.loveandlemons.com/spring-kale-panzanella/
+ Collected
+2020-12-26 12:16:58,104 - INFO - No ingredients or INSTRUCTIONS on recipe page 871. https://www.loveandlemons.com/mango-fiesta/
+
+2020-12-26 12:16:58,104 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:16:58,104 - INFO - Recipe from recipe page 871.https://www.loveandlemons.com/mango-fiesta/
+ Collected
+2020-12-26 12:17:00,137 - INFO - Recipe from recipe page 872.https://www.loveandlemons.com/rosemary-lemon-pasta/
+ Collected
+2020-12-26 12:17:02,571 - INFO - Recipe from recipe page 873.https://www.loveandlemons.com/lavender-french-75/
+ Collected
+2020-12-26 12:17:04,630 - INFO - Recipe from recipe page 874.https://www.loveandlemons.com/soup-au-pistou/
+ Collected
+2020-12-26 12:17:07,052 - INFO - Recipe from recipe page 875.https://www.loveandlemons.com/vegan-french-toast/
+ Collected
+2020-12-26 12:17:09,078 - INFO - Recipe from recipe page 876.https://www.loveandlemons.com/chocolate-chip-carrot-cookies/
+ Collected
+2020-12-26 12:17:11,005 - INFO - Recipe from recipe page 877.https://www.loveandlemons.com/chickpeas-hunger/
+ Collected
+2020-12-26 12:17:13,040 - INFO - Recipe from recipe page 878.https://www.loveandlemons.com/arugula-scramble-pesto/
+ Collected
+2020-12-26 12:17:14,960 - INFO - Recipe from recipe page 879.https://www.loveandlemons.com/farro-salad-kale-pesto/
+ Collected
+2020-12-26 12:17:16,920 - INFO - Recipe from recipe page 880.https://www.loveandlemons.com/kale-pesto/
+ Collected
+2020-12-26 12:17:18,925 - INFO - Recipe from recipe page 881.https://www.loveandlemons.com/parmigiano-fig-grilled-cheese/
+ Collected
+2020-12-26 12:17:20,799 - INFO - Recipe from recipe page 882.https://www.loveandlemons.com/edamame-hummus-yogurt-radish-crostini/
+ Collected
+2020-12-26 12:17:22,765 - INFO - Recipe from recipe page 883.https://www.loveandlemons.com/mushroom-quinoa-lettuce-wraps/
+ Collected
+2020-12-26 12:17:24,980 - INFO - Recipe from recipe page 884.https://www.loveandlemons.com/nutella-stuffed-french-toast/
+ Collected
+2020-12-26 12:17:27,639 - INFO - Recipe from recipe page 885.https://www.loveandlemons.com/swiss-chard-egg-casserole/
+ Collected
+2020-12-26 12:17:29,828 - INFO - Recipe from recipe page 886.https://www.loveandlemons.com/sweet-potato-brussels-sprout-skillet/
+ Collected
+2020-12-26 12:17:32,057 - INFO - Recipe from recipe page 887.https://www.loveandlemons.com/ginger-citrus-soba/
+ Collected
+2020-12-26 12:17:33,807 - INFO - Recipe from recipe page 888.https://www.loveandlemons.com/irish-ale-cocktail/
+ Collected
+2020-12-26 12:17:35,839 - INFO - Recipe from recipe page 889.https://www.loveandlemons.com/cauliflower-puree-roasted-chickpeas/
+ Collected
+2020-12-26 12:17:37,779 - INFO - Recipe from recipe page 890.https://www.loveandlemons.com/apple-muffins/
+ Collected
+2020-12-26 12:17:39,912 - INFO - Recipe from recipe page 891.https://www.loveandlemons.com/shells-brussels-sprouts/
+ Collected
+2020-12-26 12:17:41,974 - INFO - Recipe from recipe page 892.https://www.loveandlemons.com/walnut-mushroom-veggie-burgers/
+ Collected
+2020-12-26 12:17:44,117 - INFO - Recipe from recipe page 893.https://www.loveandlemons.com/apple-pancake/
+ Collected
+2020-12-26 12:17:46,020 - INFO - Recipe from recipe page 894.https://www.loveandlemons.com/brussels-sprout-sunchoke-salad/
+ Collected
+2020-12-26 12:17:47,922 - INFO - Recipe from recipe page 895.https://www.loveandlemons.com/shrimp-tacos/
+ Collected
+2020-12-26 12:17:49,933 - INFO - Recipe from recipe page 896.https://www.loveandlemons.com/mushroom-wheatberry-sautee/
+ Collected
+2020-12-26 12:17:51,759 - INFO - Recipe from recipe page 897.https://www.loveandlemons.com/mini-ceviche-tacos/
+ Collected
+2020-12-26 12:17:53,717 - INFO - Recipe from recipe page 898.https://www.loveandlemons.com/carrot-muffins-coconut-whip/
+ Collected
+2020-12-26 12:17:55,874 - INFO - Recipe from recipe page 899.https://www.loveandlemons.com/granola-pomegranate-breakfast-bowl/
+ Collected
+2020-12-26 12:17:57,918 - INFO - Recipe from recipe page 900.https://www.loveandlemons.com/steamy-kitchen-mussels/
+ Collected
+2020-12-26 12:18:00,064 - INFO - Recipe from recipe page 901.https://www.loveandlemons.com/blood-orange-bourbon/
+ Collected
+2020-12-26 12:18:02,047 - INFO - Recipe from recipe page 902.https://www.loveandlemons.com/cauliflower-steaks-garlic-yogurt/
+ Collected
+2020-12-26 12:18:04,151 - INFO - Recipe from recipe page 903.https://www.loveandlemons.com/chocolate-almond-smoothie/
+ Collected
+2020-12-26 12:18:06,147 - INFO - Recipe from recipe page 904.https://www.loveandlemons.com/chickpea-saffron-stew/
+ Collected
+2020-12-26 12:18:08,070 - INFO - Recipe from recipe page 905.https://www.loveandlemons.com/miso-citrus-cod-en-papillote/
+ Collected
+2020-12-26 12:18:10,081 - INFO - Recipe from recipe page 906.https://www.loveandlemons.com/butternut-squash-croquettes/
+ Collected
+2020-12-26 12:18:11,848 - INFO - Recipe from recipe page 907.https://www.loveandlemons.com/sesame-orang-kale-salad/
+ Collected
+2020-12-26 12:18:13,834 - INFO - Recipe from recipe page 908.https://www.loveandlemons.com/cauliflower-pasta/
+ Collected
+2020-12-26 12:18:15,892 - INFO - Recipe from recipe page 909.https://www.loveandlemons.com/creamy-cauliflower-leek-soup/
+ Collected
+2020-12-26 12:18:18,104 - INFO - Recipe from recipe page 910.https://www.loveandlemons.com/chickpea-radicchio-wraps/
+ Collected
+2020-12-26 12:18:20,677 - INFO - Recipe from recipe page 911.https://www.loveandlemons.com/chocolate-cupcakes-avocado-frosting-vegan/
+ Collected
+2020-12-26 12:18:22,948 - INFO - Recipe from recipe page 912.https://www.loveandlemons.com/curried-sweet-potato-soup/
+ Collected
+2020-12-26 12:18:25,152 - INFO - Recipe from recipe page 913.https://www.loveandlemons.com/asian-clementine-cabbage-salad/
+ Collected
+2020-12-26 12:18:27,196 - INFO - Recipe from recipe page 914.https://www.loveandlemons.com/pear-fennel-salad/
+ Collected
+2020-12-26 12:18:29,253 - INFO - Recipe from recipe page 915.https://www.loveandlemons.com/endive-appetizers/
+ Collected
+2020-12-26 12:18:31,175 - INFO - Recipe from recipe page 916.https://www.loveandlemons.com/pomegranate-salad/
+ Collected
+2020-12-26 12:18:33,503 - INFO - Recipe from recipe page 917.https://www.loveandlemons.com/pistachio-ice-cream/
+ Collected
+2020-12-26 12:18:35,687 - INFO - Recipe from recipe page 918.https://www.loveandlemons.com/creamy-sundried-tomato-soup/
+ Collected
+2020-12-26 12:18:37,702 - INFO - Recipe from recipe page 919.https://www.loveandlemons.com/shortbread-christmas-cookies-vegan/
+ Collected
+2020-12-26 12:18:39,670 - INFO - Recipe from recipe page 920.https://www.loveandlemons.com/pistachio-coconut-truffles-vegan-gf/
+ Collected
+2020-12-26 12:18:41,752 - INFO - Recipe from recipe page 921.https://www.loveandlemons.com/winter-roasted-kale-salad/
+ Collected
+2020-12-26 12:18:43,795 - INFO - Recipe from recipe page 922.https://www.loveandlemons.com/white-bean-kale-soup/
+ Collected
+2020-12-26 12:18:45,834 - INFO - Recipe from recipe page 923.https://www.loveandlemons.com/spinach-frittata/
+ Collected
+2020-12-26 12:18:48,136 - INFO - Recipe from recipe page 924.https://www.loveandlemons.com/kale-white-bean-crostini/
+ Collected
+2020-12-26 12:18:50,850 - INFO - Recipe from recipe page 925.https://www.loveandlemons.com/butternut-squash-leek-risotto-2/
+ Collected
+2020-12-26 12:18:53,049 - INFO - Recipe from recipe page 926.https://www.loveandlemons.com/kale-egg-avocado-toast/
+ Collected
+2020-12-26 12:18:55,474 - INFO - Recipe from recipe page 927.https://www.loveandlemons.com/fall-panzanella/
+ Collected
+2020-12-26 12:18:57,445 - INFO - Recipe from recipe page 928.https://www.loveandlemons.com/coconut-curry-pumpkin-soup/
+ Collected
+2020-12-26 12:18:59,987 - INFO - Recipe from recipe page 929.https://www.loveandlemons.com/poblano-cornbread-stuffing/
+ Collected
+2020-12-26 12:19:02,264 - INFO - Recipe from recipe page 930.https://www.loveandlemons.com/roasted-delicata-squash-ginger-miso-gravy/
+ Collected
+2020-12-26 12:19:04,307 - INFO - Recipe from recipe page 931.https://www.loveandlemons.com/sweet-potato-surprise/
+ Collected
+2020-12-26 12:19:06,280 - INFO - Recipe from recipe page 932.https://www.loveandlemons.com/pumpkin-bread-pudding/
+ Collected
+2020-12-26 12:19:08,485 - INFO - Recipe from recipe page 933.https://www.loveandlemons.com/roasted-squash-apple-salsa/
+ Collected
+2020-12-26 12:19:10,510 - INFO - Recipe from recipe page 934.https://www.loveandlemons.com/quinoa-stuffed-acorn-squash/
+ Collected
+2020-12-26 12:19:12,618 - INFO - Recipe from recipe page 935.https://www.loveandlemons.com/okra-2/
+ Collected
+2020-12-26 12:19:15,582 - INFO - Recipe from recipe page 936.https://www.loveandlemons.com/roasted-sweet-potato-wheatberry-salad/
+ Collected
+2020-12-26 12:19:18,100 - INFO - Recipe from recipe page 937.https://www.loveandlemons.com/aida-mollenkamp-giveaway/
+ Collected
+2020-12-26 12:19:20,097 - INFO - Recipe from recipe page 938.https://www.loveandlemons.com/ginger-miso-noodles-eggplant/
+ Collected
+2020-12-26 12:19:23,311 - INFO - Recipe from recipe page 939.https://www.loveandlemons.com/roasted-beet-salad/
+ Collected
+2020-12-26 12:19:25,346 - INFO - Recipe from recipe page 940.https://www.loveandlemons.com/sweet-potato-feta-crostini/
+ Collected
+2020-12-26 12:19:27,264 - INFO - Recipe from recipe page 941.https://www.loveandlemons.com/roasted-cauliflower-hazelnut-salad-jerusalem/
+ Collected
+2020-12-26 12:19:29,273 - INFO - Recipe from recipe page 942.https://www.loveandlemons.com/tahini-zucchini-pasta/
+ Collected
+2020-12-26 12:19:31,414 - INFO - Recipe from recipe page 943.https://www.loveandlemons.com/sesame-ginger-chickpea-cakes/
+ Collected
+2020-12-26 12:19:33,154 - INFO - No ingredients or INSTRUCTIONS on recipe page 944. https://www.loveandlemons.com/ottolenghis-tuna-cakes-yuzu-yogurt/
+
+2020-12-26 12:19:33,154 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:19:33,154 - INFO - Recipe from recipe page 944.https://www.loveandlemons.com/ottolenghis-tuna-cakes-yuzu-yogurt/
+ Collected
+2020-12-26 12:19:35,093 - INFO - Recipe from recipe page 945.https://www.loveandlemons.com/ginger-noodles-kale-shiitakes/
+ Collected
+2020-12-26 12:19:37,090 - INFO - Recipe from recipe page 946.https://www.loveandlemons.com/miso-sweet-potato-tacos/
+ Collected
+2020-12-26 12:19:39,066 - INFO - Recipe from recipe page 947.https://www.loveandlemons.com/edamame-dumplings/
+ Collected
+2020-12-26 12:19:41,207 - INFO - Recipe from recipe page 948.https://www.loveandlemons.com/gluten-free-chocolate-chip-cookies/
+ Collected
+2020-12-26 12:19:43,245 - INFO - Recipe from recipe page 949.https://www.loveandlemons.com/green-papaya-salad/
+ Collected
+2020-12-26 12:19:45,155 - INFO - Recipe from recipe page 950.https://www.loveandlemons.com/couscous-stuffed-red-peppers/
+ Collected
+2020-12-26 12:19:47,107 - INFO - Recipe from recipe page 951.https://www.loveandlemons.com/coconut-bread/
+ Collected
+2020-12-26 12:19:49,098 - INFO - Recipe from recipe page 952.https://www.loveandlemons.com/zucchini-noodles-avocado-hemp-sauce/
+ Collected
+2020-12-26 12:19:51,073 - INFO - Recipe from recipe page 953.https://www.loveandlemons.com/peach-pesto-crostini/
+ Collected
+2020-12-26 12:19:53,055 - INFO - Recipe from recipe page 954.https://www.loveandlemons.com/fig-arugula-grain-salad/
+ Collected
+2020-12-26 12:19:55,453 - INFO - Recipe from recipe page 955.https://www.loveandlemons.com/grilled-tofu-tacos-avocado-cream/
+ Collected
+2020-12-26 12:19:57,625 - INFO - Recipe from recipe page 956.https://www.loveandlemons.com/summer-squash-corn-orzo/
+ Collected
+2020-12-26 12:19:59,613 - INFO - Recipe from recipe page 957.https://www.loveandlemons.com/fig-arugula-flatbread/
+ Collected
+2020-12-26 12:20:01,372 - INFO - Recipe from recipe page 958.https://www.loveandlemons.com/roasted-shishito-peppers/
+ Collected
+2020-12-26 12:20:03,152 - INFO - Recipe from recipe page 959.https://www.loveandlemons.com/bell-pepper-chickpea-salad/
+ Collected
+2020-12-26 12:20:04,965 - INFO - Recipe from recipe page 960.https://www.loveandlemons.com/edamame-corn-succotash/
+ Collected
+2020-12-26 12:20:06,894 - INFO - Recipe from recipe page 961.https://www.loveandlemons.com/roasted-tomato-pasta/
+ Collected
+2020-12-26 12:20:08,755 - INFO - Recipe from recipe page 962.https://www.loveandlemons.com/peach-salsa-tostada/
+ Collected
+2020-12-26 12:20:10,859 - INFO - Recipe from recipe page 963.https://www.loveandlemons.com/grilled-peach-salad/
+ Collected
+2020-12-26 12:20:12,885 - INFO - Recipe from recipe page 964.https://www.loveandlemons.com/grilled-panzanella-poached-egg/
+ Collected
+2020-12-26 12:20:14,815 - INFO - Recipe from recipe page 965.https://www.loveandlemons.com/taco-salad-chipotle-lime-dressing/
+ Collected
+2020-12-26 12:20:16,728 - INFO - Recipe from recipe page 966.https://www.loveandlemons.com/fettuccine-sweet-corn-cream-vegan/
+ Collected
+2020-12-26 12:20:18,617 - INFO - Recipe from recipe page 967.https://www.loveandlemons.com/strawberry-quinoa-feta-salad/
+ Collected
+2020-12-26 12:20:20,396 - INFO - Recipe from recipe page 968.https://www.loveandlemons.com/green-bean-potato-corn-salad/
+ Collected
+2020-12-26 12:20:22,309 - INFO - Recipe from recipe page 969.https://www.loveandlemons.com/peach-salsa-recipe-with-mint/
+ Collected
+2020-12-26 12:20:24,251 - INFO - Recipe from recipe page 970.https://www.loveandlemons.com/thai-coconut-cucumber-salad/
+ Collected
+2020-12-26 12:20:26,028 - INFO - No ingredients or INSTRUCTIONS on recipe page 971. https://www.loveandlemons.com/grilled-veggie-sandwich-romesco/
+
+2020-12-26 12:20:26,028 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:20:26,028 - INFO - Recipe from recipe page 971.https://www.loveandlemons.com/grilled-veggie-sandwich-romesco/
+ Collected
+2020-12-26 12:20:27,779 - INFO - Recipe from recipe page 972.https://www.loveandlemons.com/tomato-coconut-shrimp-curry/
+ Collected
+2020-12-26 12:20:29,758 - INFO - Recipe from recipe page 973.https://www.loveandlemons.com/roasted-carrots-cilantro-yogurt/
+ Collected
+2020-12-26 12:20:31,708 - INFO - Recipe from recipe page 974.https://www.loveandlemons.com/orzo-arugula-salad-lemon-thyme/
+ Collected
+2020-12-26 12:20:33,539 - INFO - Recipe from recipe page 975.https://www.loveandlemons.com/sesame-cucumber-salad/
+ Collected
+2020-12-26 12:20:35,517 - INFO - Recipe from recipe page 976.https://www.loveandlemons.com/grilled-veggies-romesco-sauce/
+ Collected
+2020-12-26 12:20:37,559 - INFO - Recipe from recipe page 977.https://www.loveandlemons.com/leek-almond-chickpea-tart/
+ Collected
+2020-12-26 12:20:39,378 - INFO - Recipe from recipe page 978.https://www.loveandlemons.com/mini-bruschettas/
+ Collected
+2020-12-26 12:20:41,444 - INFO - Recipe from recipe page 979.https://www.loveandlemons.com/chickpea-nicoise-salad-roasted-potatoes/
+ Collected
+2020-12-26 12:20:43,199 - INFO - Recipe from recipe page 980.https://www.loveandlemons.com/red-curry-miso-roasted-veggie-bowl/
+ Collected
+2020-12-26 12:20:45,145 - INFO - Recipe from recipe page 981.https://www.loveandlemons.com/grilledpizza/
+ Collected
+2020-12-26 12:20:47,243 - INFO - Recipe from recipe page 982.https://www.loveandlemons.com/black-bean-tacos-zucchini-avocado-salsa/
+ Collected
+2020-12-26 12:20:49,140 - INFO - Recipe from recipe page 983.https://www.loveandlemons.com/bbq-portobello-mushroom-sliders/
+ Collected
+2020-12-26 12:20:51,118 - INFO - Recipe from recipe page 984.https://www.loveandlemons.com/peanut-soba-noodles-edamame-kale/
+ Collected
+2020-12-26 12:20:53,134 - INFO - Recipe from recipe page 985.https://www.loveandlemons.com/brown-rice-penne-pasta-bake-swiss-chard/
+ Collected
+2020-12-26 12:20:55,411 - INFO - Recipe from recipe page 986.https://www.loveandlemons.com/lemon-walnut-quinoa-chickpea-salad/
+ Collected
+2020-12-26 12:20:57,260 - INFO - Recipe from recipe page 987.https://www.loveandlemons.com/lemon-chive-ricotta-bruschetta/
+ Collected
+2020-12-26 12:20:59,349 - INFO - Recipe from recipe page 988.https://www.loveandlemons.com/strawberry-basil-french-toast/
+ Collected
+2020-12-26 12:21:01,643 - INFO - Recipe from recipe page 989.https://www.loveandlemons.com/raw-sushi-sunflower-miso-paste/
+ Collected
+2020-12-26 12:21:03,719 - INFO - Recipe from recipe page 990.https://www.loveandlemons.com/spring-green-pasta-lemon/
+ Collected
+2020-12-26 12:21:05,657 - INFO - Recipe from recipe page 991.https://www.loveandlemons.com/vegan-enchiladas-cashew-poblano-crema/
+ Collected
+2020-12-26 12:21:07,718 - INFO - Recipe from recipe page 992.https://www.loveandlemons.com/black-bean-mango-chard-quesadillas/
+ Collected
+2020-12-26 12:21:09,533 - INFO - Recipe from recipe page 993.https://www.loveandlemons.com/lemon-ey-shaved-fennel-toasts/
+ Collected
+2020-12-26 12:21:11,442 - INFO - Recipe from recipe page 994.https://www.loveandlemons.com/sesame-almond-asparagus-salad/
+ Collected
+2020-12-26 12:21:13,430 - INFO - Recipe from recipe page 995.https://www.loveandlemons.com/green-garabanzo-leek-soup/
+ Collected
+2020-12-26 12:21:15,205 - INFO - No ingredients or INSTRUCTIONS on recipe page 996. https://www.loveandlemons.com/basil-white-bean-puree-post-toast/
+
+2020-12-26 12:21:15,205 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:21:15,206 - INFO - Recipe from recipe page 996.https://www.loveandlemons.com/basil-white-bean-puree-post-toast/
+ Collected
+2020-12-26 12:21:17,157 - INFO - Recipe from recipe page 997.https://www.loveandlemons.com/mini-asian-crab-cakes-avocado-wasabi-sauce/
+ Collected
+2020-12-26 12:21:19,067 - INFO - Recipe from recipe page 998.https://www.loveandlemons.com/spring-lemon-risotto-asparagus-peas/
+ Collected
+2020-12-26 12:21:21,010 - INFO - Recipe from recipe page 999.https://www.loveandlemons.com/mushroom-pesto-grilled-cheese/
+ Collected
+2020-12-26 12:21:23,096 - INFO - Recipe from recipe page 1000.https://www.loveandlemons.com/raspberry-goat-cheese-swirl-brownies/
+ Collected
+2020-12-26 12:21:25,048 - INFO - Recipe from recipe page 1001.https://www.loveandlemons.com/cauliflower-crust-pizza/
+ Collected
+2020-12-26 12:21:27,267 - INFO - Recipe from recipe page 1002.https://www.loveandlemons.com/cauliflower-crust-pizza-2/
+ Collected
+2020-12-26 12:21:29,313 - INFO - Recipe from recipe page 1003.https://www.loveandlemons.com/zucchini-carpaccio-salad/
+ Collected
+2020-12-26 12:21:31,323 - INFO - Recipe from recipe page 1004.https://www.loveandlemons.com/carrot-oat-chocolate-chip-cookies/
+ Collected
+2020-12-26 12:21:33,249 - INFO - Recipe from recipe page 1005.https://www.loveandlemons.com/sweet-potato-veggie-burgers/
+ Collected
+2020-12-26 12:21:35,713 - INFO - Recipe from recipe page 1006.https://www.loveandlemons.com/roasted-broccoli-cranberry-ricotta-salata-salad/
+ Collected
+2020-12-26 12:21:37,512 - INFO - No ingredients or INSTRUCTIONS on recipe page 1007. https://www.loveandlemons.com/avocado-chickpea-salad-sandwich/
+
+2020-12-26 12:21:37,512 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:21:37,512 - INFO - Recipe from recipe page 1007.https://www.loveandlemons.com/avocado-chickpea-salad-sandwich/
+ Collected
+2020-12-26 12:21:39,292 - INFO - Recipe from recipe page 1008.https://www.loveandlemons.com/chocolate-molten-lava-cake/
+ Collected
+2020-12-26 12:21:41,088 - INFO - Recipe from recipe page 1009.https://www.loveandlemons.com/sweet-curry-popcorn/
+ Collected
+2020-12-26 12:21:42,867 - INFO - Recipe from recipe page 1010.https://www.loveandlemons.com/vegan-nachos-cashew-cheese/
+ Collected
+2020-12-26 12:21:44,651 - INFO - Recipe from recipe page 1011.https://www.loveandlemons.com/sweet-potato-pear-soup/
+ Collected
+2020-12-26 12:21:46,641 - INFO - Recipe from recipe page 1012.https://www.loveandlemons.com/healthy-breakfast-ideas/
+ Collected
+2020-12-26 12:21:49,082 - INFO - Recipe from recipe page 1013.https://www.loveandlemons.com/easy-dinner-ideas/
+ Collected
+2020-12-26 12:21:51,068 - INFO - Recipe from recipe page 1014.https://www.loveandlemons.com/healthy-lunch-ideas/
+ Collected
+2020-12-26 12:21:53,044 - INFO - Recipe from recipe page 1015.https://www.loveandlemons.com/brunch-recipes/
+ Collected
+2020-12-26 12:21:55,809 - INFO - Recipe from recipe page 1016.https://www.loveandlemons.com/vegan-recipes/
+ Collected
+2020-12-26 12:21:58,009 - INFO - Recipe from recipe page 1017.https://www.loveandlemons.com/salad-recipes/
+ Collected
+2020-12-26 12:22:00,106 - INFO - Recipe from recipe page 1018.https://www.loveandlemons.com/soup-recipes/
+ Collected
+2020-12-26 12:22:02,048 - INFO - Recipe from recipe page 1019.https://www.loveandlemons.com/appetizers/
+ Collected
+2020-12-26 12:22:04,581 - INFO - Recipe from recipe page 1020.https://www.loveandlemons.com/avocado-recipes/
+ Collected
+2020-12-26 12:22:05,928 - INFO - No ingredients or INSTRUCTIONS on recipe page 1021. https://www.loveandlemons.com/simple-roasted-beets/
+
+2020-12-26 12:22:05,929 - INFO - Links were written into file /home/gal/PycharmProjects/AiDock/data/no_recipe_page.txt finished
+2020-12-26 12:22:05,929 - INFO - Recipe from recipe page 1021.https://www.loveandlemons.com/simple-roasted-beets/
+ Collected
+2020-12-26 12:22:07,947 - INFO - Recipe from recipe page 1022.https://www.loveandlemons.com/roasted-brussels-sprouts/
+ Collected
+2020-12-26 12:22:09,936 - INFO - Recipe from recipe page 1023.https://www.loveandlemons.com/roasted-broccoli/
+ Collected
+2020-12-26 12:22:11,870 - INFO - Recipe from recipe page 1024.https://www.loveandlemons.com/roasted-butternut-squash/
+ Collected
+2020-12-26 12:22:14,175 - INFO - Recipe from recipe page 1025.https://www.loveandlemons.com/how-to-make-cauliflower-rice/
+ Collected
+2020-12-26 12:22:16,866 - INFO - Recipe from recipe page 1026.https://www.loveandlemons.com/how-to-cook-spaghetti-squash/
+ Collected
+2020-12-26 12:22:18,937 - INFO - Recipe from recipe page 1027.https://www.loveandlemons.com/baked-sweet-potato/
+ Collected
+2020-12-26 12:22:20,919 - INFO - Recipe from recipe page 1028.https://www.loveandlemons.com/how-to-cook-brown-rice/
+ Collected
+2020-12-26 12:22:22,791 - INFO - Recipe from recipe page 1029.https://www.loveandlemons.com/how-to-cook-lentils/
+ Collected
+2020-12-26 12:22:25,195 - INFO - Recipe from recipe page 1030.https://www.loveandlemons.com/roasted-chickpeas/
+ Collected
+2020-12-26 12:22:27,283 - INFO - Recipe from recipe page 1031.https://www.loveandlemons.com/farro/
+ Collected
+2020-12-26 12:22:29,227 - INFO - Recipe from recipe page 1032.https://www.loveandlemons.com/how-to-cook-tofu/
+ Collected
+2020-12-26 12:22:31,187 - INFO - Recipe from recipe page 1033.https://www.loveandlemons.com/tempeh/
+ Collected
+2020-12-26 12:22:33,432 - INFO - Recipe from recipe page 1034.https://www.loveandlemons.com/quinoa/
+ Collected
+2020-12-26 12:22:35,501 - INFO - Recipe from recipe page 1035.https://www.loveandlemons.com/zucchini-noodles/
+ Collected
+2020-12-26 12:22:35,505 - INFO - All data from recipes pages was saved into /home/gal/PycharmProjects/AiDock/data/recipes.pkl
+2020-12-26 12:22:35,505 - INFO - Collecting was executed 0:39:43.838937
+2020-12-26 14:19:23,633 - INFO - Recipe from recipe page 1.https://www.loveandlemons.com/spaghetti-bolognese/ Collected

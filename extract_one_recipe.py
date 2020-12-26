@@ -50,7 +50,6 @@ def get_recipe(url_to_get, counter_to_print=1):
         # transform INSTRUCTIONS into string and add into dict
         json_file['INSTRUCTIONS'] = '\n\n'.join(instructions_list)
     logging.info(f'Recipe from recipe page {counter_to_print}.{url_to_get} Collected')
-    # print_json(url_to_get, json_file)  # FOR BASH SCRIPT RUN
     return json_file
 
 

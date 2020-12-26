@@ -15,7 +15,7 @@ def main():
     path_to_all_links = extract_links_to_file()
     stop_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
     total_time = (datetime.datetime.strptime(stop_time, '%H:%M:%S.%f') -
-                  datetime.datetime.strptime(start_time,'%H:%M:%S.%f'))
+                  datetime.datetime.strptime(start_time, '%H:%M:%S.%f'))
     logging.info(f"Collecting all links was executed {total_time} ")
 
     # writing down recipe data from each page

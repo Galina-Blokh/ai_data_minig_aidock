@@ -1,6 +1,7 @@
 import logging
 import os
 import re
+# import tensorflow as tf
 import numpy as np
 import pandas as pd
 from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE
@@ -65,11 +66,11 @@ def load_data_transform_to_set(filename):
 
     # remove duplicates
     unique = np.unique(data, axis=0)
-    logging.info('shape without duplicates'+ str(unique.shape))
+    logging.info('shape without duplicates' + str(unique.shape))
 
     # remove empty string rows(from table)
     unique = np.delete(unique, np.where(unique == ''), axis=0)
-    logging.info('shape without empty string rows'+str(unique.shape))
+    logging.info('shape without empty string rows' + str(unique.shape))
     return pd.DataFrame(unique, columns=['paragraph', 'label'])
 
 
