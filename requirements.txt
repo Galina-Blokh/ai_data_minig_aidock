@@ -1,7 +1,8 @@
 grequests~=0.6.0
 beautifulsoup4~=4.9.3
 bs4==0.0.1
-cssselect==1.1.0
 pandas==1.1.5
 urllib3==1.26.2
-numpy~=1.19.2
+numpy==1.19.3
+spacy==2.3.5
+tensorflow==2.4.0

@@ -1,3 +1,4 @@
+import datetime
 import logging
 import os
 import pickle
@@ -8,6 +9,27 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
+def timeit(func):
+    """The function of time measure
+    :param function
+    :return print into logfile and into console ide
+    __name__ of the function and execution time"""
+
+    def inner1(*args, **kwargs):
+        # storing time before function execution
+        begin = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
+        func(*args, **kwargs)
+        # storing time after function execution
+        end = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
+        total_time = (datetime.datetime.strptime(begin, '%H:%M:%S.%f') -
+                      datetime.datetime.strptime(end, '%H:%M:%S.%f'))
+        # logging.INFO(f"Total time taken in : {func.__name__} {total_time}")
+        print(f"Total time taken in : {func.__name__} {total_time}")
+
+    return inner1
+
+
+@timeit
 def print_json(url_to_get_recipe, json_file):
     """The function receive url_to_get_recipe:str and json_file:dict
     prints the pretty json file format
@@ -21,7 +43,7 @@ def print_json(url_to_get_recipe, json_file):
     print('"' + json_file['INSTRUCTIONS'] + '"')
     print('}\n')
 
-
+@timeit
 def check_dir_path(filename, what_to_do):
     """The function receive filename:txt
     checks is the path exists and creates empty file
@@ -36,19 +58,22 @@ def check_dir_path(filename, what_to_do):
         raise Exception('WTF!!!! Could not open {}'.format(path))
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
-
-def save_data_to_pkl(json_file):
-    """The function receive  a json_file: Dict[str, Union[list, str]] = {}
+@timeit
+def save_data_to_pkl(data_file, file_name=DATA_FILE):
+    """The function receive  a data_file:obj
     checks the path and dumps into the pkl file
-    :return full path of saved file"""
+    :return full path of saved data_file:str"""
 
-    file, path = check_dir_path(DATA_FILE, 'wb')
-    pickle.dump(json_file, file, pickle.HIGHEST_PROTOCOL)
+    file, path = check_dir_path(file_name, 'wb')
+    pickle.dump(data_file, file, pickle.HIGHEST_PROTOCOL)
     file.close()
 
     return path
 
-
+@timeit
 def read_from_pickle(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
+
+
+
