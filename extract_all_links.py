@@ -8,7 +8,6 @@ from utils import check_dir_path, timeit
 logging.basicConfig(filename=config.LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-
 @timeit
 def get_all_links_recipes(url_to_get):
     """The function receives url_to_get:str
@@ -29,7 +28,7 @@ def get_all_links_recipes(url_to_get):
     logging.info(f'Collected {len(recipes_links)} `recipes_links` from recipes page')
     return recipes_links
 
-
+@timeit
 def extract_links_to_file(file_name=config.FILE_LINKS_NAME, url_to_write=config.URL):
     """
     Function receives a file_name:str

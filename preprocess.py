@@ -25,7 +25,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
 @timeit
 def replace_numbers_str(series):
     """
-    replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
+    Replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
     . and : replace with ' zDOT '
     :param series: pandas series of text strings
     :return: series with replaced numbers
@@ -39,7 +39,7 @@ def replace_numbers_str(series):
 @timeit
 def lemmatiz(series):
     """Transform all words to lemma, add tag  -PRON-
-    paramLseries:str
+    param: series:str
     return: series:str"""
     new_series = ' '.join([word.lemma_ for word in nlp(series)])
     return new_series
@@ -145,7 +145,7 @@ def load_data_transform_to_set(filename):
 
 
 @timeit
-def main():
+def main_preprocess():
     # load data
     filename = f'{os.getcwd()}/data/{DATA_FILE}'
     start_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
@@ -156,10 +156,9 @@ def main():
     df['paragraph'] = df.paragraph.apply(replace_numbers_str)
     logging.info('Numbers are replaced by tag')
 
-# TODO preprocess.py", line 156, in main
-# df['paragraph'] = df.paragraph.apply(replace_numbers_str)
-# AttributeError: 'NoneType' object has no attribute 'paragraph'
-
+    # TODO preprocess.py", line 156, in main
+    # df['paragraph'] = df.paragraph.apply(replace_numbers_str)
+    # AttributeError: 'NoneType' object has no attribute 'paragraph'
 
     # this one takes an eternity (lemmatiz)
     df['lemmatiz'] = df.paragraph.apply(lemmatiz)
@@ -194,7 +193,7 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main_preprocess()
 
     # TODO Tokenizer
     # TODO Word2Vec

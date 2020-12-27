@@ -2,32 +2,35 @@ import datetime
 import logging
 import os
 import pickle
-
 from config import DATA_FILE, LOG_FILE
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def timeit(func):
+def timeit(method):
     """The function of time measure
-    :param function
+    :param method:
     :return print into logfile and into console ide
     __name__ of the function and execution time"""
 
-    def inner1(*args, **kwargs):
-        # storing time before function execution
+    def timed(*args, **kw):
         begin = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-        func(*args, **kwargs)
-        # storing time after function execution
+        result = method(*args, **kw)
         end = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-        total_time = (datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f'))
-        logging.info(f"Total time taken in : {func.__name__} {total_time}")
-        print(f"Total time taken in : {func.__name__} {total_time}")
+        if 'log_time' in kw:
+            name = kw.get('log_name', method.__name__.upper())
+            total_time = datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f')
+            kw['log_time'][name] = total_time
+        else:
+            total_time = datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f')
+            logging.info(f"Total time taken in : {method.__name__} {total_time}")
+            print('Total time taken in : {}  {} ms'.format(method.__name__, total_time))
+        return result
 
-    return inner1
+    return timed
 
-
+@timeit
 def print_json(url_to_get_recipe, json_file):
     """The function receive url_to_get_recipe:str and json_file:dict
     prints the pretty json file format
@@ -56,6 +59,7 @@ def check_dir_path(filename, what_to_do):
         raise Exception('WTF!!!! Could not open {}'.format(path))
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
+
 @timeit
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
     """The function receive  a data_file:obj
@@ -68,10 +72,8 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
 
     return path
 
+
 @timeit
 def read_from_pickle(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
-
-
-

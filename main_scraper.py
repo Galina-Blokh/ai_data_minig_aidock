@@ -1,3 +1,4 @@
+import datetime
 import sys
 from extract_one_recipe import *
 from utils import save_data_to_pkl, timeit
@@ -6,8 +7,11 @@ from utils import save_data_to_pkl, timeit
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+
 @timeit
-def main():
+def main_scrapper():
+    start_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
+    logging.info(f"Starting collecting all links...")
     json_file = []
     # extracting all links
 
@@ -23,10 +27,13 @@ def main():
     # save the pkl file
     get_recipes = save_data_to_pkl(json_file)
     logging.info(f'All data from recipes pages was saved into {get_recipes}')
-
-    logging.info(f"Collecting was executed ")
+    stop_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
+    total_time = (datetime.datetime.strptime(stop_time, '%H:%M:%S.%f') -
+                  datetime.datetime.strptime(start_time, '%H:%M:%S.%f'))
+    print(f"Collecting was executed {total_time}")
+    logging.info(f"Collecting was executed {total_time}")
     sys.exit('This is the end...')
 
 
 if __name__ == '__main__':
-    main()
+    main_scrapper()

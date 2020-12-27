@@ -10,7 +10,7 @@ from utils import timeit
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-
+@timeit
 def get_recipe(url_to_get, counter_to_print=1):
     """The function receives url_to_get:str to the one recipe page
     and counter_to_print:int in log
