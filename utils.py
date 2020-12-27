@@ -21,15 +21,13 @@ def timeit(func):
         func(*args, **kwargs)
         # storing time after function execution
         end = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-        total_time = (datetime.datetime.strptime(begin, '%H:%M:%S.%f') -
-                      datetime.datetime.strptime(end, '%H:%M:%S.%f'))
-        # logging.INFO(f"Total time taken in : {func.__name__} {total_time}")
+        total_time = (datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f'))
+        logging.info(f"Total time taken in : {func.__name__} {total_time}")
         print(f"Total time taken in : {func.__name__} {total_time}")
 
     return inner1
 
 
-@timeit
 def print_json(url_to_get_recipe, json_file):
     """The function receive url_to_get_recipe:str and json_file:dict
     prints the pretty json file format
