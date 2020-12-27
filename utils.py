@@ -1,6 +1,5 @@
 import logging
 import pickle
-import psutil
 import time
 import os
 import psutil
@@ -28,8 +27,9 @@ def elapsed_since(start):
 
 def get_process_memory():
     """Function of memory information about the process.
-        :return The "portable" fields( available on all plaforms) are `rss` and `vms`.
+        :return The "portable" fields( available on all platforms) `rss` and `vms`.
         All numbers are expressed in bytes."""
+
     process = psutil.Process(os.getpid())
     mi = process.memory_info()
     return mi.rss, mi.vms
@@ -122,11 +122,14 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     file, path = check_dir_path(file_name, 'wb')
     pickle.dump(data_file, file, pickle.HIGHEST_PROTOCOL)
     file.close()
-
     return path
 
 
 @profile
 def read_from_pickle(filename):
+    """The function receive  a data_file_name:str
+    read from the pkl file
+    :return pkl.load object"""
+
     with open(filename, 'rb') as f:
         return pickle.load(f)
