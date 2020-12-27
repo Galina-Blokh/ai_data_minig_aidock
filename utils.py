@@ -11,40 +11,10 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-# def elapsed_since(start):
-#     return time.strftime("%H:%M:%S", time.gmtime(time.time() - start))
-#
-#
-# def get_process_memory():
-#     process = psutil.Process(os.getpid())
-#     return process.memory_info().rss
-#
-#
-# def profile(func):
-#     """The function of time measure
-#     :param func:
-#     :return print into logfile and into console ide
-#     __name__ of the function and execution time amd memory usage"""
-#     def wrapper(*args, **kwargs):
-#         mem_before = get_process_memory()
-#         start = time.time()
-#         result = func(*args, **kwargs)
-#         elapsed_time = elapsed_since(start)
-#         mem_after = get_process_memory()
-#         print("{}: memory before: {:,}, after: {:,}, consumed: {:,}; exec time: {}".format(
-#             func.__name__,
-#             mem_before, mem_after, mem_after - mem_before,
-#             elapsed_time))
-#         logging.info("{}: memory before: {:,}, after: {:,}, consumed: {:,}; exec time: {}".format(
-#             func.__name__,
-#             mem_before, mem_after, mem_after - mem_before,
-#             elapsed_time))
-#         return result
-#
-#     return wrapper
-
-
 def elapsed_since(start):
+    """time measurement
+    :param start: str - time of start
+    :return diff execution time: str"""
     elapsed = time.time() - start
     if elapsed < 1:
         return str(round(elapsed * 1000, 2)) + "ms"
@@ -57,12 +27,19 @@ def elapsed_since(start):
 
 
 def get_process_memory():
+    """Function of memory information about the process.
+        :return The "portable" fields( available on all plaforms) are `rss` and `vms`.
+        All numbers are expressed in bytes."""
     process = psutil.Process(os.getpid())
     mi = process.memory_info()
     return mi.rss, mi.vms
 
 
 def format_bytes(bytes):
+    """Function to transform bytes into B,kB,Mb,Gb
+    :param bytes:int
+    :return str with transformed bytes """
+
     if abs(bytes) < 1000:
         return str(bytes) + "B"
     elif abs(bytes) < 1e6:
@@ -74,7 +51,13 @@ def format_bytes(bytes):
 
 
 def profile(func, *args, **kwargs):
-    """ source link: https://stackoverflow.com/questions/552744/how-do-i-profile-memory-usage-in-python"""
+    """The function of time measure
+    :param func:
+    :return print into logfile and into console ide
+    __name__ of the function and execution time amd memory usage
+     source link of this function:
+     https://stackoverflow.com/questions/552744/how-do-i-profile-memory-usage-in-python"""
+
     def wrapper(*args, **kwargs):
         rss_before, vms_before = get_process_memory()
         start = time.time()
@@ -86,6 +69,11 @@ def profile(func, *args, **kwargs):
                       format_bytes(rss_after - rss_before),
                       format_bytes(vms_after - vms_before),
                       elapsed_time))
+        logging.info(("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
+                      .format("<" + func.__name__ + ">",
+                              format_bytes(rss_after - rss_before),
+                              format_bytes(vms_after - vms_before),
+                              elapsed_time)))
         return result
 
     if inspect.isfunction(func):
