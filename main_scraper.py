@@ -1,22 +1,29 @@
 import datetime
 import sys
+import time
+
 from extract_one_recipe import *
-from utils import save_data_to_pkl, timeit
+from utils import save_data_to_pkl, profile, elapsed_since
 
 #  log-file will be created in the same dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-@timeit
+@profile
 def main_scrapper():
-    start_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-    logging.info(f"Starting collecting all links...")
-    json_file = []
-    # extracting all links
+    start = time.time()
 
+    logging.info(f"Starting collecting all links...")
+    print(f"Starting collecting all links...")
+
+    json_file = []
+
+    # extracting all links
     path_to_all_links = extract_links_to_file()
-    logging.info(f"Collecting all links was executed ")
+    elapsed_time1 = elapsed_since(start)
+    logging.info(f"Collecting all links was executed {elapsed_time1}")
+    print(f"Collecting all links was executed {elapsed_time1}")
 
     # writing down recipe data from each page
     recipe_links = open(path_to_all_links, "r").readlines()
@@ -27,11 +34,9 @@ def main_scrapper():
     # save the pkl file
     get_recipes = save_data_to_pkl(json_file)
     logging.info(f'All data from recipes pages was saved into {get_recipes}')
-    stop_time = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-    total_time = (datetime.datetime.strptime(stop_time, '%H:%M:%S.%f') -
-                  datetime.datetime.strptime(start_time, '%H:%M:%S.%f'))
-    print(f"Collecting was executed {total_time}")
-    logging.info(f"Collecting was executed {total_time}")
+    elapsed_time2 = elapsed_since(start)
+    print(f"Collecting was executed {elapsed_time2}")
+    logging.info(f"Collecting was executed {elapsed_time2}")
     sys.exit('This is the end...')
 
 

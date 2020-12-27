@@ -69,11 +69,11 @@ def profile(func, *args, **kwargs):
                       format_bytes(rss_after - rss_before),
                       format_bytes(vms_after - vms_before),
                       elapsed_time))
-        logging.info(("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
+        logging.info("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
                       .format("<" + func.__name__ + ">",
                               format_bytes(rss_after - rss_before),
                               format_bytes(vms_after - vms_before),
-                              elapsed_time)))
+                              elapsed_time))
         return result
 
     if inspect.isfunction(func):

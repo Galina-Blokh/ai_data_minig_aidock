@@ -10,19 +10,18 @@ import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
 
 # python3 -m spacy download en_core_web_sm
-from utils import save_data_to_pkl, timeit
+from utils import save_data_to_pkl, profile
+from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE
 
 nlp = spacy.load('en_core_web_sm')
 nlp.Defaults.stop_words |= {" f ", " s ", " etc"}
-# import en_core_web_sm
 stop_words = set([w.lower() for w in list(STOP_WORDS)])
-from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-@timeit
+@profile
 def replace_numbers_str(series):
     """
     Replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
@@ -36,7 +35,7 @@ def replace_numbers_str(series):
     return new_series
 
 
-@timeit
+@profile
 def lemmatiz(series):
     """Transform all words to lemma, add tag  -PRON-
     param: series:str
@@ -45,7 +44,7 @@ def lemmatiz(series):
     return new_series
 
 
-@timeit
+@profile
 def have_pron(series):
     """Give the answer is there a pron in the paragraph
     param:series:str
@@ -56,7 +55,7 @@ def have_pron(series):
     return answer
 
 
-@timeit
+@profile
 def remove_punctuation(series):
     """ Remove punctuation from each word, make every word to lower case
     params: series of strings
@@ -66,7 +65,7 @@ def remove_punctuation(series):
     return tokens_punct
 
 
-@timeit
+@profile
 def remove_stop_words(series):
     """Remove stopwords in the series:str and makes words lower case
     param:series:str
@@ -76,7 +75,7 @@ def remove_stop_words(series):
     return new_series
 
 
-@timeit
+@profile
 def count_paragraph_sentences(series):
     """Count number of sentences in the paragraph
         :param series: pandas series of text strings
@@ -87,7 +86,7 @@ def count_paragraph_sentences(series):
     return sent_count
 
 
-@timeit
+@profile
 def num_count(series):
     """Count number of sentences in the paragraph
         :param series: pandas series of text strings
@@ -95,7 +94,7 @@ def num_count(series):
     return series.count('znum')
 
 
-@timeit
+@profile
 def count_words(series):
     """ Count words in each string (paragraph)
     without dots and numbers
@@ -107,7 +106,7 @@ def count_words(series):
     return clean_sent_len
 
 
-@timeit
+@profile
 def load_data_transform_to_set(filename):
     """
     Read from pkl file,transform from dict(str:list(str),str:str)
@@ -144,7 +143,7 @@ def load_data_transform_to_set(filename):
     return pd.DataFrame(unique, columns=['paragraph', 'label'])
 
 
-@timeit
+@profile
 def main_preprocess():
     # load data
     filename = f'{os.getcwd()}/data/{DATA_FILE}'
@@ -155,10 +154,6 @@ def main_preprocess():
     # transform to pandas -> easy to clean
     df['paragraph'] = df.paragraph.apply(replace_numbers_str)
     logging.info('Numbers are replaced by tag')
-
-    # TODO preprocess.py", line 156, in main
-    # df['paragraph'] = df.paragraph.apply(replace_numbers_str)
-    # AttributeError: 'NoneType' object has no attribute 'paragraph'
 
     # this one takes an eternity (lemmatiz)
     df['lemmatiz'] = df.paragraph.apply(lemmatiz)
@@ -197,5 +192,6 @@ if __name__ == '__main__':
 
     # TODO Tokenizer
     # TODO Word2Vec
-    # TODO RNN/LSTM
+    # TODO Embeddings
+    # TODO RNN/LSTM/DNN/CNN/Simple NN
     # TODO chain everything in for_one_link_run.py

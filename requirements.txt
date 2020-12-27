@@ -6,3 +6,4 @@ urllib3==1.26.2
 numpy==1.19.3
 spacy==2.3.5
 tensorflow==2.4.0
+psutil==5.8.0

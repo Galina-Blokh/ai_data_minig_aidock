@@ -5,12 +5,12 @@ from config import BATCHES, EMPTY_LINKS, LOG_FILE
 from extract_all_links import extract_links_to_file
 
 # # log-file will be created in the same dir
-from utils import timeit
+from utils import  profile
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
-@timeit
+@profile
 def get_recipe(url_to_get, counter_to_print=1):
     """The function receives url_to_get:str to the one recipe page
     and counter_to_print:int in log
