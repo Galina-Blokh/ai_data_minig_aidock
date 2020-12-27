@@ -1,36 +1,100 @@
-import datetime
 import logging
-import os
 import pickle
+import psutil
+import time
+import os
+import psutil
+import inspect
 from config import DATA_FILE, LOG_FILE
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-def timeit(method):
-    """The function of time measure
-    :param method:
-    :return print into logfile and into console ide
-    __name__ of the function and execution time"""
+# def elapsed_since(start):
+#     return time.strftime("%H:%M:%S", time.gmtime(time.time() - start))
+#
+#
+# def get_process_memory():
+#     process = psutil.Process(os.getpid())
+#     return process.memory_info().rss
+#
+#
+# def profile(func):
+#     """The function of time measure
+#     :param func:
+#     :return print into logfile and into console ide
+#     __name__ of the function and execution time amd memory usage"""
+#     def wrapper(*args, **kwargs):
+#         mem_before = get_process_memory()
+#         start = time.time()
+#         result = func(*args, **kwargs)
+#         elapsed_time = elapsed_since(start)
+#         mem_after = get_process_memory()
+#         print("{}: memory before: {:,}, after: {:,}, consumed: {:,}; exec time: {}".format(
+#             func.__name__,
+#             mem_before, mem_after, mem_after - mem_before,
+#             elapsed_time))
+#         logging.info("{}: memory before: {:,}, after: {:,}, consumed: {:,}; exec time: {}".format(
+#             func.__name__,
+#             mem_before, mem_after, mem_after - mem_before,
+#             elapsed_time))
+#         return result
+#
+#     return wrapper
 
-    def timed(*args, **kw):
-        begin = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-        result = method(*args, **kw)
-        end = datetime.datetime.now().time().strftime('%H:%M:%S.%f')
-        if 'log_time' in kw:
-            name = kw.get('log_name', method.__name__.upper())
-            total_time = datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f')
-            kw['log_time'][name] = total_time
-        else:
-            total_time = datetime.datetime.strptime(end, '%H:%M:%S.%f') - datetime.datetime.strptime(begin, '%H:%M:%S.%f')
-            logging.info(f"Total time taken in : {method.__name__} {total_time}")
-            print('Total time taken in : {}  {} ms'.format(method.__name__, total_time))
+
+def elapsed_since(start):
+    elapsed = time.time() - start
+    if elapsed < 1:
+        return str(round(elapsed * 1000, 2)) + "ms"
+    if elapsed < 60:
+        return str(round(elapsed, 2)) + "s"
+    if elapsed < 3600:
+        return str(round(elapsed / 60, 2)) + "min"
+    else:
+        return str(round(elapsed / 3600, 2)) + "hrs"
+
+
+def get_process_memory():
+    process = psutil.Process(os.getpid())
+    mi = process.memory_info()
+    return mi.rss, mi.vms
+
+
+def format_bytes(bytes):
+    if abs(bytes) < 1000:
+        return str(bytes) + "B"
+    elif abs(bytes) < 1e6:
+        return str(round(bytes / 1e3, 2)) + "kB"
+    elif abs(bytes) < 1e9:
+        return str(round(bytes / 1e6, 2)) + "MB"
+    else:
+        return str(round(bytes / 1e9, 2)) + "GB"
+
+
+def profile(func, *args, **kwargs):
+    """ source link: https://stackoverflow.com/questions/552744/how-do-i-profile-memory-usage-in-python"""
+    def wrapper(*args, **kwargs):
+        rss_before, vms_before = get_process_memory()
+        start = time.time()
+        result = func(*args, **kwargs)
+        elapsed_time = elapsed_since(start)
+        rss_after, vms_after = get_process_memory()
+        print("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
+              .format("<" + func.__name__ + ">",
+                      format_bytes(rss_after - rss_before),
+                      format_bytes(vms_after - vms_before),
+                      elapsed_time))
         return result
 
-    return timed
+    if inspect.isfunction(func):
+        return wrapper
+    elif inspect.ismethod(func):
+        return wrapper(*args, **kwargs)
 
-@timeit
+
+@profile
 def print_json(url_to_get_recipe, json_file):
     """The function receive url_to_get_recipe:str and json_file:dict
     prints the pretty json file format
@@ -44,7 +108,8 @@ def print_json(url_to_get_recipe, json_file):
     print('"' + json_file['INSTRUCTIONS'] + '"')
     print('}\n')
 
-@timeit
+
+@profile
 def check_dir_path(filename, what_to_do):
     """The function receive filename:txt
     checks is the path exists and creates empty file
@@ -60,7 +125,7 @@ def check_dir_path(filename, what_to_do):
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 
-@timeit
+@profile
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
     """The function receive  a data_file:obj
     checks the path and dumps into the pkl file
@@ -73,7 +138,7 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     return path
 
 
-@timeit
+@profile
 def read_from_pickle(filename):
     with open(filename, 'rb') as f:
         return pickle.load(f)
