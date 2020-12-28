@@ -5,9 +5,12 @@ import os
 import psutil
 import inspect
 from config import DATA_FILE, LOG_FILE
+import tensorflow as tf
+import numpy as np
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
+
 
 
 def elapsed_since(start):
@@ -70,10 +73,10 @@ def profile(func, *args, **kwargs):
                       format_bytes(vms_after - vms_before),
                       elapsed_time))
         logging.info("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
-                      .format("<" + func.__name__ + ">",
-                              format_bytes(rss_after - rss_before),
-                              format_bytes(vms_after - vms_before),
-                              elapsed_time))
+                     .format("<" + func.__name__ + ">",
+                             format_bytes(rss_after - rss_before),
+                             format_bytes(vms_after - vms_before),
+                             elapsed_time))
         return result
 
     if inspect.isfunction(func):
@@ -133,3 +136,60 @@ def read_from_pickle(filename):
 
     with open(filename, 'rb') as f:
         return pickle.load(f)
+
+
+def stratified_split_data(text, label, test_size):
+    """
+    The function shuffles and splits data set into Train and Test sets stratified on label
+    :param text: series
+    :param label: series
+    :param test_size: float
+    :return: (train_data, teat_data): list(ndArray,ndArray)
+    source link: https://stackoverflow.com/questions/57792113/stratify-batch-in-tensorflow-2
+                 https://www.tensorflow.org/api_docs/python/tf/data/Dataset
+    """
+
+    data_size = len(text)
+
+    # Create data
+    X_data = text
+    y_data = label
+    samples1 = np.sum(y_data)
+    logging.info(f'Percentage of 1 = {samples1 / len(y_data)}')
+    print('Percentage of 1 = ', samples1 / len(y_data))
+
+    # Create TensorFlow dataset
+    dataset = tf.data.Dataset.from_tensor_slices((X_data, y_data))
+
+    # Gather data with 0 and 1 labels separately
+    class0_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0],0))
+    class1_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0],1))
+
+    # Shuffle them
+    class0_dataset = class0_dataset.shuffle(data_size)
+    class1_dataset = class1_dataset.shuffle(data_size)
+
+    # Split them
+    class0_test_samples_len = int((data_size - samples1) * test_size)
+    class0_test = class0_dataset.take(class0_test_samples_len)
+    class0_train = class0_dataset.skip(class0_test_samples_len)
+
+    class1_test_samples_len = int(samples1 * test_size)
+    class1_test = class1_dataset.take(class1_test_samples_len)
+    class1_train = class1_dataset.skip(class1_test_samples_len)
+
+    print(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
+    print(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
+    logging.info(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
+    logging.info(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
+
+    # Gather datasets
+    train_dataset = class0_train.concatenate(class1_train).shuffle(data_size)
+    test_dataset = class0_test.concatenate(class1_test).shuffle(data_size)
+
+    print(f'Train dataset size = {len(list(train_dataset))}')
+    print(f'Test dataset size = {len(list(test_dataset))}')
+    logging.info(f'Train dataset size = {len(list(train_dataset))}')
+    logging.info(f'Test dataset size = {len(list(test_dataset))}')
+
+    return train_dataset, test_dataset
