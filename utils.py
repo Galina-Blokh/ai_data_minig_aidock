@@ -12,7 +12,6 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-
 def elapsed_since(start):
     """time measurement
     :param start: str - time of start
@@ -138,6 +137,7 @@ def read_from_pickle(filename):
         return pickle.load(f)
 
 
+@profile
 def stratified_split_data(text, label, test_size):
     """
     The function shuffles and splits data set into Train and Test sets stratified on label
@@ -162,12 +162,12 @@ def stratified_split_data(text, label, test_size):
     dataset = tf.data.Dataset.from_tensor_slices((X_data, y_data))
 
     # Gather data with 0 and 1 labels separately
-    class0_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0],0))
-    class1_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0],1))
+    class0_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0], 0))
+    class1_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0], 1))
 
     # Shuffle them
-    class0_dataset = class0_dataset.shuffle(data_size)
-    class1_dataset = class1_dataset.shuffle(data_size)
+    class0_dataset = class0_dataset.shuffle(data_size,seed=121212)
+    class1_dataset = class1_dataset.shuffle(data_size,seed=121212)
 
     # Split them
     class0_test_samples_len = int((data_size - samples1) * test_size)
@@ -184,8 +184,8 @@ def stratified_split_data(text, label, test_size):
     logging.info(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
 
     # Gather datasets
-    train_dataset = class0_train.concatenate(class1_train).shuffle(data_size)
-    test_dataset = class0_test.concatenate(class1_test).shuffle(data_size)
+    train_dataset = class0_train.concatenate(class1_train).shuffle(data_size,seed=121212)
+    test_dataset = class0_test.concatenate(class1_test).shuffle(data_size,seed=121212)
 
     print(f'Train dataset size = {len(list(train_dataset))}')
     print(f'Test dataset size = {len(list(test_dataset))}')

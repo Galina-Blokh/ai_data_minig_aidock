@@ -6,8 +6,11 @@ import numpy as np
 import pandas as pd
 import spacy
 from spacy.lang.en.stop_words import STOP_WORDS
+from tensorflow.keras.preprocessing.sequence import pad_sequences
+from tensorflow.keras.preprocessing.text import Tokenizer
+
 from utils import save_data_to_pkl, profile, stratified_split_data
-from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE
+from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE
 
 # python3 -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
@@ -18,7 +21,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-@profile
+# @profile
 def from_list_to_str(series):
     """Function to transform series of list(str) to series of string
     param: series:list(str)
@@ -27,7 +30,7 @@ def from_list_to_str(series):
     return ' '.join([words for words in series])
 
 
-@profile
+# @profile
 def replace_numbers_str(series):
     """
     Replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
@@ -41,7 +44,7 @@ def replace_numbers_str(series):
     return new_series
 
 
-@profile
+# @profile
 def lemmatiz(series):
     """Transform all words to lemma, add tag  -PRON-
     param: series:str
@@ -50,7 +53,7 @@ def lemmatiz(series):
     return new_series
 
 
-@profile
+# @profile
 def have_pron(series):
     """Give the answer is there a pron in the paragraph
     param:series:str
@@ -61,7 +64,7 @@ def have_pron(series):
     return answer
 
 
-@profile
+# @profile
 def remove_punctuation(series):
     """ Remove punctuation from each word, make every word to lower case
     params: series of strings
@@ -72,7 +75,7 @@ def remove_punctuation(series):
     return tokens_spaces
 
 
-@profile
+# @profile
 def remove_stop_words(series):
     """Remove stopwords in the series:str and makes words lower case
     param:series:str
@@ -82,7 +85,7 @@ def remove_stop_words(series):
     return new_series
 
 
-@profile
+# @profile
 def count_paragraph_sentences(series):
     """Count number of sentences in the paragraph
         :param series: pandas series of text strings
@@ -93,7 +96,7 @@ def count_paragraph_sentences(series):
     return sent_count
 
 
-@profile
+# @profile
 def num_count(series):
     """Count number of sentences in the paragraph
         :param series: pandas series of text strings
@@ -101,7 +104,7 @@ def num_count(series):
     return series.count('znum')
 
 
-@profile
+# @profile
 def count_words(series):
     """ Count words in each string (paragraph)
     without dots and numbers
@@ -144,7 +147,7 @@ def load_data_transform_to_set(filename):
     logging.info('Shape  of all paragraphs data matrix ' + str(data.shape))
     print('Shape  of all paragraphs data matrix ' + str(data.shape))
 
-    # # remove duplicates
+    # remove duplicates
     unique = np.unique(data.astype(str), axis=0)
     print('Shape without duplicates', unique.shape)
 
@@ -157,7 +160,7 @@ def load_data_transform_to_set(filename):
 
 
 @profile
-def preprocess_clean_data(df):
+def preprocess_clean_data(df, name_to_save):
     """The function replace numbers with the tag, lemmatize, counts prons,
     counts dots, counts numbers and removes stopwords
     saves as pkl file
@@ -192,37 +195,67 @@ def preprocess_clean_data(df):
     data['not_clean_paragraph_len'] = data.paragraph.apply(count_words)
     logging.info('column num_count is created')
 
+    data['label'] = data.label.apply(int)  # if it won't be needed - remove this line (convert list --> int)
+
     data_clean = data[['remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'contains_pron', 'label']]
-    path_to_data = save_data_to_pkl(data_clean, 'data_clean.pkl')
+    path_to_data = save_data_to_pkl(data_clean, f'{name_to_save}_data_clean.pkl')
     print('Count of rows where is pron and it is an ingredient paragraph',
-          f'{len(data_clean.remove_stop_words[(data_clean.label==1)&(data.contains_pron == 1)])}')
+          f'{len(data_clean.remove_stop_words[(data_clean.label == 1) & (data.contains_pron == 1)])}')
     print(f'Clean data is in {path_to_data}')
     logging.info(f'Clean data is in {path_to_data}')
     print(f'The proportion of target variable\n{round(data_clean.label.value_counts() / len(data_clean) * 100, 2)}')
     return data_clean, path_to_data
 
 
+def prep_text(texts, max_sequence_length):
+    """ Create a union train set vocabulary and turn text in set
+    into  padded sequences (word --> num )
+    :param texts: series of prepared strings
+           max_sequence_length: int max len of sentence in series
+    :return ndArray with transformed series of text to int
+            with 0-padding up to max_sequence_length"""
+    # we will use only first most common 1000 words
+    tokenizer = Tokenizer()
+    tokenizer.fit_on_texts(texts)
+
+    # Turn text into  padded sequences (word --> num )
+    text_sequences = tokenizer.texts_to_sequences(texts)
+    return pad_sequences(text_sequences, maxlen=max_sequence_length,
+                         dtype="int32", padding="post", value=0)
+
+
 @profile
 def main_preprocess():
+    """Function preprocess whole data set"""
+
     # load data
-    filename = f'{os.getcwd()}/data/{DATA_FILE}'
+    filename = f'{os.getcwd()}/data/{DATA_FILE}'  # ./data/recipes.pkl'
     print('Data set is loading from ' + str(filename))
     logging.info('Data set is loading from ' + str(filename))
     df = load_data_transform_to_set(filename)  # pd.DataFrame(unique,columns=['paragraph', 'label'])
 
     text = pd.DataFrame(df['paragraph'])
     label = pd.DataFrame(df['label']).astype(int)
-    test_size = 0.2
-    train_dataset, test_dataset = stratified_split_data(text, label, test_size)
-    train_data_clean, train_path_to_data = preprocess_clean_data(train_dataset.as_numpy_iterator())
-    test_data_clean, train_path_to_data = preprocess_clean_data(test_dataset.as_numpy_iterator())
+    test_size = TEST_SIZE  # 0.2 default
+
+    train_dataset, test_dataset = stratified_split_data(text, label, test_size)  # data/train_data_clean.pkl
+    train_data_clean, train_path_to_data = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
+    test_data_clean, train_path_to_data = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
+
+    max_sequence_length = train_data_clean['clean_paragraph_len'].max()  # 121 91-seed 42
+
+    text_train = prep_text(train_data_clean.remove_stop_words, max_sequence_length)
+
+    index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index  # Int64Index([2163], dtype='int64')
+
+    print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},\n{text_train[index_max_len_sent]}')
 
 
 if __name__ == '__main__':
     main_preprocess()
 
-    # TODO Tokenizer
-    # TODO Word2Vec
+    # done Tokenizer
+    # done Word2Vec
     # TODO Embeddings
     # TODO RNN/LSTM/DNN/CNN/Simple NN
     # TODO chain everything in for_one_link_run.py

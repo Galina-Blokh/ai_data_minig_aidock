@@ -1,6 +1,7 @@
 import logging
 
 BATCHES = 20
+TEST_SIZE = 0.2
 LINK_PATTERN = 'https://www.loveandlemons'
 URL = 'https://www.loveandlemons.com/recipes/'
 LOG_FILE = 'recipes_logging.log'
