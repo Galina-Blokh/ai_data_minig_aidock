@@ -5,6 +5,7 @@ import string
 import numpy as np
 import pandas as pd
 import spacy
+# import tensorflow as tf
 from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -164,6 +165,7 @@ def preprocess_clean_data(df, name_to_save):
     """The function replace numbers with the tag, lemmatize, counts prons,
     counts dots, counts numbers and removes stopwords
     saves as pkl file
+    :param name_to_save: str
     :param  df: ndArray
     :return data:pandas df, path_to_data:str"""
 
@@ -207,15 +209,16 @@ def preprocess_clean_data(df, name_to_save):
     return data_clean, path_to_data
 
 
-def prep_text(texts, max_sequence_length):
+def sent2vec(texts, max_sequence_length, vocab_size):
     """ Create a union train set vocabulary and turn text in set
     into  padded sequences (word --> num )
+    :param vocab_size: int lemmas count
+    :param max_sequence_length: int max count words in series sentences
     :param texts: series of prepared strings
-           max_sequence_length: int max len of sentence in series
     :return ndArray with transformed series of text to int
             with 0-padding up to max_sequence_length"""
-    # we will use only first most common 1000 words
-    tokenizer = Tokenizer()
+
+    tokenizer = Tokenizer(num_words=vocab_size)
     tokenizer.fit_on_texts(texts)
 
     # Turn text into  padded sequences (word --> num )
@@ -226,7 +229,10 @@ def prep_text(texts, max_sequence_length):
 
 @profile
 def main_preprocess():
-    """Function preprocess whole data set"""
+    """Function preprocess whole data set,
+    split to train and test,
+    build and train the model,
+    predict on test"""
 
     # load data
     filename = f'{os.getcwd()}/data/{DATA_FILE}'  # ./data/recipes.pkl'
@@ -236,29 +242,43 @@ def main_preprocess():
 
     text = pd.DataFrame(df['paragraph'])
     label = pd.DataFrame(df['label']).astype(int)
-    test_size = TEST_SIZE  # 0.2 default
+    # test_size = 0.2 default it is in config
 
-    train_dataset, test_dataset = stratified_split_data(text, label, test_size)  # data/train_data_clean.pkl
+    # data stratified split
+    train_dataset, test_dataset = stratified_split_data(text, label, TEST_SIZE)  # data/train_data_clean.pkl
+
+    # preprocessing + feature engineering for train and test sets
     train_data_clean, train_path_to_data = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
     test_data_clean, train_path_to_data = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
 
-    max_sequence_length = train_data_clean['clean_paragraph_len'].max()  # 121 91-seed 42
+    # max len sequence count (it is 121 in train - we will use it)
+    max_sequence_length = train_data_clean['clean_paragraph_len'].max()
+    # vocab_size count in train set
+    results = set()
+    train_data_clean.remove_stop_words.str.split().apply(results.update)
+    vocab_size = len(results)
 
-    text_train = prep_text(train_data_clean.remove_stop_words, max_sequence_length)
+    # sent to sequence only for  NLP TRAIN
+    sent2vec_train = sent2vec(train_data_clean.remove_stop_words, max_sequence_length, vocab_size)
+    # for other features train
+    X_meta_train = train_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'contains_pron']]
 
-    index_max_len_sent = train_data_clean[
-        train_data_clean['clean_paragraph_len'] == max_sequence_length].index  # Int64Index([2163], dtype='int64')
+    # for NLP TEST
+    sent2vec_test = sent2vec(test_data_clean.remove_stop_words, max_sequence_length, vocab_size)
+    X_meta_test = test_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'contains_pron']]
 
-    print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
-    print(f'{text_train[index_max_len_sent]}')
-    print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
+    # some print out results
+    # index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index
+    # print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
+    # print(f'{text_train[index_max_len_sent]}')
+    # print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
 
 
 if __name__ == '__main__':
     main_preprocess()
 
     # done Tokenizer
+    # done Embeddings
     # done Word2Vec
-    # TODO Embeddings
-    # TODO RNN/LSTM/DNN/CNN/Simple NN
+    # done RNN/LSTM/DNN/CNN/Simple NN
     # TODO chain everything in for_one_link_run.py
