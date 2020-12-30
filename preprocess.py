@@ -246,9 +246,12 @@ def main_preprocess():
 
     text_train = prep_text(train_data_clean.remove_stop_words, max_sequence_length)
 
-    index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index  # Int64Index([2163], dtype='int64')
+    index_max_len_sent = train_data_clean[
+        train_data_clean['clean_paragraph_len'] == max_sequence_length].index  # Int64Index([2163], dtype='int64')
 
-    print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},\n{text_train[index_max_len_sent]}')
+    print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
+    print(f'{text_train[index_max_len_sent]}')
+    print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
 
 
 if __name__ == '__main__':
