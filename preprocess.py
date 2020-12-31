@@ -5,13 +5,19 @@ import string
 import numpy as np
 import pandas as pd
 import spacy
-# import tensorflow as tf
+import tensorflow
+import matplotlib.pyplot as plt
+
 from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
+from tensorflow.python.keras import Input
+from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
+from tensorflow.python.keras.models import Model
 
 from utils import save_data_to_pkl, profile, stratified_split_data
-from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE
+from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM, BATCH_SIZE, EPOCHS, \
+    MODEL_NAME
 
 # python3 -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
@@ -228,6 +234,38 @@ def sent2vec(texts, max_sequence_length, vocab_size):
 
 
 @profile
+def get_model(sent2vec_train, X_meta_train, results, embedding_dimensions=EMBEDDING_DIM):
+    """The function creates the model for 2 different input data:
+    NLP set and additional features not NLP set
+    Layers: Embedding - Use masking to handle the variable sequence lengths,
+            BiLSTM, concatenation of 2 data types,
+            fully connected layer with activation function "relu",
+            Dropout layer to avoid overfitting,
+            and fully connected layer with activation function "sigmoid"
+            All hyper-parameters as constants are in config.py
+    :params sent2vec_train: ndArray(ndArray(int)) - a set with text vectors
+            X_meta_train: ndArray(int))- a set with non-nlp features
+            results: set{str} - word vocabulary of the train set
+            embedding_dimensions:int hyper-parameter, can be done as = int(len(results)**0.25)
+    :return a model
+    """
+    nlp_input = Input(shape=(sent2vec_train.shape[1],))
+    meta_input = Input(shape=(X_meta_train.shape[1],))
+    emb = Embedding(output_dim=embedding_dimensions,
+                    input_dim=len(results) + 1,
+                    input_length=sent2vec_train.shape[1],
+                    mask_zero=True)(nlp_input)
+    nlp_out = Bidirectional(LSTM(128))(emb)  # 128 #64
+    concat = tensorflow.concat([nlp_out, meta_input], axis=1)
+    classifier = Dense(32, activation='relu')(concat)
+    drop = Dropout(0.2)(classifier)  # 0.5
+    output = Dense(1, activation='sigmoid')(drop)
+    model = Model(inputs=[nlp_input, meta_input], outputs=[output])
+
+    return model
+
+
+@profile
 def main_preprocess():
     """Function preprocess whole data set,
     split to train and test,
@@ -242,36 +280,20 @@ def main_preprocess():
 
     text = pd.DataFrame(df['paragraph'])
     label = pd.DataFrame(df['label']).astype(int)
-    # test_size = 0.2 default it is in config
 
-    # data stratified split
+    # data stratified split test_size = 0.2 default it is in config
     train_dataset, test_dataset = stratified_split_data(text, label, TEST_SIZE)  # data/train_data_clean.pkl
 
     # preprocessing + feature engineering for train and test sets
-    train_data_clean, train_path_to_data = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
-    test_data_clean, train_path_to_data = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
+    train_data_clean, _ = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
+    test_data_clean, _ = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
 
-    # max len sequence count (it is 121 in train - we will use it)
-    max_sequence_length = train_data_clean['clean_paragraph_len'].max()
-    # vocab_size count in train set
-    results = set()
-    train_data_clean.remove_stop_words.str.split().apply(results.update)
-    vocab_size = len(results)
 
-    # sent to sequence only for  NLP TRAIN
-    sent2vec_train = sent2vec(train_data_clean.remove_stop_words, max_sequence_length, vocab_size)
-    # for other features train
-    X_meta_train = train_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'contains_pron']]
-
-    # for NLP TEST
-    sent2vec_test = sent2vec(test_data_clean.remove_stop_words, max_sequence_length, vocab_size)
-    X_meta_test = test_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'contains_pron']]
-
-    # some print out results
-    # index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index
-    # print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
-    # print(f'{text_train[index_max_len_sent]}')
-    # print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
+# some print out results
+# index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index
+# print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
+# print(f'{text_train[index_max_len_sent]}')
+# print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
 
 
 if __name__ == '__main__':
