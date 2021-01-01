@@ -300,18 +300,5 @@ def main_preprocess(filename=DATA_FILE):
     return train_data_clean_path, test_data_clean_path
 
 
-# some print out results
-# index_max_len_sent = train_data_clean[train_data_clean['clean_paragraph_len'] == max_sequence_length].index
-# print(f'The max len of sentence {max_sequence_length} tokens in index {index_max_len_sent},')
-# print(f'{text_train[index_max_len_sent]}')
-# print(train_data_clean.remove_stop_words[train_data_clean['clean_paragraph_len'] == max_sequence_length])
-
-
 if __name__ == '__main__':
     main_preprocess()
-
-    # done Tokenizer
-    # done Embeddings
-    # done Word2Vec
-    # done RNN/LSTM/DNN/CNN/Simple NN
-    # TODO chain everything in for_one_link_run.py

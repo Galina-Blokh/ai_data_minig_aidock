@@ -110,8 +110,8 @@ def check_dir_path(filename, what_to_do):
     try:
         path = '{}/data/{}'.format(os.getcwd(), filename)
         file = open(path, what_to_do)
-    except:
-        raise Exception('WTF!!!! Could not open {}'.format(path))
+    except FileNotFoundError:
+        print('WTF!!!! Could not open {}'.format(path))
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 

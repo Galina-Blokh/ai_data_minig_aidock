@@ -7,6 +7,7 @@ URL = 'https://www.loveandlemons.com/recipes/'
 LOG_FILE = 'recipes_logging.log'
 FILE_LINKS_NAME = 'all_recipes_links.txt'
 EMPTY_LINKS = 'no_recipe_page.txt'
+TEST_LINKS_FILE = 'test_links.txt'
 DATA_FILE = 'recipes.pkl'
 
 # constants  for preprocess  data
@@ -22,7 +23,7 @@ THRESHOLD = 0.5
 EMBEDDING_DIM = 128
 TRAIN_DATA_CLEAN = 'data/train_data_clean.pkl'
 TEST_DATA_CLEAN = 'data/test_data_clean.pkl'
-MODEL_NAME = 'data/lstm_concat.h5'
+MODEL_NAME = '/data/lstm_concat.h5'
 
 MAX_SEQ_LEN = 121
 VOCAB_SIZE = 2200

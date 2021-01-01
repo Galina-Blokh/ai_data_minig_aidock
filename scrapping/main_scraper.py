@@ -1,8 +1,7 @@
-import datetime
 import sys
 import time
 
-from extract_one_recipe import *
+from scrapping.extract_one_recipe import *
 from utils import save_data_to_pkl, profile, elapsed_since
 
 #  log-file will be created in the same dir
@@ -12,6 +11,14 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
 
 @profile
 def main_scrapper():
+    """
+    To extract all links from a page with all recipes,
+    write down collected links into all_links.txt file
+    redact the all_links.txt --> leave only links with no duplicates and pages are with data
+    then read links from file and collect data from each recipe page
+    save collected data into pkl file
+    If you want to continue run the project, then run `model_preprocess/preprocess.py`
+    """
     start = time.time()
 
     logging.info(f"Starting collecting all links...")
@@ -26,6 +33,7 @@ def main_scrapper():
     print(f"Collecting all links was executed {elapsed_time1}")
 
     # writing down recipe data from each page
+    # input('just for reducing links. press enter') #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     recipe_links = open(path_to_all_links, "r").readlines()
     for counter_to_print, link in enumerate(recipe_links):
         one_recipe = get_recipe(link, counter_to_print)
@@ -36,8 +44,8 @@ def main_scrapper():
     logging.info(f'All data from recipes pages was saved into {get_recipes}')
     elapsed_time2 = elapsed_since(start)
     print(f"Collecting was executed {elapsed_time2}")
-    logging.info(f"Collecting was executed {elapsed_time2}")
-    sys.exit('This is the end...')
+    logging.info(f"Collecting was executed {elapsed_time2}\nIf you want to continue, run `model_preprocess/preprocess.py`")
+    sys.exit('This is the end of scraping...\nIf you want to continue, run `model_preprocess/preprocess.py`')
 
 
 if __name__ == '__main__':
