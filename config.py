@@ -20,7 +20,13 @@ BATCH_SIZE = 256  # 64 loss: 0.2981 - accuracy: 0.9498 #256 --> acc0.95 loss0.24
 EPOCHS = 200
 THRESHOLD = 0.5
 EMBEDDING_DIM = 128
+TRAIN_DATA_CLEAN = 'data/train_data_clean.pkl'
+TEST_DATA_CLEAN = 'data/test_data_clean.pkl'
 MODEL_NAME = 'data/lstm_concat.h5'
+
+MAX_SEQ_LEN = 121
+VOCAB_SIZE = 2200
+
 # # log-file will be created in the same dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')

@@ -6,8 +6,6 @@ import numpy as np
 import pandas as pd
 import spacy
 import tensorflow
-import matplotlib.pyplot as plt
-
 from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
@@ -15,9 +13,8 @@ from tensorflow.python.keras import Input
 from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
 from tensorflow.python.keras.models import Model
 
+from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM
 from utils import save_data_to_pkl, profile, stratified_split_data
-from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM, BATCH_SIZE, EPOCHS, \
-    MODEL_NAME
 
 # python3 -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
@@ -45,7 +42,10 @@ def replace_numbers_str(series):
     :param series: pandas series of text strings
     :return: series with replaced numbers
     """
-    new_series1 = re.sub(DIGIT_RX, " zNUM ", series[0].decode('utf-8'))
+    try:
+        new_series1 = re.sub(DIGIT_RX, " zNUM ", series[0].decode('utf-8'))
+    except AttributeError:
+        new_series1 = re.sub(DIGIT_RX, " zNUM ", series)
     new_series2 = re.sub(SYMBOL_RX, ' ', new_series1)
     new_series = re.sub(DOT_RX, " zDOT ", new_series2)
     return new_series
@@ -133,11 +133,17 @@ def load_data_transform_to_set(filename):
     """
 
     # load data
-    df = pd.DataFrame(pd.read_pickle(filename))
+    if type(filename) == str:
+        df = pd.DataFrame(pd.read_pickle(filename))
+        # transform recipe to array
+        recipe_col = df["Recipe"].apply(from_list_to_str).to_numpy()
+    else:
+        df = pd.DataFrame([filename])  # here we got a list(dict())
+        recipe_col = df["Recipe"].to_numpy()
 
-    # transform recipe to array and give a label 1
-    recipe_col = df["Recipe"].apply(from_list_to_str).to_numpy()
     recipe = recipe_col.reshape(-1, 1)
+
+    # and give a label 1
     recipe = np.hstack((recipe, np.ones(len(recipe), int).reshape(-1, 1)))
     logging.info('Recipe transformed to array and give a label 1')
     print('Recipe transformed to array and give a label 1 with shape {}'.format(recipe.shape))
@@ -212,7 +218,7 @@ def preprocess_clean_data(df, name_to_save):
     print(f'Clean data is in {path_to_data}')
     logging.info(f'Clean data is in {path_to_data}')
     print(f'The proportion of target variable\n{round(data_clean.label.value_counts() / len(data_clean) * 100, 2)}')
-    return data_clean, path_to_data
+    return path_to_data
 
 
 def sent2vec(texts, max_sequence_length, vocab_size):
@@ -234,7 +240,8 @@ def sent2vec(texts, max_sequence_length, vocab_size):
 
 
 @profile
-def get_model(sent2vec_train, X_meta_train, results, embedding_dimensions=EMBEDDING_DIM):
+def get_model(sent2vec_train, X_meta_train, results,
+              embedding_dimensions=EMBEDDING_DIM):  # TODO replace it into model_train.py
     """The function creates the model for 2 different input data:
     NLP set and additional features not NLP set
     Layers: Embedding - Use masking to handle the variable sequence lengths,
@@ -266,14 +273,16 @@ def get_model(sent2vec_train, X_meta_train, results, embedding_dimensions=EMBEDD
 
 
 @profile
-def main_preprocess():
-    """Function preprocess whole data set,
-    split to train and test,
-    build and train the model,
-    predict on test"""
+def main_preprocess(filename=DATA_FILE):
+    """Function load the data after scrapping from pkl file
+    transform to data set with column 'paragraph' and 'label',
+    split stratified on label  and preprocess separately train and test sets
+    add new columns with additional features and save to 2 pkl files
+    return: train and test set paths: str
+    """
 
     # load data
-    filename = f'{os.getcwd()}/data/{DATA_FILE}'  # ./data/recipes.pkl'
+    filename = f'{os.getcwd()}/data/{filename}'  # ./data/recipes.pkl'
     print('Data set is loading from ' + str(filename))
     logging.info('Data set is loading from ' + str(filename))
     df = load_data_transform_to_set(filename)  # pd.DataFrame(unique,columns=['paragraph', 'label'])
@@ -285,8 +294,10 @@ def main_preprocess():
     train_dataset, test_dataset = stratified_split_data(text, label, TEST_SIZE)  # data/train_data_clean.pkl
 
     # preprocessing + feature engineering for train and test sets
-    train_data_clean, _ = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
-    test_data_clean, _ = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
+    train_data_clean_path = preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
+    test_data_clean_path = preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
+
+    return train_data_clean_path, test_data_clean_path
 
 
 # some print out results

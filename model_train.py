@@ -1,17 +1,30 @@
 import tensorflow
 import matplotlib.pyplot as plt
 import pandas as pd
-from config import BATCH_SIZE, EPOCHS, MODEL_NAME
+from config import BATCH_SIZE, EPOCHS, MODEL_NAME, TRAIN_DATA_CLEAN, TEST_DATA_CLEAN
 from preprocess import get_model, sent2vec
 
-if __name__ == '__main__':
-    train_data_clean = pd.read_pickle('C:\\Users\\galin\\PycharmProjects\\aiAssignment\\data\\train_data_clean.pkl')
+
+def model_train(train_data_clean_path= TRAIN_DATA_CLEAN, test_data_clean_path=TEST_DATA_CLEAN):
+    """Read train and test data from pkl files
+            count max len sent/sequence
+            count vocabulary size
+            transform data into sequences
+            split data into nlp and meta sets for test and train
+            train the model, evaluate and plot loss vs val_loss
+            save the model into 'data/lstm_concat.h5' file
+    param: train_data_clean_path: str - default = constanta in config.py
+           test_data_clean_path:str - default = constanta in config.py
+    return: void
+    """
+
+    train_data_clean = pd.read_pickle(train_data_clean_path)
     print('in train', round(train_data_clean['label'].value_counts() / len(train_data_clean) * 100, 2))
 
-    test_data_clean = pd.read_pickle('C:\\Users\\galin\\PycharmProjects\\aiAssignment\\data\\test_data_clean.pkl')
+    test_data_clean = pd.read_pickle(test_data_clean_path)
     print('in test', round(test_data_clean['label'].value_counts() / len(test_data_clean) * 100, 2))
 
-    # max len sequence count (it is 121 in train - we will use it)
+    # max len sequence count will be constanta at the end  (it is 121 in train - we will use it)
     max_sequence_length = train_data_clean['clean_paragraph_len'].max()
     print(max_sequence_length)
     # vocab_size count in train set
@@ -59,3 +72,6 @@ if __name__ == '__main__':
 
     concat_biLstm.save(MODEL_NAME)
 
+
+if __name__ == '__main__':
+    model_train()

@@ -140,7 +140,7 @@ def read_from_pickle(filename):
 @profile
 def stratified_split_data(text, label, test_size):
     """
-    The function shuffles and splits data set into Train and Test sets stratified on label
+    The function shuffle and split data set into Train and Test sets stratified on label
     :param text: series
     :param label: series
     :param test_size: float
@@ -166,8 +166,8 @@ def stratified_split_data(text, label, test_size):
     class1_dataset = dataset.filter(lambda x, y: tf.math.equal(y[0], 1))
 
     # Shuffle them
-    class0_dataset = class0_dataset.shuffle(data_size,seed=121212)
-    class1_dataset = class1_dataset.shuffle(data_size,seed=121212)
+    class0_dataset = class0_dataset.shuffle(data_size, seed=121)
+    class1_dataset = class1_dataset.shuffle(data_size, seed=121)
 
     # Split them
     class0_test_samples_len = int((data_size - samples1) * test_size)
@@ -178,15 +178,17 @@ def stratified_split_data(text, label, test_size):
     class1_test = class1_dataset.take(class1_test_samples_len)
     class1_train = class1_dataset.skip(class1_test_samples_len)
 
+    # print out info
     print(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
     print(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
     logging.info(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
     logging.info(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
 
     # Gather datasets
-    train_dataset = class0_train.concatenate(class1_train).shuffle(data_size,seed=121212)
-    test_dataset = class0_test.concatenate(class1_test).shuffle(data_size,seed=121212)
+    train_dataset = class0_train.concatenate(class1_train).shuffle(data_size, seed=121)
+    test_dataset = class0_test.concatenate(class1_test).shuffle(data_size, seed=121)
 
+    # print out info
     print(f'Train dataset size = {len(list(train_dataset))}')
     print(f'Test dataset size = {len(list(test_dataset))}')
     logging.info(f'Train dataset size = {len(list(train_dataset))}')
