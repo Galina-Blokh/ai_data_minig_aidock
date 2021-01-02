@@ -8,12 +8,9 @@ from config import DATA_FILE, LOG_FILE
 import tensorflow as tf
 import numpy as np
 
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
-                    format='%(asctime)s - %(levelname)s - %(message)s')
-
 
 def elapsed_since(start):
-    """time measurement
+    """For time measurement
     :param start: str - time of start
     :return diff execution time: str"""
     elapsed = time.time() - start
@@ -28,9 +25,10 @@ def elapsed_since(start):
 
 
 def get_process_memory():
-    """Function of memory information about the process.
-        :return The "portable" fields( available on all platforms) `rss` and `vms`.
-        All numbers are expressed in bytes."""
+    """
+    Function of memory information about the process.
+    :return The "portable" fields( available on all platforms) `rss` and `vms`.
+            All numbers are expressed in bytes."""
 
     process = psutil.Process(os.getpid())
     mi = process.memory_info()
@@ -53,12 +51,14 @@ def format_bytes(bytes):
 
 
 def profile(func, *args, **kwargs):
-    """The function of time measure
-    :param func:
-    :return print into logfile and into console ide
-    __name__ of the function and execution time amd memory usage
-     source link of this function:
-     https://stackoverflow.com/questions/552744/how-do-i-profile-memory-usage-in-python"""
+    """To  measure time decorator
+    source link of this function:
+     https://stackoverflow.com/questions/552744/how-do-i-profile-memory-usage-in-python
+    :param func
+    :param **kwargs
+    :param *args
+    :return into log file __name__ of the function , execution time amd memory usage
+     """
 
     def wrapper(*args, **kwargs):
         rss_before, vms_before = get_process_memory()
@@ -66,16 +66,11 @@ def profile(func, *args, **kwargs):
         result = func(*args, **kwargs)
         elapsed_time = elapsed_since(start)
         rss_after, vms_after = get_process_memory()
-        print("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
+        logging.info("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
               .format("<" + func.__name__ + ">",
                       format_bytes(rss_after - rss_before),
                       format_bytes(vms_after - vms_before),
                       elapsed_time))
-        logging.info("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
-                     .format("<" + func.__name__ + ">",
-                             format_bytes(rss_after - rss_before),
-                             format_bytes(vms_after - vms_before),
-                             elapsed_time))
         return result
 
     if inspect.isfunction(func):
@@ -84,11 +79,14 @@ def profile(func, *args, **kwargs):
         return wrapper(*args, **kwargs)
 
 
-@profile
+# @profile
 def print_json(url_to_get_recipe, json_file):
-    """The function receive url_to_get_recipe:str and json_file:dict
-    prints the pretty json file format
-    :return void"""
+    """
+    To print to the console json beautiful format
+    :param url_to_get_recipe:str
+    :param json_file:dict
+    :return void
+    """
 
     print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
     for k in json_file['Recipe']:
@@ -99,27 +97,33 @@ def print_json(url_to_get_recipe, json_file):
     print('}\n')
 
 
-@profile
+# @profile
 def check_dir_path(filename, what_to_do):
-    """The function receive filename:txt
-    checks is the path exists and creates empty file
-    :return file and path"""
+    """
+    To checks if the path exists and create empty file
+    :param filename:txt
+    :param what_to_do: str 'w','a', 'r' etc.
+    :return file and path
+    """
     path = ''
-    if not os.path.exists('{}/data'.format(os.getcwd())):
-        os.makedirs('{}/data'.format(os.getcwd()))
+    if not os.path.exists(f'{os.pardir}/data'):
+        os.makedirs(f'{os.pardir}/data')
     try:
-        path = '{}/data/{}'.format(os.getcwd(), filename)
+        path = f'{os.pardir}/data/{filename}'
         file = open(path, what_to_do)
     except FileNotFoundError:
-        print('WTF!!!! Could not open {}'.format(path))
+        logging.info(f'WTF!!!! Could not open {path}')
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 
-@profile
+# @profile
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
-    """The function receive  a data_file:obj
-    checks the path and dumps into the pkl file
-    :return full path of saved data_file:str"""
+    """
+    To checks the path and dumps into the pkl file
+    :param data_file:obj
+    :param file_name: str / default config.DATA_FILE
+    :return full path of saved data_file:str
+    """
 
     file, path = check_dir_path(file_name, 'wb')
     pickle.dump(data_file, file, pickle.HIGHEST_PROTOCOL)
@@ -127,7 +131,7 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     return path
 
 
-@profile
+# @profile
 def read_from_pickle(filename):
     """The function receive  a data_file_name:str
     read from the pkl file
@@ -137,18 +141,18 @@ def read_from_pickle(filename):
         return pickle.load(f)
 
 
-@profile
+# @profile
 def stratified_split_data(text, label, test_size):
     """
     The function shuffle and split data set into Train and Test sets stratified on label
+    source link: https://stackoverflow.com/questions/57792113/stratify-batch-in-tensorflow-2
+                 https://www.tensorflow.org/api_docs/python/tf/data/Dataset
     :param text: series
     :param label: series
     :param test_size: float
     :return: (train_data, teat_data): list(ndArray,ndArray)
-    source link: https://stackoverflow.com/questions/57792113/stratify-batch-in-tensorflow-2
-                 https://www.tensorflow.org/api_docs/python/tf/data/Dataset
-    """
 
+    """
     data_size = len(text)
 
     # Create data
@@ -156,7 +160,6 @@ def stratified_split_data(text, label, test_size):
     y_data = label
     samples1 = np.sum(y_data)
     logging.info(f'Percentage of 1 = {samples1 / len(y_data)}')
-    print('Percentage of 1 = ', samples1 / len(y_data))
 
     # Create TensorFlow dataset
     dataset = tf.data.Dataset.from_tensor_slices((X_data, y_data))
@@ -179,8 +182,6 @@ def stratified_split_data(text, label, test_size):
     class1_train = class1_dataset.skip(class1_test_samples_len)
 
     # print out info
-    print(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
-    print(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
     logging.info(f'Train Class 0 = {len(list(class0_train))} Class 1 = {len(list(class1_train))}')
     logging.info(f'Test Class 0 = {len(list(class0_test))} Class 1 = {len(list(class1_test))}')
 
@@ -189,8 +190,6 @@ def stratified_split_data(text, label, test_size):
     test_dataset = class0_test.concatenate(class1_test).shuffle(data_size, seed=121)
 
     # print out info
-    print(f'Train dataset size = {len(list(train_dataset))}')
-    print(f'Test dataset size = {len(list(test_dataset))}')
     logging.info(f'Train dataset size = {len(list(train_dataset))}')
     logging.info(f'Test dataset size = {len(list(test_dataset))}')
 

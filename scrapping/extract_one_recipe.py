@@ -1,12 +1,14 @@
 import logging
+import os
+
 import grequests
 from bs4 import BeautifulSoup
 from config import BATCHES, EMPTY_LINKS, LOG_FILE
 from scrapping.extract_all_links import extract_links_to_file
 from utils import profile
 
-# log-file will be created in the same dir
-logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+# log-file will be created in the main dir
+logging.basicConfig(filename=os.pardir+LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
@@ -52,7 +54,7 @@ def get_recipe(url_to_get, counter_to_print=1):
         json_file['Recipe'] = ingredients_list
         # transform INSTRUCTIONS into string and add into dict
         json_file['INSTRUCTIONS'] = '\n\n'.join(instructions_list)
-    logging.info(f'Recipe from recipe page {counter_to_print}.{url_to_get} Collected')
+    logging.info(f'Recipe from recipe page {counter_to_print}. {url_to_get} Collected')
     return json_file
 
 
