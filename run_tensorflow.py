@@ -24,12 +24,12 @@ def eval_on_one_page(sent2vec_one_page, X_meta_one_page, y_one_page, model, text
     pred_df = pd.DataFrame(columns=['text', 'pred_label'])
     pred_df['text'] = text
 
-    pred_df['pred_label'] = preds
+    pred_df['proba'] = preds
     pred_df['label'] = y_one_page
     pred_df['label'] = pred_df['label'].apply(lambda x: 'Instructions' if x == 0 else 'Recepie')
-    pred_df['pred_label'] = pred_df['pred_label'].apply(lambda x: 'Recepie' if x > THRESHOLD else 'Instructions')
+    pred_df['pred_label'] = pred_df['proba'].apply(lambda x: 'Recepie' if x > THRESHOLD else 'Instructions')
     logging.info(f'{model}')
-    logging.info(pred_df[['label', 'pred_label']])
+    logging.info(pred_df[['label', 'pred_label','proba']])
 
     score1 = new_model1.evaluate([sent2vec_one_page, X_meta_one_page], y_one_page,
                                  batch_size=BATCH_SIZE, verbose=1)

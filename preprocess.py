@@ -52,7 +52,6 @@ def replace_numbers_str(series):
     return new_series
 
 
-
 # @profile
 def lemmatiz(series):
     """
@@ -237,7 +236,8 @@ def preprocess_clean_data(df, name_to_save):
 
     data['label'] = data.label.apply(int)  # this line (convert list --> int)
 
-    data_clean = data[['remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron', 'label']]
+    data_clean = data[
+        ['remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron', 'label']]
     path_to_data = save_data_to_pkl(data_clean, f'{name_to_save}_data_clean.pkl')
     logging.info(
         f'Count of rows where is pron and it is an ingredient paragraph {len(data_clean.remove_stop_words[(data_clean.label == 1) & (data.contains_pron == 1)])}')
@@ -267,6 +267,23 @@ def sent2vec(texts, max_sequence_length, vocab_size):
                          dtype="int32", padding="post", value=0)
 
 
+def tfidf(texts, vocab_size):
+    """ Create a union train set vocabulary and turn text in set
+    into  padded sequences (word --> num )
+    :param texts: series of prepared strings
+           max_sequence_length: int max len of sentence in series
+    :return ndArray with transformed series of text to arrays of float Tf-IdF coefficients"""
+
+    tokenizer = Tokenizer(num_words=vocab_size)
+    tokenizer.fit_on_texts(texts)
+    #     print('vocab len',vocab_size,len(tokenizer.word_index))
+
+    # Turn text into  padded sequences (word --> num )
+    text_sequences = tokenizer.texts_to_sequences(texts)
+
+    return tokenizer.sequences_to_matrix(text_sequences, mode='tfidf')
+
+
 # @profile
 def get_model(sent2vec_train, X_meta_train, results,
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
@@ -293,7 +310,7 @@ def get_model(sent2vec_train, X_meta_train, results,
                     mask_zero=True)(nlp_input)
     nlp_out = Bidirectional(LSTM(128))(emb)
     concat = tensorflow.concat([nlp_out, meta_input], axis=1)
-    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.001),activation='relu')(concat)
+    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.001), activation='relu')(concat)
     drop = Dropout(0.5)(classifier)
     output = Dense(1, kernel_regularizer=regularizers.l2(0.001), activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])

@@ -100,7 +100,7 @@ def print_json(url_to_get_recipe, json_file):
     print('}\n')
 
 
-# @profile
+@profile
 def check_dir_path(filename, what_to_do):
     """
     To checks if the path exists and create empty file
@@ -119,7 +119,7 @@ def check_dir_path(filename, what_to_do):
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 
-# @profile
+@profile
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
     """
     To checks the path and dumps into the pkl file
@@ -137,7 +137,7 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     return path
 
 
-# @profile
+@profile
 def read_from_pickle(filename):
     """The function receive  a data_file_name:str
     read from the pkl file
@@ -147,7 +147,7 @@ def read_from_pickle(filename):
         return pickle.load(f)
 
 
-# @profile
+@profile
 def stratified_split_data(text, label, test_size):
     """
     The function shuffle and split data set into Train and Test sets stratified on label
