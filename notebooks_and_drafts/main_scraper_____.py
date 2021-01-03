@@ -31,6 +31,7 @@ def main_scrapper():
     logging.info(f"Collecting all links was executed {elapsed_time1}")
 
     # writing down recipe data from each page
+    # input('This stop run just for taking out several links from all_links.txt to test at the end. if you made it press enter') #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     recipe_links = open(path_to_all_links, "r").readlines()
     for counter_to_print, link in enumerate(recipe_links):
         one_recipe = get_recipe(link, counter_to_print)

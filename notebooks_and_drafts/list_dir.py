@@ -11,8 +11,8 @@ from utils import print_json
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 def run_list_dir():
-    f = open(f'{os.getcwd()}/notebook_drafts/test_links.txt', 'r')
-    models_list = glob.glob(f'{os.getcwd()}/data/' + '*.h5')
+    f = open(f'test_links.txt', 'r')
+    models_list = glob.glob(f'{os.pardir}/data/' + '*.h5')
     list_links = [l.strip() for l in f]
     for url in list_links:
         link = url
@@ -30,7 +30,7 @@ def run_list_dir():
 
         # sent to sequence only for  NLP set
         # sent2vec_one_page= sent2vec(one_page_set_clean.remove_stop_words, MAX_SEQ_LEN, VOCAB_SIZE)
-        tf_idf_one_page = tfidf(text, 2263)
+        tf_idf_one_page = tfidf(text, VOCAB_SIZE)
         # for other features set
         X_meta_one_page = one_page_set_clean[
             ['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron']]

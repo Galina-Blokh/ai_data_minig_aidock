@@ -1,5 +1,3 @@
-import logging
-
 # for scraping part
 BATCHES = 20
 LINK_PATTERN = 'https://www.loveandlemons'
@@ -15,11 +13,11 @@ DIGIT_RX = "(\d+([\.|,]\d+)?[\w]*[\s|-])|[^A-Za-z\,()\.'\-: ]{1,7}"
 SYMBOL_RX = "[/(/)\-/*/,]|[^ -~]"
 DOT_RX = "\.{1,4}|\:"
 
-# constants for model training
+# for model , preprocess, training
 TEST_SIZE = 0.2
 BATCH_SIZE = 128
 EPOCHS = 200
-THRESHOLD = 0.13
+THRESHOLD = 0.5
 EMBEDDING_DIM = 128
 TRAIN_DATA_CLEAN = '/data/train_data_clean.pkl'
 TEST_DATA_CLEAN = '/data/test_data_clean.pkl'

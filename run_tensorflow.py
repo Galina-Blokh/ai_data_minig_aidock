@@ -11,9 +11,9 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
 
 
 @profile
-def eval_on_one_page(sent2vec_one_page, X_meta_one_page, y_one_page, model, text):
+def eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text):
     """Load model from file and evaluate on data from one page
-    :param sent2vec_one_page : ndArray,
+    :param tfidf_one_page : ndArray,
     :param X_meta_one_page: ndArray,
     :param y_one_page: ndArray,
     :param model:str - path to the model
@@ -21,7 +21,7 @@ def eval_on_one_page(sent2vec_one_page, X_meta_one_page, y_one_page, model, text
     """
 
     new_model1 = tensorflow.keras.models.load_model(model)
-    preds = new_model1.predict([sent2vec_one_page, X_meta_one_page])
+    preds = new_model1.predict([tfidf_one_page, X_meta_one_page])
     pred_df = pd.DataFrame(columns=['text', 'pred_label'])
     pred_df['text'] = text
 
@@ -32,8 +32,11 @@ def eval_on_one_page(sent2vec_one_page, X_meta_one_page, y_one_page, model, text
     logging.info(f'{model}')
     logging.info(pred_df[['label', 'pred_label','proba']])
 
-    score1 = new_model1.evaluate([sent2vec_one_page, X_meta_one_page], y_one_page,
+    score = new_model1.evaluate([tfidf_one_page, X_meta_one_page], y_one_page,
                                  batch_size=BATCH_SIZE, verbose=1)
 
-    logging.info(f'{model} Loss score : {round(score1[0], 2)}')
-    logging.info(f'{model} Accuracy/recall Evaluation : {round(score1[1], 2)}')
+    logging.info(f'Model Loss score: {round(score[0], 2)}')
+    logging.info(f'Model Recall score: {round(score[1], 2)}')
+    logging.info(f'Model Precision score: {round(score[2], 2)}')
+    logging.info(f'Model Accuracy Evaluation : {round(score[3], 2)}')
+    logging.info(f'Model AUC Evaluation : {round(score[4], 2)}')

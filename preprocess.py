@@ -247,6 +247,7 @@ def preprocess_clean_data(df, name_to_save):
         f'The proportion of target variable\n{round(data_clean.label.value_counts() / len(data_clean) * 100, 2)}')
     return path_to_data
 
+
 @profile
 def sent2vec(texts, max_sequence_length, vocab_size):
     """
@@ -265,6 +266,7 @@ def sent2vec(texts, max_sequence_length, vocab_size):
     text_sequences = tokenizer.texts_to_sequences(texts)
     return pad_sequences(text_sequences, maxlen=max_sequence_length,
                          dtype="int32", padding="post", value=0)
+
 
 @profile
 def tfidf(texts, vocab_size):
@@ -285,34 +287,41 @@ def tfidf(texts, vocab_size):
 
 
 @profile
-def get_model(sent2vec_train, X_meta_train, results,
+def get_model(tf_idf_train, X_meta_train, results,
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
     """
     The function creates the model for 2 different input data:
     NLP set and additional features not NLP set
-    Layers: Embedding - Use masking to handle the variable sequence lengths,
+    Layers: Embedding - TFIDF MATRIX Use masking to handle the variable sequence lengths,
             BiLSTM, concatenation of 2 data types,
             Dense/fully connected layer with activation function "relu",
             Dropout layer to avoid overfitting,
             Dense/fully connected layer with activation function "sigmoid"
             All hyper-parameters as constants are in config.py
-    :params sent2vec_train: ndArray(ndArray(int)) - a set with text vectors
+    :params tf_idf_train: ndArray(ndArray(int)) - a set with tfidf vectors
     :params X_meta_train: ndArray(int))- a set with non-nlp features
-    :params results: set{str} - word vocabulary of the train set
+    :params results: set{str} - word vocabulary of the train set (config.VOCAB_SIZE=2263)
     :params embedding_dimensions:int hyper-parameter, can be done as = int(len(results)**0.25)
     :return a model
     """
-    nlp_input = Input(shape=(sent2vec_train.shape[1],))
+    nlp_input = Input(shape=(tf_idf_train.shape[1],))
+
     meta_input = Input(shape=(X_meta_train.shape[1],))
+
     emb = Embedding(output_dim=embedding_dimensions,
                     input_dim=len(results) + 1,
-                    input_length=sent2vec_train.shape[1],
+                    input_length=tf_idf_train.shape[1],
                     mask_zero=True)(nlp_input)
-    nlp_out = Bidirectional(LSTM(128))(emb)
+
+    nlp_out = LSTM(128)(emb)
+
     concat = tensorflow.concat([nlp_out, meta_input], axis=1)
-    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.001), activation='relu')(concat)
-    drop = Dropout(0.5)(classifier)
-    output = Dense(1, kernel_regularizer=regularizers.l2(0.001), activation='sigmoid')(drop)
+
+    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.005), activation='relu')(concat)
+
+    drop = Dropout(0.2)(classifier)
+
+    output = Dense(1, kernel_regularizer=regularizers.l2(0.005), activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])
 
     return model
