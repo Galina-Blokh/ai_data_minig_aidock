@@ -10,9 +10,7 @@ from utils import print_json
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
-
-if __name__ == '__main__':
-
+def run_list_dir():
     f = open(f'{os.getcwd()}/notebook_drafts/test_links.txt', 'r')
     models_list = glob.glob(f'{os.getcwd()}/data/' + '*.h5')
     list_links = [l.strip() for l in f]
@@ -28,17 +26,22 @@ if __name__ == '__main__':
         text = df['paragraph']
 
         one_page_data_path = preprocess_clean_data(df, 'one_page')
-        one_page_set_clean  = pd.read_pickle(one_page_data_path)
+        one_page_set_clean = pd.read_pickle(one_page_data_path)
 
         # sent to sequence only for  NLP set
         # sent2vec_one_page= sent2vec(one_page_set_clean.remove_stop_words, MAX_SEQ_LEN, VOCAB_SIZE)
         tf_idf_one_page = tfidf(text, 2263)
         # for other features set
-        X_meta_one_page = one_page_set_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count','contains_pron']]
+        X_meta_one_page = one_page_set_clean[
+            ['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron']]
         y_one_page = one_page_set_clean['label']
         for model in models_list:
             print(link)
-            eval_on_one_page(tf_idf_one_page, X_meta_one_page, y_one_page, model,text)
+            eval_on_one_page(tf_idf_one_page, X_meta_one_page, y_one_page, model, text)
+
+
+if __name__ == '__main__':
+    run_list_dir()
 
 
 

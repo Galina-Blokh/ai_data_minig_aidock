@@ -3,13 +3,14 @@ import logging
 import pandas as pd
 import tensorflow
 from config import BATCH_SIZE, THRESHOLD, LOG_FILE
+from utils import profile
 
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-
+@profile
 def eval_on_one_page(sent2vec_one_page, X_meta_one_page, y_one_page, model, text):
     """Load model from file and evaluate on data from one page
     :param sent2vec_one_page : ndArray,
