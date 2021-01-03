@@ -14,7 +14,7 @@ from tensorflow.python.keras import Input, regularizers
 from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
 from tensorflow.python.keras.models import Model
 from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM
-from utils import save_data_to_pkl, stratified_split_data
+from utils import save_data_to_pkl, stratified_split_data, profile
 
 # python3 -m spacy download en_core_web_sm
 nlp = spacy.load('en_core_web_sm')
@@ -26,7 +26,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-# @profile
+@profile
 def from_list_to_str(series):
     """Function to transform series of list(str) to series of string
     param: series:list(str)
@@ -35,7 +35,7 @@ def from_list_to_str(series):
     return ' '.join([words for words in series])
 
 
-# @profile
+@profile
 def replace_numbers_str(series):
     """
     Replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
@@ -52,7 +52,7 @@ def replace_numbers_str(series):
     return new_series
 
 
-# @profile
+@profile
 def lemmatiz(series):
     """
     Transform all words to lemma, add tag  -PRON-
@@ -64,7 +64,7 @@ def lemmatiz(series):
     return new_series
 
 
-# @profile
+@profile
 def verb_count(series):
     """
     To count how many verbs contains the sentence
@@ -75,7 +75,7 @@ def verb_count(series):
     return new_series
 
 
-# @profile
+@profile
 def have_pron(series):
     """
     Give the answer is there a pron in the paragraph
@@ -88,7 +88,7 @@ def have_pron(series):
     return answer
 
 
-# @profile
+@profile
 def remove_punctuation(series):
     """
     Remove punctuation from each word, make every word to lower case
@@ -112,7 +112,7 @@ def remove_stop_words(series):
     return new_series
 
 
-# @profile
+@profile
 def count_paragraph_sentences(series):
     """
     Count number of sentences in the paragraph
@@ -125,7 +125,7 @@ def count_paragraph_sentences(series):
     return sent_count
 
 
-# @profile
+@profile
 def num_count(series):
     """
     Count number of sentences in the paragraph
@@ -135,7 +135,7 @@ def num_count(series):
     return series.count('znum')
 
 
-# @profile
+@profile
 def count_words(series):
     """
     Count words in each string (paragraph)
@@ -147,7 +147,7 @@ def count_words(series):
     return clean_sent_len
 
 
-# @profile
+@profile
 def load_data_transform_to_set(filename):
     """
     Read from pkl file,transform from dict(str:list(str),str:str)
@@ -192,7 +192,7 @@ def load_data_transform_to_set(filename):
     return pd.DataFrame(unique, columns=['paragraph', 'label'])
 
 
-# @profile
+@profile
 def preprocess_clean_data(df, name_to_save):
     """
     The function replace numbers with the tag, lemmatize, counts prons,
@@ -247,7 +247,7 @@ def preprocess_clean_data(df, name_to_save):
         f'The proportion of target variable\n{round(data_clean.label.value_counts() / len(data_clean) * 100, 2)}')
     return path_to_data
 
-
+@profile
 def sent2vec(texts, max_sequence_length, vocab_size):
     """
     Create a union train set vocabulary and turn text in set
@@ -266,7 +266,7 @@ def sent2vec(texts, max_sequence_length, vocab_size):
     return pad_sequences(text_sequences, maxlen=max_sequence_length,
                          dtype="int32", padding="post", value=0)
 
-
+@profile
 def tfidf(texts, vocab_size):
     """ Create a union train set vocabulary and turn text in set
     into  padded sequences (word --> num )
@@ -284,7 +284,7 @@ def tfidf(texts, vocab_size):
     return tokenizer.sequences_to_matrix(text_sequences, mode='tfidf')
 
 
-# @profile
+@profile
 def get_model(sent2vec_train, X_meta_train, results,
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
     """
@@ -318,7 +318,7 @@ def get_model(sent2vec_train, X_meta_train, results,
     return model
 
 
-# @profile
+@profile
 def main_preprocess(filename=DATA_FILE):
     """
     Function load the data after scrapping from pkl file

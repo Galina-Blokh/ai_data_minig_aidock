@@ -82,7 +82,7 @@ def profile(func, *args, **kwargs):
         return wrapper(*args, **kwargs)
 
 
-# @profile
+@profile
 def print_json(url_to_get_recipe, json_file):
     """
     To print to the console json beautiful format
