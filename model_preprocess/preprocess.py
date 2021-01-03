@@ -259,9 +259,9 @@ def get_model(sent2vec_train, X_meta_train, results,
     NLP set and additional features not NLP set
     Layers: Embedding - Use masking to handle the variable sequence lengths,
             BiLSTM, concatenation of 2 data types,
-            fully connected layer with activation function "relu",
+            Dense/fully connected layer with activation function "relu",
             Dropout layer to avoid overfitting,
-            and fully connected layer with activation function "sigmoid"
+            Dense/fully connected layer with activation function "sigmoid"
             All hyper-parameters as constants are in config.py
     :params sent2vec_train: ndArray(ndArray(int)) - a set with text vectors
     :params X_meta_train: ndArray(int))- a set with non-nlp features
@@ -275,10 +275,10 @@ def get_model(sent2vec_train, X_meta_train, results,
                     input_dim=len(results) + 1,
                     input_length=sent2vec_train.shape[1],
                     mask_zero=True)(nlp_input)
-    nlp_out = Bidirectional(LSTM(128))(emb)  # 128 #64
+    nlp_out = Bidirectional(LSTM(128))(emb)
     concat = tensorflow.concat([nlp_out, meta_input], axis=1)
     classifier = Dense(32, activation='relu')(concat)
-    drop = Dropout(0.2)(classifier)  # 0.5
+    drop = Dropout(0.5)(classifier)
     output = Dense(1, activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])
 
