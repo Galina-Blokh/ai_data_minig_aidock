@@ -8,6 +8,9 @@ from config import DATA_FILE, LOG_FILE
 import tensorflow as tf
 import numpy as np
 
+# log-file will be created in the main dir
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
+                    format='%(asctime)s - %(levelname)s - %(message)s')
 
 def elapsed_since(start):
     """For time measurement
@@ -106,10 +109,10 @@ def check_dir_path(filename, what_to_do):
     :return file and path
     """
     path = ''
-    if not os.path.exists(f'{os.pardir}/data'):
-        os.makedirs(f'{os.pardir}/data')
+    if not os.path.exists(f'{os.getcwd()}/data'):
+        os.makedirs(f'{os.getcwd()}/data')
     try:
-        path = f'{os.pardir}/data/{filename}'
+        path = f'{os.getcwd()}/data/{filename}'
         file = open(path, what_to_do)
     except FileNotFoundError:
         logging.info(f'WTF!!!! Could not open {path}')
@@ -124,7 +127,10 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     :param file_name: str / default config.DATA_FILE
     :return full path of saved data_file:str
     """
-
+    # if file_name=='one_page_data_clean.pkl':
+    #     path = os.getcwd()+'/data/'+file_name
+    #     file = open(path,'wb')
+    # else:
     file, path = check_dir_path(file_name, 'wb')
     pickle.dump(data_file, file, pickle.HIGHEST_PROTOCOL)
     file.close()
