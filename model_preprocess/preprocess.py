@@ -10,7 +10,7 @@ import tensorflow
 from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.python.keras import Input
+from tensorflow.python.keras import Input, regularizers
 from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
 from tensorflow.python.keras.models import Model
 from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM
@@ -275,11 +275,11 @@ def get_model(sent2vec_train, X_meta_train, results,
                     input_dim=len(results) + 1,
                     input_length=sent2vec_train.shape[1],
                     mask_zero=True)(nlp_input)
-    nlp_out = Bidirectional(LSTM(128))(emb)
+    nlp_out = Bidirectional(LSTM(128,kernel_regularizer=regularizers.l2(0.005),))(emb)
     concat = tensorflow.concat([nlp_out, meta_input], axis=1)
-    classifier = Dense(32, activation='relu')(concat)
+    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.005),activation='relu')(concat)
     drop = Dropout(0.5)(classifier)
-    output = Dense(1, activation='sigmoid')(drop)
+    output = Dense(1, kernel_regularizer=regularizers.l2(0.005), activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])
 
     return model
