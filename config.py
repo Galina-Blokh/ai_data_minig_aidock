@@ -21,7 +21,7 @@ THRESHOLD = 0.5
 EMBEDDING_DIM = 128
 TRAIN_DATA_CLEAN = '/data/train_data_clean.pkl'
 TEST_DATA_CLEAN = '/data/test_data_clean.pkl'
-MODEL_NAME = '/data/my_model_first_good.h5'
+MODEL_NAME = '/data/my_model.h5'
 MAX_SEQ_LEN = 121
 VOCAB_SIZE = 2284  # it is changed from 2263. It depends on scrapping part -
 # links to scrap each time goes in different order --> when you take out first 10 links from
