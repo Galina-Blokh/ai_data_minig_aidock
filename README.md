@@ -67,6 +67,9 @@ It will call **main_task_run.py** which accepts arguments such as your website l
 <br> `eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text)` from **run_tensorflow.py**. In log file
 <br> you will find all information about the metrics, model, table with predictions and probability values.
 
+<br>_**IMPORTANT:**_ If you want to test models in **/data** folder on test links, then you have to run **notebooks_and_drafts/list_dir.py**
+<br> In **/data** folder can be several pretrained models. It runs on links from **data/test_links.txt**
+
 ## Data specific information
 
 The data is collected from 'https://www.loveandlemons.com'

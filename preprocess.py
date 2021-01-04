@@ -278,7 +278,6 @@ def tfidf(texts, vocab_size):
 
     tokenizer = Tokenizer(num_words=vocab_size)
     tokenizer.fit_on_texts(texts)
-    #     print('vocab len',vocab_size,len(tokenizer.word_index))
 
     # Turn text into  padded sequences (word --> num )
     text_sequences = tokenizer.texts_to_sequences(texts)
@@ -287,7 +286,7 @@ def tfidf(texts, vocab_size):
 
 
 @profile
-def get_model(tf_idf_train, X_meta_train, results,
+def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and model_train.py is in notebooks_and_drafts/LSTM.ipynb
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
     """
     The function creates the model for 2 different input data:
@@ -319,7 +318,7 @@ def get_model(tf_idf_train, X_meta_train, results,
 
     classifier = Dense(32, kernel_regularizer=regularizers.l2(0.005), activation='relu')(concat)
 
-    drop = Dropout(0.2)(classifier)
+    drop = Dropout(0.3)(classifier)
 
     output = Dense(1, kernel_regularizer=regularizers.l2(0.005), activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])
