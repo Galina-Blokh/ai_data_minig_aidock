@@ -6,9 +6,9 @@
 
 It contains of 2 parts: 
 - Scraping data from recipe website part (data collecting)
-- Data Science part (it made around the classification problem that determines for each paragraphs with what probability it’s 
+- Data Science part (it made around the classification problem that determines for each paragraph with what probability it’s 
   <br>label is ‘ingredients’ or ‘recipe’)
-####!!!These parts are not running as one pipeline!!! No console output - only log (except when you run run.sh)!!!
+#### !!!These parts are not running as one pipeline!!! No console output - only log (except when you run run.sh)!!!
 
 <br>All functions are wraped with `@profile` decorator - it prints out into log file time and memory usage during code 
 <br>running program execution. The code of this utility you may find in **utils.py** in the main project directory.
@@ -30,7 +30,11 @@ Unique links for scraping are in **data/all_recipes_links.txt**
 <br>leaves only links with no duplicates and pages with relevant data. Then reads links from a file and calls 
 <br>**extract_one_recipe.py** to collect data from each recipe page. Saves collected data into **data/recipes.pkl** file.
 <br> If you want to continue run the project, then run **preprocess.py**
-
+<br>_**IMPORTANT:**_ If you want to take out several links to test the model, you have to uncomment the line 34, 
+<br> in **main_scraper.py** before run it (to stop the program run in the middle) and in hand way take out links from 
+<br> **data/all_links.txt**, then save the file and press enter in terminal. In such way data from these pages won't be 
+<br>collected into data set for training the model.
+<br>If you want just to test the model work using **run.sh** file, then you can use already written links in **data/test_links.txt**
 ### **Preprocessing, modeling, feature engineering**
 Next stage is starting from run `main_preprocess(filename)` in **preprocess.py**.This function load the data after 
 <br>scrapping from **data/recipes.pkl** file. Calling for `load_data_transform_to_set(filename)` to transform into data 

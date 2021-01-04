@@ -51,7 +51,7 @@ def extract_links_to_file(file_name=config.FILE_LINKS_NAME, url_to_write=config.
         output_links.write(url_to_write)
 
         # deleting empty links from all_recipe_links.txt
-        all_links_path = f'{os.pardir}/data/{config.FILE_LINKS_NAME}'
+        all_links_path = f'{os.getcwd()}/data/{config.FILE_LINKS_NAME}'
         with open(all_links_path, "r+") as f:
             new_f = f.readlines()
             f.seek(0)
