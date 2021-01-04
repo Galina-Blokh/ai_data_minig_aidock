@@ -2,7 +2,8 @@
 
 ## Data Mining NLP python project:
 **The goal** was to collect the data, build the Neural Network for text binary classification using only _Pytorch, 
-<br>Tensorflow, Pandas, Numpy and BeautifulSoup_. 
+<br>Tensorflow, Pandas, Numpy and BeautifulSoup_. The implementation was be done in _Python 3.6+._ 
+<br>For web scraping was used _Grequests_ Python library
 
 It contains of 2 parts: 
 - Scraping data from recipe website part (data collecting)
