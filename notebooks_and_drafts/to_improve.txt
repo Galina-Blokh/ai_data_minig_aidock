@@ -6,6 +6,7 @@ Deal with imbalanced data
 # TODO 5. Try to translate the given sentence to ‘non-English’ language and then again translating to ‘English’.
 # TODO 6. Find how to concatenate 2 embeddings with different dimensions
 # TODO 7. done Add l2 regularization
+# TODO 8. Do sharp and lime model explanation
 
 Tune the model
 # TODO 1. Try HYPEROPT to tune the model (maybe it will better work with tensorflow than with scikitlearn)
