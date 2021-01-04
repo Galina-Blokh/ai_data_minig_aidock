@@ -299,7 +299,7 @@ def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and m
             All hyper-parameters as constants are in config.py
     :params tf_idf_train: ndArray(ndArray(int)) - a set with tfidf vectors
     :params X_meta_train: ndArray(int))- a set with non-nlp features
-    :params results: set{str} - word vocabulary of the train set (config.VOCAB_SIZE=2263)
+    :params results: set{str} - word vocabulary of the train set (config.VOCAB_SIZE=2284)
     :params embedding_dimensions:int hyper-parameter, can be done as = int(len(results)**0.25)
     :return a model
     """
