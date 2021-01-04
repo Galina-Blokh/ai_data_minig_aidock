@@ -15,5 +15,6 @@ Tune the model
 
 Code changes
 # TODO 1. Change in for_one_link_run.py df['text'] to show real text, not cleaned
+# TODO 2. Do something with project architecture
 
 
