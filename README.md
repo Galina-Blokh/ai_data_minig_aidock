@@ -30,6 +30,7 @@ Unique links for scraping are in **data/all_recipes_links.txt**
 <br>leaves only links with no duplicates and pages with relevant data. Then reads links from a file and calls 
 <br>**extract_one_recipe.py** to collect data from each recipe page. Saves collected data into **data/recipes.pkl** file.
 <br> If you want to continue run the project, then run **preprocess.py**
+
 <br>_**IMPORTANT:**_ If you want to take out several links to test the model, you have to uncomment the line 34, 
 <br> in **main_scraper.py** before run it (to stop the program run in the middle) and in hand way take out links from 
 <br> **data/all_links.txt**, then save the file and press enter in terminal. In such way data from these pages won't be 
