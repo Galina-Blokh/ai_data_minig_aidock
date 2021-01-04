@@ -12,10 +12,12 @@ import numpy as np
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
+
 def elapsed_since(start):
     """For time measurement
     :param start: str - time of start
-    :return diff execution time: str"""
+    :return diff execution time: str
+    """
     elapsed = time.time() - start
     if elapsed < 1:
         return str(round(elapsed * 1000, 2)) + "ms"
@@ -31,8 +33,8 @@ def get_process_memory():
     """
     Function of memory information about the process.
     :return The "portable" fields( available on all platforms) `rss` and `vms`.
-            All numbers are expressed in bytes."""
-
+            All numbers are expressed in bytes.
+            """
     process = psutil.Process(os.getpid())
     mi = process.memory_info()
     return mi.rss, mi.vms
@@ -41,8 +43,8 @@ def get_process_memory():
 def format_bytes(bytes):
     """Function to transform bytes into B,kB,Mb,Gb
     :param bytes:int
-    :return str with transformed bytes """
-
+    :return str with transformed bytes
+    """
     if abs(bytes) < 1000:
         return str(bytes) + "B"
     elif abs(bytes) < 1e6:
@@ -70,10 +72,10 @@ def profile(func, *args, **kwargs):
         elapsed_time = elapsed_since(start)
         rss_after, vms_after = get_process_memory()
         logging.info("Profiling: {:>20}  RSS: {:>8} | VMS: {:>8} | time: {:>8}"
-              .format("<" + func.__name__ + ">",
-                      format_bytes(rss_after - rss_before),
-                      format_bytes(vms_after - vms_before),
-                      elapsed_time))
+                     .format("<" + func.__name__ + ">",
+                             format_bytes(rss_after - rss_before),
+                             format_bytes(vms_after - vms_before),
+                             elapsed_time))
         return result
 
     if inspect.isfunction(func):
