@@ -338,7 +338,7 @@ def main_preprocess(filename=DATA_FILE):
     :return void
     """
     # load data
-    filename = os.pardir + '/data/' + filename  # ../data/recipes.pkl'
+    filename = os.getcwd() + '/data/' + filename  # ../data/recipes.pkl'
     logging.info(f'Data set is loading from {filename}')
     df = load_data_transform_to_set(filename)  # pd.DataFrame(unique,columns=['paragraph', 'label'])
 
