@@ -15,6 +15,14 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
 
 @profile
 def main_for_one_link():
+    """
+    The function accept an url as an argument.
+    Collects the needed data from a single webpage, print it into console
+    Transform Recipe part from list to string, clean, preprocess text,
+    save into pkl file and splits data into nlp and meta sets.
+    Evaluate the pretrained model on this data and print into log metrics
+    :return void
+    """
     parser = argparse.ArgumentParser(description='Print the recipe json from given link')
     parser.add_argument('link')
     args = parser.parse_args()
