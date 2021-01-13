@@ -93,12 +93,12 @@ def print_json(url_to_get_recipe, json_file):
     :return void
     """
 
-    # print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
-    for k in json_file['Recipe']:
-        print(u'\t\t\t\t\t\t {}'.format(str(k).strip()))
-    print(u'\t\t\t\t]')
-    # print('\n\t\t' + str(list(json_file.keys())[1] + ':'))
-    print('"' + json_file['INSTRUCTIONS'] + '"')
+    print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
+    for k in json_file['Recipe'][0]:
+       print('\t\t\t\t\t\t {}'.format(str(k).strip()))
+    print('\t\t\t\t]')
+    print('\n\t\t' + str(list(json_file.keys())[1] + ':'))
+    print('"' + json_file['INSTRUCTIONS'][0] + '"')
     print('}\n')
 
 

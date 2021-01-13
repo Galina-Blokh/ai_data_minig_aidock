@@ -30,7 +30,7 @@ def get_all_links_recipes(url_to_get):
 
 
 @profile
-def get_all_recipes(url_to_get=config.URL, is_one=False):
+def get_all_recipes(url_to_get=config.URL):
     """
       To extract all links from a page with all recipes,
       write down 10 first urls into data/test_links.txt file
@@ -40,22 +40,17 @@ def get_all_recipes(url_to_get=config.URL, is_one=False):
       """
     json_file = defaultdict(list)
 
-    if not is_one:
-        logging.info(f"Starting collecting all links...")
-        # get all urls
-        urls = list(get_all_links_recipes(url_to_get))
-        # take out 10 url for model testing
-        with open('data/' + config.TEST_LINKS_FILE, "w") as f:
-            [f.write(l + '\n') for l in urls[:10]]
-        links = urls[10:]
-        logging.info(f'Took out {len(urls)-len(links)} recipes_links for testing, left {len(links)} links')
-        page = (grequests.get(u) for u in links)
-
-    else:
-        page = [grequests.get([url_to_get])]
-
+    logging.info(f"Starting collecting all links...")
+    # get all urls
+    urls = list(get_all_links_recipes(url_to_get))
+    # take out 10 url for model testing
+    with open('data/' + config.TEST_LINKS_FILE, "w") as f:
+        [f.write(l + '\n') for l in urls[:10]]
+    links = urls[10:]
+    logging.info(f'Took out {len(urls)-len(links)} recipes_links for testing, left {len(links)} links')
+    page = (grequests.get(u) for u in links)
     # get data from website
-    response = grequests.map(page, size=20)
+    response = grequests.map(page, size=config.BATCHES)
     for res in response:
         try:
             soup = BeautifulSoup(res.content, 'html.parser')
@@ -72,11 +67,12 @@ def get_all_recipes(url_to_get=config.URL, is_one=False):
         json_file['Recipe'].append(ingredients_list)
         json_file['INSTRUCTIONS'].append('\n\n'.join(instructions_list))
     path_to_data = save_data_to_pkl(json_file, 'new_recipe.pkl')
-    return json_file
+
+    return json_file,path_to_data
 
 
 if __name__ == '__main__':
-    _ = get_all_recipes()
-    logging.info(f'All data from recipes pages was saved into \ndata/{config.DATA_FILE}\nIf you want to continue, run '
+    _,path = get_all_recipes()
+    logging.info(f'All data from recipes pages was saved into \n{path}\nIf you want to continue, run '
                  f'`preprocess.py`')
     sys.exit('This is the end of scraping...\nIf you want to continue, run `preprocess.py`')

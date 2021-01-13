@@ -3,6 +3,7 @@ import logging
 import os
 import pandas as pd
 from config import VOCAB_SIZE, LOG_FILE, TEST_LINKS_FILE
+from get_one import get_one
 from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf
 from run_tensorflow import eval_on_one_page
 from scraper_main import get_all_recipes
@@ -20,12 +21,11 @@ def run_list_dir():
     models_list = glob.glob(f'{os.pardir}/data/' + '*.h5')
     list_links = [l.strip() for l in f]
     for url in list_links:
-        link = url
-        dict_file = get_all_recipes(link, True)
-        print_json(link, dict_file)
+        dict_file = get_one(url)
+        print_json(url, dict_file)
 
-        dict_file['Recipe'] = from_list_to_str(dict_file['Recipe'])
-
+        dict_file['Recipe'] = from_list_to_str(dict_file['Recipe'][0])
+        dict_file['INSTRUCTIONS'] = dict_file['INSTRUCTIONS'][0]
         # transform to data set (funny tiny dataset;)
         df = load_data_transform_to_set(dict_file)
         text = df['paragraph']
@@ -40,8 +40,8 @@ def run_list_dir():
             ['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron']]
         y_one_page = one_page_set_clean['label']
         for model in models_list:
-            print(link)
             eval_on_one_page(tf_idf_one_page, X_meta_one_page, y_one_page, model, text)
+        print('Evaluation is finished')
 
 
 if __name__ == '__main__':

@@ -71,8 +71,8 @@ def verb_count(series):
     :param series:str
     :return series:int count of verbs in each sentence
     """
-    new_series = len([token for token in nlp(series) if token.pos_ == 'VERB'])
-    return new_series
+    count = len([token for token in nlp(series) if token.pos_ == 'VERB'])
+    return count
 
 
 # @profile
@@ -95,7 +95,7 @@ def remove_punctuation(series):
     params: series of strings
     return transformed series
     """
-    table = str.maketrans('', '', string.punctuation)
+    table = str.maketrans('','', string.punctuation)
     tokens_punct = series.translate(table).lower()
     tokens_spaces = ' '.join([token.strip() for token in tokens_punct.split() if token != ' '])
     return tokens_spaces
