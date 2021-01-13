@@ -10,7 +10,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-@profile
+# @profile
 def eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text):
     """Load model from file and evaluate on data from one page
     :param tfidf_one_page : ndArray,

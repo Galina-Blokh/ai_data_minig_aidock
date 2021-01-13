@@ -11,15 +11,17 @@ from utils import profile
 
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
-@profile
-def model_train(train_data_clean_path= TRAIN_DATA_CLEAN, test_data_clean_path=TEST_DATA_CLEAN):
+
+
+# @profile
+def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TEST_DATA_CLEAN):
     """Read train and test data from pkl files
             count max len sent/sequence
             count vocabulary size
             transform data into sequences
             split data into nlp and meta sets for test and train
             train the model, evaluate and plot loss vs val_loss
-            save the model into 'data/lstm_concat-86-85.h5' file
+            save the model into 'data/my_model.h5' file
     :param train_data_clean_path: str - default  config.TRAIN_DATA_CLEAN
     :param test_data_clean_path: str - default config.TEST_DATA_CLEAN
     :return void
@@ -43,13 +45,13 @@ def model_train(train_data_clean_path= TRAIN_DATA_CLEAN, test_data_clean_path=TE
     # sent to sequence only for  NLP TRAIN
     tf_idf_train = tfidf(train_data_clean.remove_stop_words, vocab_size)
     # for other features train
-    X_meta_train = train_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count','contains_pron']]
+    X_meta_train = train_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron']]
     y_train = train_data_clean['label']
 
     # for NLP TEST
     tf_idf_test = tfidf(test_data_clean.remove_stop_words, vocab_size)
     # for other features test
-    X_meta_test = test_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count','contains_pron']]
+    X_meta_test = test_data_clean[['sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron']]
     y_test = test_data_clean['label']
 
     # create and train the MODEL
@@ -74,7 +76,6 @@ def model_train(train_data_clean_path= TRAIN_DATA_CLEAN, test_data_clean_path=TE
     logging.info(f'Model Precision score: {round(score[2], 2)}')
     logging.info(f'Model Accuracy Evaluation : {round(score[3], 2)}')
     logging.info(f'Model AUC Evaluation : {round(score[4], 2)}')
-
 
     # plot the loss
     plt.figure(figsize=(15, 4))

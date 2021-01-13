@@ -84,7 +84,7 @@ def profile(func, *args, **kwargs):
         return wrapper(*args, **kwargs)
 
 
-@profile
+# @profile
 def print_json(url_to_get_recipe, json_file):
     """
     To print to the console json beautiful format
@@ -93,16 +93,16 @@ def print_json(url_to_get_recipe, json_file):
     :return void
     """
 
-    print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
+    # print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
     for k in json_file['Recipe']:
         print(u'\t\t\t\t\t\t {}'.format(str(k).strip()))
     print(u'\t\t\t\t]')
-    print('\n\t\t' + str(list(json_file.keys())[1] + ':'))
+    # print('\n\t\t' + str(list(json_file.keys())[1] + ':'))
     print('"' + json_file['INSTRUCTIONS'] + '"')
     print('}\n')
 
 
-@profile
+# @profile
 def check_dir_path(filename, what_to_do):
     """
     To checks if the path exists and create empty file
@@ -121,7 +121,7 @@ def check_dir_path(filename, what_to_do):
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 
-@profile
+# @profile
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
     """
     To checks the path and dumps into the pkl file
@@ -129,17 +129,14 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     :param file_name: str / default config.DATA_FILE
     :return full path of saved data_file:str
     """
-    # if file_name=='one_page_data_clean.pkl':
-    #     path = os.getcwd()+'/data/'+file_name
-    #     file = open(path,'wb')
-    # else:
+
     file, path = check_dir_path(file_name, 'wb')
     pickle.dump(data_file, file, pickle.HIGHEST_PROTOCOL)
     file.close()
     return path
 
 
-@profile
+# @profile
 def read_from_pickle(filename):
     """The function receive  a data_file_name:str
     read from the pkl file
@@ -149,7 +146,7 @@ def read_from_pickle(filename):
         return pickle.load(f)
 
 
-@profile
+# @profile
 def stratified_split_data(text, label, test_size):
     """
     The function shuffle and split data set into Train and Test sets stratified on label

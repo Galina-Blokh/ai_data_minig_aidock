@@ -2,24 +2,26 @@ import glob
 import logging
 import os
 import pandas as pd
-import extract_one_recipe
-from config import MAX_SEQ_LEN, VOCAB_SIZE, LOG_FILE
-from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, sent2vec, tfidf
+from config import VOCAB_SIZE, LOG_FILE, TEST_LINKS_FILE
+from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf
 from run_tensorflow import eval_on_one_page
+from scraper_main import get_all_recipes
 from utils import print_json
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
+
+
 def run_list_dir():
     """
     To test several models on several links
     """
-    f = open(os.pardir+'/data/'+f'test_links.txt', 'r')
+    f = open(os.pardir+'/data/'+TEST_LINKS_FILE, 'r')
     models_list = glob.glob(f'{os.pardir}/data/' + '*.h5')
     list_links = [l.strip() for l in f]
     for url in list_links:
         link = url
-        dict_file = extract_one_recipe.get_recipe(link)
+        dict_file = get_all_recipes(link, True)
         print_json(link, dict_file)
 
         dict_file['Recipe'] = from_list_to_str(dict_file['Recipe'])

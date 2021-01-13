@@ -77,6 +77,8 @@ The data is collected from 'https://www.loveandlemons.com'
 <br>Data is imbalanced 80/20. 
 <br>Paragraph = all lines in ingredients labeled as 1, 
 <br>Paragraph = each `\n` in Instructions labeled as 0.
-<br>Vocabulary size = 2263 words/lemmas. 
+<br>Vocabulary size = xxxx words/lemmas. It is changed from 2263 to 2284. It very depends on scrapping part -
+<br>links to scrap each time goes in different order --> when you take out first 10 links from
+<br>all_links.txt it will be 10 different links each scraper run --> the vocabulary every time will be different size
 <br>Test split size = 0.2
 <br>Data from 10 links wasn't included into set (was using for testing **run.sh**) it is in **data/test_links.txt**

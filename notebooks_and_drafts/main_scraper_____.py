@@ -1,7 +1,7 @@
 import sys
 import time
 
-from extract_one_recipe import *
+from notebooks_and_drafts.extract_one_recipe import *
 from utils import save_data_to_pkl, profile, elapsed_since
 
 #  log-file will be created in the main dir

@@ -1,12 +1,12 @@
 Deal with imbalanced data
 # TODO 1. not real - Increase the data set at all
 # TODO 2. Try to add weights into model_train.py, using glob,BERT,NLTK,Spacy
-# TODO 3. Add more features such as have_adjective, count_adjectives
+# D0NE 3. Bad idea - underfit: Add more features such as have_adjective, count_adjectives
 # TODO 4. I don't believe it won't be overfit - Try Over Sampling and Data augmentation
 # TODO 5. Try to translate the given sentence to ‘non-English’ language and then again translating to ‘English’.
 # TODO 6. Find how to concatenate 2 embeddings with different dimensions
-# TODO 7. done Add l2 regularization
-# TODO 8. Do sharp and lime model explanation
+# DONE 7.  Add l2 regularization
+# TODO 8. Do sharp and lime model explanation OR JUST FEATURE IMPORTANCE/TENSORBOARD
 
 Tune the model
 # TODO 1. Try HYPEROPT to tune the model (maybe it will better work with tensorflow than with scikitlearn)
@@ -14,7 +14,7 @@ Tune the model
 # TODO 3. Add  kfold validation
 
 Code changes
-# TODO 1. Change in for_one_link_run.py df['text'] to show real text, not cleaned
+# DONE 1. Change in for_one_link_run.py df['text'] to show real text, not cleaned
 # TODO 2. Do something with project architecture
 
 

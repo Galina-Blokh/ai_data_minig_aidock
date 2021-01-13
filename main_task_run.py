@@ -2,7 +2,7 @@ import argparse
 import logging
 import os
 import pandas as pd
-from extract_one_recipe import get_recipe
+from notebooks_and_drafts.extract_one_recipe import get_recipe
 from config import  VOCAB_SIZE, MODEL_NAME, LOG_FILE
 from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data,tfidf
 from run_tensorflow import eval_on_one_page

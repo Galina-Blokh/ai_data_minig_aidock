@@ -3,8 +3,7 @@ import logging
 import os
 import pandas as pd
 
-import extract_one_recipe
-from extract_one_recipe import get_recipe
+from notebooks_and_drafts.extract_one_recipe import get_recipe
 from config import MAX_SEQ_LEN, VOCAB_SIZE, MODEL_NAME, LOG_FILE
 from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, sent2vec
 from run_tensorflow import eval_on_one_page

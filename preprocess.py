@@ -26,7 +26,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-@profile
+# @profile
 def from_list_to_str(series):
     """Function to transform series of list(str) to series of string
     param: series:list(str)
@@ -35,7 +35,7 @@ def from_list_to_str(series):
     return ' '.join([words for words in series])
 
 
-@profile
+# @profile
 def replace_numbers_str(series):
     """
     Replace numbers expression (11 ; 11,00;  1111.99; 23-th 25-,1/2,¼) with tag ' zNUM ',
@@ -52,7 +52,7 @@ def replace_numbers_str(series):
     return new_series
 
 
-@profile
+# @profile
 def lemmatiz(series):
     """
     Transform all words to lemma, add tag  -PRON-
@@ -64,7 +64,7 @@ def lemmatiz(series):
     return new_series
 
 
-@profile
+# @profile
 def verb_count(series):
     """
     To count how many verbs contains the sentence
@@ -75,7 +75,7 @@ def verb_count(series):
     return new_series
 
 
-@profile
+# @profile
 def have_pron(series):
     """
     Give the answer is there a pron in the paragraph
@@ -88,7 +88,7 @@ def have_pron(series):
     return answer
 
 
-@profile
+# @profile
 def remove_punctuation(series):
     """
     Remove punctuation from each word, make every word to lower case
@@ -112,7 +112,7 @@ def remove_stop_words(series):
     return new_series
 
 
-@profile
+# @profile
 def count_paragraph_sentences(series):
     """
     Count number of sentences in the paragraph
@@ -125,7 +125,7 @@ def count_paragraph_sentences(series):
     return sent_count
 
 
-@profile
+# @profile
 def num_count(series):
     """
     Count number of sentences in the paragraph
@@ -135,7 +135,7 @@ def num_count(series):
     return series.count('znum')
 
 
-@profile
+# @profile
 def count_words(series):
     """
     Count words in each string (paragraph)
@@ -147,7 +147,7 @@ def count_words(series):
     return clean_sent_len
 
 
-@profile
+# @profile
 def load_data_transform_to_set(filename):
     """
     Read from pkl file,transform from dict(str:list(str),str:str)
@@ -192,7 +192,7 @@ def load_data_transform_to_set(filename):
     return pd.DataFrame(unique, columns=['paragraph', 'label'])
 
 
-@profile
+# @profile
 def preprocess_clean_data(df, name_to_save):
     """
     The function replace numbers with the tag, lemmatize, counts prons,
@@ -205,11 +205,11 @@ def preprocess_clean_data(df, name_to_save):
 
     # transform to pandas -> easy to clean
     data = pd.DataFrame(df, columns=['paragraph', 'label'])
-    data['paragraph'] = data.paragraph.apply(replace_numbers_str)
+    data['replaced_num'] = data.paragraph.apply(replace_numbers_str)
     logging.info('Numbers are replaced by tag')
 
     # this one takes an eternity (lemmatiz)
-    data['lemmatiz'] = data.paragraph.apply(lemmatiz)
+    data['lemmatiz'] = data.replaced_num.apply(lemmatiz)
     logging.info('Lemmatization is done')
 
     data['verb_count'] = data.lemmatiz.apply(verb_count)
@@ -217,7 +217,9 @@ def preprocess_clean_data(df, name_to_save):
 
     data['contains_pron'] = data.lemmatiz.apply(have_pron)
     logging.info('column contains_pron created')
+
     data['tokens_punct'] = data.lemmatiz.apply(remove_punctuation)
+    logging.info('column tokens_punct created')
 
     data['remove_stop_words'] = data.tokens_punct.apply(remove_stop_words)
     logging.info('column remove_stop_words is created')
@@ -231,24 +233,22 @@ def preprocess_clean_data(df, name_to_save):
     data['clean_paragraph_len'] = data.remove_stop_words.apply(count_words)
     logging.info('column clean_paragraph_len is created')
 
-    data['not_clean_paragraph_len'] = data.paragraph.apply(count_words)
-    logging.info('column num_count is created')
+    # data['not_clean_paragraph_len'] = data.paragraph.apply(count_words)
+    # logging.info('column not_clean_paragraph_len is created')
 
     data['label'] = data.label.apply(int)  # this line (convert list --> int)
 
     data_clean = data[
-        ['remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron', 'label']]
-    path_to_data = save_data_to_pkl(data_clean, f'{name_to_save}_data_clean.pkl')
-    logging.info(
-        f'Count of rows where is pron and it is an ingredient paragraph {len(data_clean.remove_stop_words[(data_clean.label == 1) & (data.contains_pron == 1)])}')
-    logging.info(f'Clean data is in {path_to_data}')
+        ['paragraph','remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron', 'label']]
+    path_to_data = save_data_to_pkl(data_clean, f'new_{name_to_save}_data_clean.pkl')
+
     logging.info(f'Clean data is in {path_to_data}')
     logging.info(
         f'The proportion of target variable\n{round(data_clean.label.value_counts() / len(data_clean) * 100, 2)}')
     return path_to_data
 
 
-@profile
+# @profile
 def sent2vec(texts, max_sequence_length, vocab_size):
     """
     Create a union train set vocabulary and turn text in set
@@ -268,7 +268,7 @@ def sent2vec(texts, max_sequence_length, vocab_size):
                          dtype="int32", padding="post", value=0)
 
 
-@profile
+# @profile
 def tfidf(texts, vocab_size):
     """ Create a union train set vocabulary and turn text in set
     into  padded sequences (word --> num )
@@ -285,7 +285,7 @@ def tfidf(texts, vocab_size):
     return tokenizer.sequences_to_matrix(text_sequences, mode='tfidf')
 
 
-@profile
+# @profile
 def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and model_train.py is in notebooks_and_drafts/LSTM.ipynb
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
     """
@@ -326,7 +326,7 @@ def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and m
     return model
 
 
-@profile
+# @profile
 def main_preprocess(filename=DATA_FILE):
     """
     Function load the data after scrapping from pkl file
@@ -348,10 +348,10 @@ def main_preprocess(filename=DATA_FILE):
     train_dataset, test_dataset = stratified_split_data(text, label, TEST_SIZE)  # data/train_data_clean.pkl
 
     # preprocessing + feature engineering for train and test sets
-    preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')
-    preprocess_clean_data(test_dataset.as_numpy_iterator(), f'test')
-    logging.info('If you want to continue run model_preprocess/model_train.py\nYour data is in the ../data folder')
-    sys.exit('If you want to continue run model_preprocess/model_train.py')
+    preprocess_clean_data(train_dataset.as_numpy_iterator(), 'train')
+    preprocess_clean_data(test_dataset.as_numpy_iterator(), 'test')
+    logging.info('If you want to continue run model_train.py\nYour data is in the ../data folder')
+    sys.exit('If you want to continue run model_train.py')
 
 
 if __name__ == '__main__':
