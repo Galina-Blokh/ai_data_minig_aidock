@@ -1,0 +1,618 @@
+2021-01-15 01:06:04,795 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:06:04,796 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (3, 2)
+2021-01-15 01:06:04,796 - INFO - Shape  of all paragraphs data matrix (4, 2)
+2021-01-15 01:06:04,796 - INFO - Shape without duplicates (4, 2)
+2021-01-15 01:06:04,796 - INFO - Shape without empty string rows (4, 2)
+2021-01-15 01:06:04,798 - INFO - Numbers are replaced by tag
+2021-01-15 01:06:04,843 - INFO - Lemmatization is done
+2021-01-15 01:06:04,882 - INFO - column verb_count created
+2021-01-15 01:06:04,883 - INFO - column contains_pron created
+2021-01-15 01:06:04,883 - INFO - column tokens_punct created
+2021-01-15 01:06:04,884 - INFO - column remove_stop_words is created
+2021-01-15 01:06:04,885 - INFO - column sent_count is created
+2021-01-15 01:06:04,885 - INFO - column num_count is created
+2021-01-15 01:06:04,886 - INFO - column clean_paragraph_len is created
+2021-01-15 01:06:04,888 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:06:04,893 - INFO - The proportion of target variable
+0    75.0
+1    25.0
+Name: label, dtype: float64
+2021-01-15 01:06:04,893 - INFO - Profiling: <preprocess_clean_data>  RSS:   3.41MB | VMS:  17.26MB | time:  96.67ms
+2021-01-15 01:06:04,896 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.69ms
+2021-01-15 01:06:09,748 - INFO - ../data/my_model-12.h5
+2021-01-15 01:06:09,749 - INFO -                                                 text     proba
+0  1 pound green beans, trimmed ½ head radicchio,...  0.993931
+1  Arrange on a platter and top with small dollop...  0.001321
+2  Bring a large pot of salted water to a boil an...  0.000100
+3  Transfer the beans to a bowl and toss with the...  0.002931
+2021-01-15 01:06:09,753 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+2021-01-15 01:06:12,546 - INFO - Model Loss score: 0.0
+2021-01-15 01:06:12,546 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:12,546 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:12,546 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:12,546 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:12,547 - INFO - Profiling:   <eval_on_one_page>  RSS: 193.93MB | VMS:   1.19GB | time:    7.65s
+2021-01-15 01:06:15,616 - INFO - ../data/new_my_model.h5
+2021-01-15 01:06:15,617 - INFO -                                                 text     proba
+0  1 pound green beans, trimmed ½ head radicchio,...  0.818737
+1  Arrange on a platter and top with small dollop...  0.011916
+2  Bring a large pot of salted water to a boil an...  0.000168
+3  Transfer the beans to a bowl and toss with the...  0.068142
+2021-01-15 01:06:15,621 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+2021-01-15 01:06:17,495 - INFO - Model Loss score: 0.07
+2021-01-15 01:06:17,495 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:17,496 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:17,496 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:17,496 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:17,496 - INFO - Profiling:   <eval_on_one_page>  RSS:  26.88MB | VMS:  17.27MB | time:    4.95s
+2021-01-15 01:06:19,059 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:06:19,060 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (7, 2)
+2021-01-15 01:06:19,060 - INFO - Shape  of all paragraphs data matrix (8, 2)
+2021-01-15 01:06:19,060 - INFO - Shape without duplicates (8, 2)
+2021-01-15 01:06:19,060 - INFO - Shape without empty string rows (8, 2)
+2021-01-15 01:06:19,062 - INFO - Numbers are replaced by tag
+2021-01-15 01:06:19,133 - INFO - Lemmatization is done
+2021-01-15 01:06:19,194 - INFO - column verb_count created
+2021-01-15 01:06:19,194 - INFO - column contains_pron created
+2021-01-15 01:06:19,195 - INFO - column tokens_punct created
+2021-01-15 01:06:19,196 - INFO - column remove_stop_words is created
+2021-01-15 01:06:19,197 - INFO - column sent_count is created
+2021-01-15 01:06:19,197 - INFO - column num_count is created
+2021-01-15 01:06:19,198 - INFO - column clean_paragraph_len is created
+2021-01-15 01:06:19,200 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:06:19,201 - INFO - The proportion of target variable
+0    87.5
+1    12.5
+Name: label, dtype: float64
+2021-01-15 01:06:19,202 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time: 140.72ms
+2021-01-15 01:06:19,204 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.88ms
+2021-01-15 01:06:23,593 - INFO - ../data/my_model-12.h5
+2021-01-15 01:06:23,594 - INFO -                                                 text     proba
+0  Add between ¼ - ½ teaspoon of whole dried spices.  0.004709
+1  Combine vinegar, filtered water and salt in a ...  0.004417
+2  Hide the jar in the back of the friedge for at...  0.004620
+3        Keep them in the fridge for up to 6 months.  0.002514
+4  Put your just boiled brine over the vegetables...  0.001308
+5  Wash and cut up your vegetables and pack them ...  0.001364
+6  Wipe any vinegar spills from the rim with a cl...  0.002726
+7  any vegetables you like (I used cucumbers, bro...  0.989500
+2021-01-15 01:06:23,599 - INFO -           label    pred_label
+0  Instructions  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+7       Recepie       Recepie
+2021-01-15 01:06:26,723 - INFO - Model Loss score: 0.0
+2021-01-15 01:06:26,724 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:26,724 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:26,724 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:26,724 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:26,724 - INFO - Profiling:   <eval_on_one_page>  RSS:  11.93MB | VMS:   9.18MB | time:    7.52s
+2021-01-15 01:06:30,722 - INFO - ../data/new_my_model.h5
+2021-01-15 01:06:30,724 - INFO -                                                 text     proba
+0  Add between ¼ - ½ teaspoon of whole dried spices.  0.540221
+1  Combine vinegar, filtered water and salt in a ...  0.162818
+2  Hide the jar in the back of the friedge for at...  0.381525
+3        Keep them in the fridge for up to 6 months.  0.402902
+4  Put your just boiled brine over the vegetables...  0.159594
+5  Wash and cut up your vegetables and pack them ...  0.112984
+6  Wipe any vinegar spills from the rim with a cl...  0.206705
+7  any vegetables you like (I used cucumbers, bro...  0.495409
+2021-01-15 01:06:30,732 - INFO -           label    pred_label
+0  Instructions       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+7       Recepie  Instructions
+2021-01-15 01:06:32,996 - INFO - Model Loss score: 0.4
+2021-01-15 01:06:32,996 - INFO - Model Recall score: 0.0
+2021-01-15 01:06:32,996 - INFO - Model Precision score: 0.0
+2021-01-15 01:06:32,996 - INFO - Model Accuracy Evaluation : 0.75
+2021-01-15 01:06:32,996 - INFO - Model AUC Evaluation : 0.86
+2021-01-15 01:06:32,997 - INFO - Profiling:   <eval_on_one_page>  RSS:  22.61MB | VMS:   2.62MB | time:    6.27s
+2021-01-15 01:06:33,954 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:06:33,955 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (6, 2)
+2021-01-15 01:06:33,955 - INFO - Shape  of all paragraphs data matrix (7, 2)
+2021-01-15 01:06:33,956 - INFO - Shape without duplicates (7, 2)
+2021-01-15 01:06:33,956 - INFO - Shape without empty string rows (7, 2)
+2021-01-15 01:06:33,958 - INFO - Numbers are replaced by tag
+2021-01-15 01:06:34,053 - INFO - Lemmatization is done
+2021-01-15 01:06:34,130 - INFO - column verb_count created
+2021-01-15 01:06:34,131 - INFO - column contains_pron created
+2021-01-15 01:06:34,132 - INFO - column tokens_punct created
+2021-01-15 01:06:34,133 - INFO - column remove_stop_words is created
+2021-01-15 01:06:34,133 - INFO - column sent_count is created
+2021-01-15 01:06:34,134 - INFO - column num_count is created
+2021-01-15 01:06:34,135 - INFO - column clean_paragraph_len is created
+2021-01-15 01:06:34,137 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:06:34,138 - INFO - The proportion of target variable
+0    85.71
+1    14.29
+Name: label, dtype: float64
+2021-01-15 01:06:34,139 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time: 182.17ms
+2021-01-15 01:06:34,141 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   1.45ms
+2021-01-15 01:06:38,805 - WARNING - 5 out of the last 5 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247dc1c400> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:38,811 - INFO - ../data/my_model-12.h5
+2021-01-15 01:06:38,812 - INFO -                                                 text     proba
+0  2 medium potatoes, chopped into ½-inch pieces ...  0.998373
+1  Boil the Israeli couscous in salted water for ...  0.017760
+2  Combine the potatoes, green beans, couscous, c...  0.000575
+3  Make the dressing: Whisk together the olive oi...  0.000722
+4  Preheat the oven to 400 degrees. Toss the pota...  0.004555
+5  Serve warm or at room temperature. (it would p...  0.000215
+6  Set a bowl of ice water aside a large pot of b...  0.000081
+2021-01-15 01:06:38,816 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+2021-01-15 01:06:41,410 - WARNING - 5 out of the last 5 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249d72dd08> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:41,412 - INFO - Model Loss score: 0.0
+2021-01-15 01:06:41,412 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:41,412 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:41,412 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:41,412 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:41,413 - INFO - Profiling:   <eval_on_one_page>  RSS:  32.56MB | VMS:  32.69MB | time:    7.27s
+2021-01-15 01:06:44,852 - WARNING - 6 out of the last 6 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f24ac1ee598> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:44,866 - INFO - ../data/new_my_model.h5
+2021-01-15 01:06:44,868 - INFO -                                                 text     proba
+0  2 medium potatoes, chopped into ½-inch pieces ...  0.998973
+1  Boil the Israeli couscous in salted water for ...  0.479427
+2  Combine the potatoes, green beans, couscous, c...  0.003455
+3  Make the dressing: Whisk together the olive oi...  0.007204
+4  Preheat the oven to 400 degrees. Toss the pota...  0.037590
+5  Serve warm or at room temperature. (it would p...  0.010861
+6  Set a bowl of ice water aside a large pot of b...  0.000447
+2021-01-15 01:06:44,878 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+2021-01-15 01:06:47,435 - WARNING - 6 out of the last 6 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249d740268> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:47,437 - INFO - Model Loss score: 0.1
+2021-01-15 01:06:47,437 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:47,437 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:47,437 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:47,437 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:47,438 - INFO - Profiling:   <eval_on_one_page>  RSS:  -9.61MB | VMS:  -2.62MB | time:    6.02s
+2021-01-15 01:06:48,519 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:06:48,521 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (5, 2)
+2021-01-15 01:06:48,521 - INFO - Shape  of all paragraphs data matrix (6, 2)
+2021-01-15 01:06:48,521 - INFO - Shape without duplicates (6, 2)
+2021-01-15 01:06:48,521 - INFO - Shape without empty string rows (6, 2)
+2021-01-15 01:06:48,524 - INFO - Numbers are replaced by tag
+2021-01-15 01:06:48,613 - INFO - Lemmatization is done
+2021-01-15 01:06:48,692 - INFO - column verb_count created
+2021-01-15 01:06:48,694 - INFO - column contains_pron created
+2021-01-15 01:06:48,695 - INFO - column tokens_punct created
+2021-01-15 01:06:48,696 - INFO - column remove_stop_words is created
+2021-01-15 01:06:48,697 - INFO - column sent_count is created
+2021-01-15 01:06:48,697 - INFO - column num_count is created
+2021-01-15 01:06:48,698 - INFO - column clean_paragraph_len is created
+2021-01-15 01:06:48,700 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:06:48,702 - INFO - The proportion of target variable
+0    83.33
+1    16.67
+Name: label, dtype: float64
+2021-01-15 01:06:48,703 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time: 180.17ms
+2021-01-15 01:06:48,705 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:    1.0ms
+2021-01-15 01:06:53,906 - WARNING - 7 out of the last 7 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247d8a2400> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:53,913 - INFO - ../data/my_model-12.h5
+2021-01-15 01:06:53,914 - INFO -                                                 text     proba
+0  Heat oil in a small skillet, add apples, a squ...  0.000499
+1  Make your crumble topping by crushing the crum...  0.000055
+2                       Preheat oven to 350 degrees.  0.006590
+3  Remove from the oven and serve with 2 spoons a...  0.002413
+4  Top the apples with the crumble mixture (as mu...  0.019321
+5  ¼ cup walnuts 2 tablespoons brown sugar 1 tabl...  0.999758
+2021-01-15 01:06:53,924 - INFO -           label    pred_label
+0  Instructions  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5       Recepie       Recepie
+2021-01-15 01:06:56,857 - WARNING - 7 out of the last 7 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249ca98510> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:06:56,859 - INFO - Model Loss score: 0.0
+2021-01-15 01:06:56,859 - INFO - Model Recall score: 1.0
+2021-01-15 01:06:56,859 - INFO - Model Precision score: 1.0
+2021-01-15 01:06:56,859 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:06:56,859 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:06:56,860 - INFO - Profiling:   <eval_on_one_page>  RSS:   1.32MB | VMS:   1.31MB | time:    8.15s
+2021-01-15 01:07:01,389 - WARNING - 8 out of the last 8 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247d891d08> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:01,399 - INFO - ../data/new_my_model.h5
+2021-01-15 01:07:01,400 - INFO -                                                 text     proba
+0  Heat oil in a small skillet, add apples, a squ...  0.006849
+1  Make your crumble topping by crushing the crum...  0.000016
+2                       Preheat oven to 350 degrees.  0.015834
+3  Remove from the oven and serve with 2 spoons a...  0.302479
+4  Top the apples with the crumble mixture (as mu...  0.085499
+5  ¼ cup walnuts 2 tablespoons brown sugar 1 tabl...  0.995903
+2021-01-15 01:07:01,409 - INFO -           label    pred_label
+0  Instructions  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5       Recepie       Recepie
+2021-01-15 01:07:04,607 - WARNING - 8 out of the last 8 calls to <function Model.make_test_function.<locals>.test_function at 0x7f24ae8691e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:04,609 - INFO - Model Loss score: 0.08
+2021-01-15 01:07:04,609 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:04,609 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:04,609 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:04,609 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:04,610 - INFO - Profiling:   <eval_on_one_page>  RSS: 696.32kB | VMS:  -1.84MB | time:    7.75s
+2021-01-15 01:07:05,677 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:07:05,677 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (6, 2)
+2021-01-15 01:07:05,677 - INFO - Shape  of all paragraphs data matrix (7, 2)
+2021-01-15 01:07:05,678 - INFO - Shape without duplicates (7, 2)
+2021-01-15 01:07:05,678 - INFO - Shape without empty string rows (7, 2)
+2021-01-15 01:07:05,680 - INFO - Numbers are replaced by tag
+2021-01-15 01:07:05,778 - INFO - Lemmatization is done
+2021-01-15 01:07:05,866 - INFO - column verb_count created
+2021-01-15 01:07:05,867 - INFO - column contains_pron created
+2021-01-15 01:07:05,868 - INFO - column tokens_punct created
+2021-01-15 01:07:05,869 - INFO - column remove_stop_words is created
+2021-01-15 01:07:05,870 - INFO - column sent_count is created
+2021-01-15 01:07:05,870 - INFO - column num_count is created
+2021-01-15 01:07:05,871 - INFO - column clean_paragraph_len is created
+2021-01-15 01:07:05,873 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:07:05,875 - INFO - The proportion of target variable
+0    85.71
+1    14.29
+Name: label, dtype: float64
+2021-01-15 01:07:05,875 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time: 196.42ms
+2021-01-15 01:07:05,878 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   1.93ms
+2021-01-15 01:07:10,124 - WARNING - 9 out of the last 9 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247da1f2f0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:10,129 - INFO - ../data/my_model-12.h5
+2021-01-15 01:07:10,130 - INFO -                                                 text     proba
+0  2 (7 oz) packages Miracle shirataki noodles (o...  0.999685
+1  Add the broth, edamame, and noodles and simmer...  0.000194
+2  In a large skillet (I used a stainless one whe...  0.000037
+3  Ladle in to bowls and finish with a drizzle of...  0.001060
+4  Prepare your noodles – if you’re using the shi...  0.000083
+5  To cook the salmon: Season the fish with salt,...  0.000041
+6  Turn off the heat and stir in the soy sauce, b...  0.001518
+2021-01-15 01:07:10,135 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+2021-01-15 01:07:13,497 - WARNING - 9 out of the last 9 calls to <function Model.make_test_function.<locals>.test_function at 0x7f247d891c80> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:13,499 - INFO - Model Loss score: 0.0
+2021-01-15 01:07:13,499 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:13,499 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:13,499 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:13,500 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:13,500 - INFO - Profiling:   <eval_on_one_page>  RSS:   -5.4MB | VMS:   1.57MB | time:    7.62s
+2021-01-15 01:07:16,889 - WARNING - 10 out of the last 10 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249d72d620> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:16,895 - INFO - ../data/new_my_model.h5
+2021-01-15 01:07:16,896 - INFO -                                                 text     proba
+0  2 (7 oz) packages Miracle shirataki noodles (o...  0.999892
+1  Add the broth, edamame, and noodles and simmer...  0.010269
+2  In a large skillet (I used a stainless one whe...  0.000020
+3  Ladle in to bowls and finish with a drizzle of...  0.020824
+4  Prepare your noodles – if you’re using the shi...  0.000919
+5  To cook the salmon: Season the fish with salt,...  0.000018
+6  Turn off the heat and stir in the soy sauce, b...  0.014766
+2021-01-15 01:07:16,903 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+4  Instructions  Instructions
+5  Instructions  Instructions
+6  Instructions  Instructions
+2021-01-15 01:07:20,206 - WARNING - 10 out of the last 10 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249ccaf1e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:20,216 - INFO - Model Loss score: 0.01
+2021-01-15 01:07:20,216 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:20,216 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:20,216 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:20,216 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:20,217 - INFO - Profiling:   <eval_on_one_page>  RSS:  10.91MB | VMS:  -2.36MB | time:    6.72s
+2021-01-15 01:07:21,244 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:07:21,244 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (2, 2)
+2021-01-15 01:07:21,244 - INFO - Shape  of all paragraphs data matrix (3, 2)
+2021-01-15 01:07:21,245 - INFO - Shape without duplicates (3, 2)
+2021-01-15 01:07:21,245 - INFO - Shape without empty string rows (3, 2)
+2021-01-15 01:07:21,246 - INFO - Numbers are replaced by tag
+2021-01-15 01:07:21,275 - INFO - Lemmatization is done
+2021-01-15 01:07:21,300 - INFO - column verb_count created
+2021-01-15 01:07:21,300 - INFO - column contains_pron created
+2021-01-15 01:07:21,301 - INFO - column tokens_punct created
+2021-01-15 01:07:21,302 - INFO - column remove_stop_words is created
+2021-01-15 01:07:21,302 - INFO - column sent_count is created
+2021-01-15 01:07:21,303 - INFO - column num_count is created
+2021-01-15 01:07:21,304 - INFO - column clean_paragraph_len is created
+2021-01-15 01:07:21,305 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:07:21,307 - INFO - The proportion of target variable
+0    66.67
+1    33.33
+Name: label, dtype: float64
+2021-01-15 01:07:21,307 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time:  61.75ms
+2021-01-15 01:07:21,309 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.48ms
+2021-01-15 01:07:26,099 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249cbee378> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:26,106 - INFO - ../data/my_model-12.h5
+2021-01-15 01:07:26,107 - INFO -                                                 text     proba
+0  3 ripe avocados ¼ cup diced red onion ¼ cup fi...  0.995594
+1  In a large bowl, combine the avocados, onion, ...  0.000806
+2                         Serve with tortilla chips.  0.013394
+2021-01-15 01:07:26,113 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:07:28,950 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249d72da60> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:28,957 - INFO - Model Loss score: 0.01
+2021-01-15 01:07:28,957 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:28,957 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:28,957 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:28,957 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:28,958 - INFO - Profiling:   <eval_on_one_page>  RSS:   -8.5MB | VMS:   3.41MB | time:    7.65s
+2021-01-15 01:07:32,514 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f24ac073840> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:32,520 - INFO - ../data/new_my_model.h5
+2021-01-15 01:07:32,521 - INFO -                                                 text     proba
+0  3 ripe avocados ¼ cup diced red onion ¼ cup fi...  0.617531
+1  In a large bowl, combine the avocados, onion, ...  0.000809
+2                         Serve with tortilla chips.  0.001332
+2021-01-15 01:07:32,527 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:07:34,833 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249c15b1e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:34,835 - INFO - Model Loss score: 0.16
+2021-01-15 01:07:34,835 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:34,835 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:34,835 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:34,835 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:34,835 - INFO - Profiling:   <eval_on_one_page>  RSS: 299.01kB | VMS:  -1.84MB | time:    5.88s
+2021-01-15 01:07:35,949 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:07:35,950 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (2, 2)
+2021-01-15 01:07:35,950 - INFO - Shape  of all paragraphs data matrix (3, 2)
+2021-01-15 01:07:35,950 - INFO - Shape without duplicates (3, 2)
+2021-01-15 01:07:35,950 - INFO - Shape without empty string rows (3, 2)
+2021-01-15 01:07:35,952 - INFO - Numbers are replaced by tag
+2021-01-15 01:07:35,995 - INFO - Lemmatization is done
+2021-01-15 01:07:36,035 - INFO - column verb_count created
+2021-01-15 01:07:36,035 - INFO - column contains_pron created
+2021-01-15 01:07:36,036 - INFO - column tokens_punct created
+2021-01-15 01:07:36,037 - INFO - column remove_stop_words is created
+2021-01-15 01:07:36,038 - INFO - column sent_count is created
+2021-01-15 01:07:36,038 - INFO - column num_count is created
+2021-01-15 01:07:36,039 - INFO - column clean_paragraph_len is created
+2021-01-15 01:07:36,041 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:07:36,042 - INFO - The proportion of target variable
+0    66.67
+1    33.33
+Name: label, dtype: float64
+2021-01-15 01:07:36,043 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time:  91.99ms
+2021-01-15 01:07:36,045 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.98ms
+2021-01-15 01:07:40,806 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247dfd8598> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:40,813 - INFO - ../data/my_model-12.h5
+2021-01-15 01:07:40,814 - INFO -                                                 text     proba
+0  3 tablespoons extra-virgin olive oil, more for...  0.999544
+1  In the bottom of a large bowl, combine the oli...  0.000129
+2  To the bowl, add the tomatoes, peaches, bread,...  0.000071
+2021-01-15 01:07:40,821 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:07:43,602 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f247dd33b70> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:43,605 - INFO - Model Loss score: 0.0
+2021-01-15 01:07:43,605 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:43,605 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:43,605 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:43,605 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:43,606 - INFO - Profiling:   <eval_on_one_page>  RSS:  -8.41MB | VMS:   1.57MB | time:    7.56s
+2021-01-15 01:07:47,052 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249c26e730> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:47,058 - INFO - ../data/new_my_model.h5
+2021-01-15 01:07:47,059 - INFO -                                                 text     proba
+0  3 tablespoons extra-virgin olive oil, more for...  0.998402
+1  In the bottom of a large bowl, combine the oli...  0.000207
+2  To the bowl, add the tomatoes, peaches, bread,...  0.000003
+2021-01-15 01:07:47,066 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:07:49,395 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249cc7c158> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:49,397 - INFO - Model Loss score: 0.0
+2021-01-15 01:07:49,398 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:49,398 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:49,398 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:49,398 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:49,398 - INFO - Profiling:   <eval_on_one_page>  RSS:   2.54MB | VMS:  -1.05MB | time:    5.79s
+2021-01-15 01:07:50,816 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:07:50,817 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (2, 2)
+2021-01-15 01:07:50,817 - INFO - Shape  of all paragraphs data matrix (3, 2)
+2021-01-15 01:07:50,817 - INFO - Shape without duplicates (3, 2)
+2021-01-15 01:07:50,818 - INFO - Shape without empty string rows (3, 2)
+2021-01-15 01:07:50,819 - INFO - Numbers are replaced by tag
+2021-01-15 01:07:50,850 - INFO - Lemmatization is done
+2021-01-15 01:07:50,878 - INFO - column verb_count created
+2021-01-15 01:07:50,879 - INFO - column contains_pron created
+2021-01-15 01:07:50,880 - INFO - column tokens_punct created
+2021-01-15 01:07:50,880 - INFO - column remove_stop_words is created
+2021-01-15 01:07:50,881 - INFO - column sent_count is created
+2021-01-15 01:07:50,882 - INFO - column num_count is created
+2021-01-15 01:07:50,882 - INFO - column clean_paragraph_len is created
+2021-01-15 01:07:50,884 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:07:50,886 - INFO - The proportion of target variable
+0    66.67
+1    33.33
+Name: label, dtype: float64
+2021-01-15 01:07:50,886 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time:  67.65ms
+2021-01-15 01:07:50,888 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.66ms
+2021-01-15 01:07:55,551 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249cc0f6a8> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:55,557 - INFO - ../data/my_model-12.h5
+2021-01-15 01:07:55,559 - INFO -                                                 text     proba
+0  2½ cups unsweetened almond milk 2 tablespoons ...  0.887614
+1  In a blender, mix the almond milk, cacao powde...  0.000099
+2  Serve with coconut whip and shaved dark chocol...  0.002485
+2021-01-15 01:07:55,565 - INFO -           label    pred_label
+0       Recepie       Recepie
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:07:58,308 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f24aea818c8> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:07:58,310 - INFO - Model Loss score: 0.04
+2021-01-15 01:07:58,311 - INFO - Model Recall score: 1.0
+2021-01-15 01:07:58,311 - INFO - Model Precision score: 1.0
+2021-01-15 01:07:58,311 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:07:58,311 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:07:58,311 - INFO - Profiling:   <eval_on_one_page>  RSS: 569.34kB | VMS: 786.43kB | time:    7.42s
+2021-01-15 01:08:01,957 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f24aea81840> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:01,963 - INFO - ../data/new_my_model.h5
+2021-01-15 01:08:01,965 - INFO -                                                 text     proba
+0  2½ cups unsweetened almond milk 2 tablespoons ...  0.015508
+1  In a blender, mix the almond milk, cacao powde...  0.000028
+2  Serve with coconut whip and shaved dark chocol...  0.013737
+2021-01-15 01:08:01,971 - INFO -           label    pred_label
+0       Recepie  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+2021-01-15 01:08:04,406 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f249cb961e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:04,408 - INFO - Model Loss score: 1.39
+2021-01-15 01:08:04,408 - INFO - Model Recall score: 0.0
+2021-01-15 01:08:04,408 - INFO - Model Precision score: 0.0
+2021-01-15 01:08:04,409 - INFO - Model Accuracy Evaluation : 0.67
+2021-01-15 01:08:04,409 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:08:04,409 - INFO - Profiling:   <eval_on_one_page>  RSS: -569.34kB | VMS: -786.43kB | time:     6.1s
+2021-01-15 01:08:05,484 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:08:05,485 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (3, 2)
+2021-01-15 01:08:05,485 - INFO - Shape  of all paragraphs data matrix (4, 2)
+2021-01-15 01:08:05,485 - INFO - Shape without duplicates (4, 2)
+2021-01-15 01:08:05,485 - INFO - Shape without empty string rows (4, 2)
+2021-01-15 01:08:05,487 - INFO - Numbers are replaced by tag
+2021-01-15 01:08:05,534 - INFO - Lemmatization is done
+2021-01-15 01:08:05,580 - INFO - column verb_count created
+2021-01-15 01:08:05,581 - INFO - column contains_pron created
+2021-01-15 01:08:05,582 - INFO - column tokens_punct created
+2021-01-15 01:08:05,582 - INFO - column remove_stop_words is created
+2021-01-15 01:08:05,583 - INFO - column sent_count is created
+2021-01-15 01:08:05,583 - INFO - column num_count is created
+2021-01-15 01:08:05,584 - INFO - column clean_paragraph_len is created
+2021-01-15 01:08:05,586 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:08:05,588 - INFO - The proportion of target variable
+0    75.0
+1    25.0
+Name: label, dtype: float64
+2021-01-15 01:08:05,588 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time: 101.79ms
+2021-01-15 01:08:05,590 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.94ms
+2021-01-15 01:08:10,055 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249c9ec268> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:10,062 - INFO - ../data/my_model-12.h5
+2021-01-15 01:08:10,063 - INFO -                                                 text     proba
+0  Assemble the toasts with sweet potatoes, feta,...  0.000487
+1  Drizzle the bread slices with a bit of oil and...  0.010937
+2  Roast the sweet potatoes: drizzle the cubes wi...  0.000060
+3  ½ cup cubed sweet potatoes (cut them pretty sm...  0.996823
+2021-01-15 01:08:10,070 - INFO -           label    pred_label
+0  Instructions  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3       Recepie       Recepie
+2021-01-15 01:08:12,830 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f24ae9a1950> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:12,833 - INFO - Model Loss score: 0.0
+2021-01-15 01:08:12,833 - INFO - Model Recall score: 1.0
+2021-01-15 01:08:12,833 - INFO - Model Precision score: 1.0
+2021-01-15 01:08:12,833 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:08:12,833 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:08:12,833 - INFO - Profiling:   <eval_on_one_page>  RSS: -524.29kB | VMS: -524.29kB | time:    7.24s
+2021-01-15 01:08:16,397 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f24ae9a1510> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:16,403 - INFO - ../data/new_my_model.h5
+2021-01-15 01:08:16,404 - INFO -                                                 text     proba
+0  Assemble the toasts with sweet potatoes, feta,...  0.003240
+1  Drizzle the bread slices with a bit of oil and...  0.036648
+2  Roast the sweet potatoes: drizzle the cubes wi...  0.000442
+3  ½ cup cubed sweet potatoes (cut them pretty sm...  0.738261
+2021-01-15 01:08:16,411 - INFO -           label    pred_label
+0  Instructions  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3       Recepie       Recepie
+2021-01-15 01:08:18,875 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f24ac2da1e0> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:18,878 - INFO - Model Loss score: 0.09
+2021-01-15 01:08:18,878 - INFO - Model Recall score: 1.0
+2021-01-15 01:08:18,878 - INFO - Model Precision score: 1.0
+2021-01-15 01:08:18,878 - INFO - Model Accuracy Evaluation : 1.0
+2021-01-15 01:08:18,878 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:08:18,878 - INFO - Profiling:   <eval_on_one_page>  RSS:   3.26MB | VMS: -262.14kB | time:    6.04s
+2021-01-15 01:08:20,251 - INFO - Recipe transformed to array and give a label 1 with shape (1, 2)
+2021-01-15 01:08:20,252 - INFO - INSTRUCTIONS transformed to array and give a label 0 with shape (3, 2)
+2021-01-15 01:08:20,252 - INFO - Shape  of all paragraphs data matrix (4, 2)
+2021-01-15 01:08:20,252 - INFO - Shape without duplicates (4, 2)
+2021-01-15 01:08:20,252 - INFO - Shape without empty string rows (4, 2)
+2021-01-15 01:08:20,253 - INFO - Numbers are replaced by tag
+2021-01-15 01:08:20,299 - INFO - Lemmatization is done
+2021-01-15 01:08:20,340 - INFO - column verb_count created
+2021-01-15 01:08:20,340 - INFO - column contains_pron created
+2021-01-15 01:08:20,341 - INFO - column tokens_punct created
+2021-01-15 01:08:20,342 - INFO - column remove_stop_words is created
+2021-01-15 01:08:20,342 - INFO - column sent_count is created
+2021-01-15 01:08:20,343 - INFO - column num_count is created
+2021-01-15 01:08:20,343 - INFO - column clean_paragraph_len is created
+2021-01-15 01:08:20,345 - INFO - Clean data is in /home/gal/PycharmProjects/ai_assignment_aidock/notebooks_and_drafts/data/new_one_page_data_clean.pkl
+2021-01-15 01:08:20,347 - INFO - The proportion of target variable
+0    75.0
+1    25.0
+Name: label, dtype: float64
+2021-01-15 01:08:20,347 - INFO - Profiling: <preprocess_clean_data>  RSS:       0B | VMS:       0B | time:  94.42ms
+2021-01-15 01:08:20,349 - INFO - Profiling:              <tfidf>  RSS:       0B | VMS:       0B | time:   0.81ms
+2021-01-15 01:08:25,233 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f249c0a9268> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:25,239 - INFO - ../data/my_model-12.h5
+2021-01-15 01:08:25,240 - INFO -                                                 text     proba
+0  1 bunch asparagus, woody ends trimmed Extra-vi...  0.142447
+1  Blanched: Bring a large pot of salted water to...  0.000050
+2  Grilled: Preheat a grill to medium. Toss the s...  0.000643
+3  Roasted: Preheat the oven to 425°F and line a ...  0.000128
+2021-01-15 01:08:25,247 - INFO -           label    pred_label
+0       Recepie  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+2021-01-15 01:08:28,116 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f24ac1b3bf8> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:28,120 - INFO - Model Loss score: 0.49
+2021-01-15 01:08:28,120 - INFO - Model Recall score: 0.0
+2021-01-15 01:08:28,120 - INFO - Model Precision score: 0.0
+2021-01-15 01:08:28,120 - INFO - Model Accuracy Evaluation : 0.75
+2021-01-15 01:08:28,120 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:08:28,120 - INFO - Profiling:   <eval_on_one_page>  RSS:       0B | VMS:       0B | time:    7.77s
+2021-01-15 01:08:32,181 - WARNING - 11 out of the last 11 calls to <function Model.make_predict_function.<locals>.predict_function at 0x7f247db44d08> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:32,188 - INFO - ../data/new_my_model.h5
+2021-01-15 01:08:32,189 - INFO -                                                 text     proba
+0  1 bunch asparagus, woody ends trimmed Extra-vi...  0.202995
+1  Blanched: Bring a large pot of salted water to...  0.000079
+2  Grilled: Preheat a grill to medium. Toss the s...  0.000970
+3  Roasted: Preheat the oven to 425°F and line a ...  0.000591
+2021-01-15 01:08:32,201 - INFO -           label    pred_label
+0       Recepie  Instructions
+1  Instructions  Instructions
+2  Instructions  Instructions
+3  Instructions  Instructions
+2021-01-15 01:08:36,170 - WARNING - 11 out of the last 11 calls to <function Model.make_test_function.<locals>.test_function at 0x7f247d7e8950> triggered tf.function retracing. Tracing is expensive and the excessive number of tracings could be due to (1) creating @tf.function repeatedly in a loop, (2) passing tensors with different shapes, (3) passing Python objects instead of tensors. For (1), please define your @tf.function outside of the loop. For (2), @tf.function has experimental_relax_shapes=True option that relaxes argument shapes that can avoid unnecessary retracing. For (3), please refer to https://www.tensorflow.org/guide/function#controlling_retracing and https://www.tensorflow.org/api_docs/python/tf/function for  more details.
+2021-01-15 01:08:36,178 - INFO - Model Loss score: 0.4
+2021-01-15 01:08:36,178 - INFO - Model Recall score: 0.0
+2021-01-15 01:08:36,178 - INFO - Model Precision score: 0.0
+2021-01-15 01:08:36,178 - INFO - Model Accuracy Evaluation : 0.75
+2021-01-15 01:08:36,178 - INFO - Model AUC Evaluation : 1.0
+2021-01-15 01:08:36,179 - INFO - Profiling:   <eval_on_one_page>  RSS:   46.4MB | VMS: 112.58MB | time:    8.06s

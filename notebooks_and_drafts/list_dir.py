@@ -50,7 +50,7 @@ if __name__ == '__main__':
 
 
 
-
+# TODO change constants and model in config and preprocess
 
 
 
