@@ -15,14 +15,14 @@ DOT_RX = "\.{1,4}|\:"
 
 # for model , preprocess, training
 TEST_SIZE = 0.2
-BATCH_SIZE = 128
+BATCH_SIZE = 64
 EPOCHS = 200
 THRESHOLD = 0.5
-EMBEDDING_DIM = 128
+EMBEDDING_DIM = 64
 TRAIN_DATA_CLEAN = '/data/new_train_data_clean.pkl'
 TEST_DATA_CLEAN = '/data/new_test_data_clean.pkl'
 MODEL_NAME = '/data/new_my_model.h5'
-MAX_SEQ_LEN = 121
+MAX_SEQ_LEN = 217
 VOCAB_SIZE = 2474  # it is changed from 2263. It depends on scrapping part -
 # links to scrap each time goes in different order --> when you take out first 10 links from
 # all_links.txt it will be 10 different links each scraper run --> the vocabulary every time will be different size

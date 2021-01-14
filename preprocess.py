@@ -192,7 +192,7 @@ def load_data_transform_to_set(filename):
     return pd.DataFrame(unique, columns=['paragraph', 'label'])
 
 
-# @profile
+@profile
 def preprocess_clean_data(df, name_to_save):
     """
     The function replace numbers with the tag, lemmatize, counts prons,
@@ -233,9 +233,6 @@ def preprocess_clean_data(df, name_to_save):
     data['clean_paragraph_len'] = data.remove_stop_words.apply(count_words)
     logging.info('column clean_paragraph_len is created')
 
-    # data['not_clean_paragraph_len'] = data.paragraph.apply(count_words)
-    # logging.info('column not_clean_paragraph_len is created')
-
     data['label'] = data.label.apply(int)  # this line (convert list --> int)
 
     data_clean = data[
@@ -268,7 +265,7 @@ def sent2vec(texts, max_sequence_length, vocab_size):
                          dtype="int32", padding="post", value=0)
 
 
-# @profile
+@profile
 def tfidf(texts, vocab_size):
     """ Create a union train set vocabulary and turn text in set
     into  padded sequences (word --> num )
@@ -285,7 +282,7 @@ def tfidf(texts, vocab_size):
     return tokenizer.sequences_to_matrix(text_sequences, mode='tfidf')
 
 
-# @profile
+@profile
 def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and model_train.py is in notebooks_and_drafts/LSTM.ipynb
               embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
     """
@@ -312,21 +309,21 @@ def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and m
                     input_length=tf_idf_train.shape[1],
                     mask_zero=True)(nlp_input)
 
-    nlp_out = LSTM(128)(emb)
+    nlp_out = Bidirectional(LSTM(64))(emb)
 
     concat = tensorflow.concat([nlp_out, meta_input], axis=1)
 
-    classifier = Dense(32, kernel_regularizer=regularizers.l2(0.005), activation='relu')(concat)
+    classifier = Dense(32, activation='relu')(concat)
 
-    drop = Dropout(0.3)(classifier)
+    drop = Dropout(0.1)(classifier)
 
-    output = Dense(1, kernel_regularizer=regularizers.l2(0.005), activation='sigmoid')(drop)
+    output = Dense(1, activation='sigmoid')(drop)
     model = Model(inputs=[nlp_input, meta_input], outputs=[output])
 
     return model
 
 
-# @profile
+@profile
 def main_preprocess(filename=DATA_FILE):
     """
     Function load the data after scrapping from pkl file
