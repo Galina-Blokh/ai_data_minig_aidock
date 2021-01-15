@@ -7,7 +7,6 @@ import inspect
 from config import DATA_FILE, LOG_FILE
 import tensorflow as tf
 import numpy as np
-
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -84,7 +83,7 @@ def profile(func, *args, **kwargs):
         return wrapper(*args, **kwargs)
 
 
-# @profile
+@profile
 def print_json(url_to_get_recipe, json_file):
     """
     To print to the console json beautiful format

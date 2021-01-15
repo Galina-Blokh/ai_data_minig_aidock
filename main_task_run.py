@@ -2,12 +2,11 @@ import argparse
 import logging
 import os
 import pandas as pd
-
 from get_one import get_one
 from config import  VOCAB_SIZE, MODEL_NAME, LOG_FILE
-from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf, eval_on_one_page
+from model_train import eval_on_one_page
+from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf
 from utils import print_json, profile
-
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')

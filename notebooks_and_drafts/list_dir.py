@@ -13,7 +13,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
 
 def run_list_dir():
     """
-    To test several models on several links
+    To test several models on several links (takes all from /data folder)
     """
     f = open(os.pardir+'/data/'+TEST_LINKS_FILE, 'r')
     models_list = glob.glob(f'{os.pardir}/data/' + '*.h5')

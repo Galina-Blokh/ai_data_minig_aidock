@@ -5,13 +5,10 @@ import matplotlib.pyplot as plt
 import pandas as pd
 from tensorflow.python.keras import Input, Model
 from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
-
-from config import BATCH_SIZE, EPOCHS, MODEL_NAME, TRAIN_DATA_CLEAN, TEST_DATA_CLEAN, LOG_FILE, EMBEDDING_DIM
-from preprocess import  tfidf
-
+from config import BATCH_SIZE, EPOCHS, MODEL_NAME, TRAIN_DATA_CLEAN, TEST_DATA_CLEAN, LOG_FILE, EMBEDDING_DIM, THRESHOLD
+from preprocess import tfidf
 # log-file will be created in the main dir
 from utils import profile
-
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -56,7 +53,10 @@ def get_model(tf_idf_train, X_meta_train, results,
     The function creates the model for 2 different input data:
     NLP set and additional features not NLP set
     Layers: Embedding - TFIDF MATRIX Use masking to handle the variable sequence lengths,
-            BiLSTM, concatenation of 2 data types,
+            BiLSTM,
+            concatenation of 2 data types,
+            expand dimension to use BiLSTM second time,
+            BiLSTM,
             Dense/fully connected layer with activation function "relu",
             Dropout layer to avoid overfitting,
             Dense/fully connected layer with activation function "sigmoid"
@@ -70,12 +70,12 @@ def get_model(tf_idf_train, X_meta_train, results,
     tf_idf_input = Input(shape=(tf_idf_train.shape[1],))
     meta_input = Input(shape=(X_meta_train.shape[1],))
     emb = Embedding(output_dim=embedding_dimensions,
-                     input_dim=len(results) + 1,
-                     input_length=tf_idf_train.shape[1],
-                     mask_zero=True)(tf_idf_input)  # Use masking to handle the variable sequence lengths
+                    input_dim=len(results) + 1,
+                    input_length=tf_idf_train.shape[1],
+                    mask_zero=True)(tf_idf_input)  # Use masking to handle the variable sequence lengths
     nlp_out = Bidirectional(LSTM(64))(emb)  #
     concat = tf.concat([nlp_out, meta_input], axis=1)
-    concat = tf.expand_dims(concat, axis=-1)  # expand dimension to use lstm second time
+    concat = tf.expand_dims(concat, axis=-1)  # expand dimension to use bilstm second time
     concat_lstm = Bidirectional(LSTM(64))(concat)
     classifier = Dense(32, activation='relu')(concat_lstm)
     drop = Dropout(0.2)(classifier)  # to avoid overfitt
@@ -83,8 +83,6 @@ def get_model(tf_idf_train, X_meta_train, results,
     model = Model(inputs=[tf_idf_input, meta_input], outputs=[output])
 
     return model
-
-
 
 
 @profile
@@ -157,7 +155,7 @@ def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TES
     plt.plot(history.history['val_loss'], 'g--', label=f'val_loss ')
     plt.xlabel('Epoch')
     plt.ylabel('Loss')
-    plt.title('The Loss vs val_Loss LSTM Concat, activation = relu')
+    plt.title('The Loss vs val_Loss biLSTM Concat, activation = relu')
     plt.legend(loc='best')
     plt.show()
 

@@ -165,13 +165,13 @@ def load_data_transform_to_set(filename):
 
     # and give a label 1
     recipe = np.hstack((recipe, np.ones(len(recipe), int).reshape(-1, 1)))
-    logging.info(f'Recipe transformed to array and give a label 1 with shape {recipe.shape}')
+    logging.info(f'Recipe transformed to array and have a label 1 with shape {recipe.shape}')
 
     # transform instructions to array and give a label 0
     instr_col = df["INSTRUCTIONS"].str.split('\n\n').to_numpy()
     instr = np.concatenate(instr_col).reshape(-1, 1)
     instr = np.hstack((instr, np.zeros(len(instr), int).reshape(-1, 1)))
-    logging.info(f'INSTRUCTIONS transformed to array and give a label 0 with shape {instr.shape}')
+    logging.info(f'INSTRUCTIONS transformed to array and have a label 0 with shape {instr.shape}')
 
     # forming a full data array with labels
     data = np.concatenate((instr, recipe), axis=0)
