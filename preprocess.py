@@ -258,8 +258,7 @@ def sent2vec(texts, max_sequence_length, vocab_size):
 
     # Turn text into  padded sequences (word --> num )
     text_sequences = tokenizer.texts_to_sequences(texts)
-    return pad_sequences(text_sequences, maxlen=max_sequence_length,
-                         dtype="int32", padding="post", value=0)
+    return pad_sequences(text_sequences, maxlen=max_sequence_length, padding="post", value=0)
 
 
 @profile
@@ -267,7 +266,7 @@ def tfidf(texts, vocab_size):
     """ Create a union train set vocabulary and turn text in set
     into  padded sequences (word --> num )
     :param texts: series of prepared strings
-           max_sequence_length: int max len of sentence in series
+    :param vocab_size: int count of unique words in text series
     :return ndArray with transformed series of text to arrays of float Tf-IdF coefficients"""
 
     tokenizer = Tokenizer(num_words=vocab_size)

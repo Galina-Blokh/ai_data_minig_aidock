@@ -17,6 +17,7 @@ def get_all_links_recipes(url_to_get):
      :param url_to_get: str
      :return recipes_links: set[str]
      """
+    response = []
     try:
         page = grequests.get(url_to_get)
         response = grequests.map([page], size=config.BATCHES)
@@ -47,7 +48,7 @@ def get_all_recipes(url_to_get=config.URL):
     with open('data/' + config.TEST_LINKS_FILE, "w") as f:
         [f.write(l + '\n') for l in urls[:10]]
     links = urls[10:]
-    logging.info(f'Took out {len(urls)-len(links)} recipes_links for testing, left {len(links)} links')
+    logging.info(f'Took out {len(urls) - len(links)} recipes_links for testing, left {len(links)} links')
     page = (grequests.get(u) for u in links)
     # get data from website
     response = grequests.map(page, size=config.BATCHES)
@@ -72,7 +73,7 @@ def get_all_recipes(url_to_get=config.URL):
 
 
 if __name__ == '__main__':
-    _,path = get_all_recipes()
+    _, path = get_all_recipes()
     logging.info(f'All data from recipes pages was saved into \n{path}\nIf you want to continue, run '
                  f'`preprocess.py`')
     sys.exit('This is the end of scraping...\nIf you want to continue, run `preprocess.py`')

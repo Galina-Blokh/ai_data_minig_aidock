@@ -30,8 +30,8 @@ def eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text):
 
     pred_df['proba'] = preds
     pred_df['label'] = y_one_page
-    pred_df['label'] = pred_df['label'].apply(lambda x: 'Instructions' if x == 0 else 'Recepie')
-    pred_df['pred_label'] = pred_df['proba'].apply(lambda x: 'Recepie' if x > THRESHOLD else 'Instructions')
+    pred_df['label'] = pred_df['label'].apply(lambda x: 'Instructions' if x == 0 else 'Recipe')
+    pred_df['pred_label'] = pred_df['proba'].apply(lambda x: 'Recipe' if x > THRESHOLD else 'Instructions')
     logging.info(f'{model}')
     logging.info(pred_df[['text', 'proba']])
     logging.info(pred_df[['label', 'pred_label']])
@@ -134,7 +134,7 @@ def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TES
                                    tf.keras.metrics.Precision(),
                                    'accuracy',
                                    tf.keras.metrics.AUC()])
-    es = tf.keras.callbacks.EarlyStopping(monitor='val_loss')
+    es = tf.keras.callbacks.EarlyStopping()
     history = concat_biLstm.fit([tf_idf_train, X_meta_train],
                                 y_train,
                                 batch_size=BATCH_SIZE,
@@ -142,7 +142,7 @@ def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TES
                                 validation_split=0.2,
                                 callbacks=[es])
     # evaluate the model
-    score = concat_biLstm.evaluate([tf_idf_test, X_meta_test], y_test, batch_size=BATCH_SIZE, verbose=1)
+    score = concat_biLstm.evaluate([tf_idf_test, X_meta_test], y_test, batch_size=BATCH_SIZE)
     logging.info(f'Model Loss score: {round(score[0], 2)}')
     logging.info(f'Model Recall score: {round(score[1], 2)}')
     logging.info(f'Model Precision score: {round(score[2], 2)}')

@@ -7,6 +7,7 @@ import inspect
 from config import DATA_FILE, LOG_FILE
 import tensorflow as tf
 import numpy as np
+
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
@@ -94,14 +95,14 @@ def print_json(url_to_get_recipe, json_file):
 
     print(u"Url: {} \n{{\n \t\t{} :\n\t\t\t\t[".format(url_to_get_recipe, list(json_file.keys())[0]))
     for k in json_file['Recipe'][0]:
-       print('\t\t\t\t\t\t {}'.format(str(k).strip()))
+        print('\t\t\t\t\t\t {}'.format(str(k).strip()))
     print('\t\t\t\t]')
     print('\n\t\t' + str(list(json_file.keys())[1] + ':'))
     print('"' + json_file['INSTRUCTIONS'][0] + '"')
     print('}\n')
 
 
-# @profile
+@profile
 def check_dir_path(filename, what_to_do):
     """
     To checks if the path exists and create empty file
@@ -110,6 +111,7 @@ def check_dir_path(filename, what_to_do):
     :return file and path
     """
     path = ''
+    file = ''
     if not os.path.exists(f'{os.getcwd()}/data'):
         os.makedirs(f'{os.getcwd()}/data')
     try:
@@ -120,7 +122,7 @@ def check_dir_path(filename, what_to_do):
     return file, path  # DON'T FORGET TO CLOSE `file` IN THE PLACE WHERE YOU CALL THIS FUNCTION
 
 
-# @profile
+@profile
 def save_data_to_pkl(data_file, file_name=DATA_FILE):
     """
     To checks the path and dumps into the pkl file
@@ -135,7 +137,7 @@ def save_data_to_pkl(data_file, file_name=DATA_FILE):
     return path
 
 
-# @profile
+@profile
 def read_from_pickle(filename):
     """The function receive  a data_file_name:str
     read from the pkl file
@@ -145,7 +147,7 @@ def read_from_pickle(filename):
         return pickle.load(f)
 
 
-# @profile
+@profile
 def stratified_split_data(text, label, test_size):
     """
     The function shuffle and split data set into Train and Test sets stratified on label
