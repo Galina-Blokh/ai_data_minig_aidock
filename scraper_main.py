@@ -68,7 +68,7 @@ def get_all_recipes(url_to_get=config.URL):
         json_file['INSTRUCTIONS'].append('\n\n'.join(instructions_list))
     path_to_data = save_data_to_pkl(json_file, 'new_recipe.pkl')
 
-    return json_file,path_to_data
+    return json_file, path_to_data
 
 
 if __name__ == '__main__':

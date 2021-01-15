@@ -1,54 +1,46 @@
 # **Introductory information**
 
 ## Data Mining NLP python project:
-**The goal** was to collect the data, build the Neural Network for text binary classification using only _Pytorch, 
-<br>Tensorflow, Pandas, Numpy and BeautifulSoup_. The implementation is done in _Python 3.6+._ 
-<br>For web scraping was used _Grequests_ Python library
+**The goal** was to collect the data, build the Neural Network for text binary classification using only Tensorflow, 
+<br>Pandas, Numpy and BeautifulSoup_. The implementation is in _Python 3.6+._ For web scraping used _Grequests_ 
+<br>Python library
 
-It contains of 2 parts: 
+It contains two parts: 
 - Scraping data from recipe website part (data collecting)
-- Data Science part (it made around the classification problem that determines for each paragraph with what probability it’s 
-  <br>label is ‘ingredients’ or ‘recipe’)
-#### !!!These parts are not running as one pipeline!!! No console output - only log (except when you run run.sh)!!!
+- Data Science part (it made around the classification problem that determines for each paragraph with what probability
+<br>it’s the label is ‘ingredients’ or ‘recipe’)
+#### !!!These parts are not running as one pipeline!!! No console output - only log (except when you run  **run.sh**)!!!
 
-<br>All functions are wraped with `@profile` decorator - it prints out into log file time and memory usage during code 
-<br>running program execution. The code of this utility you may find in **utils.py** in the main project directory.
-<br>The project has the only one **recipes_logging.log** file, as well in the main directory. The project has **run.sh**
-<br>file, which you run in cli  `bash run.sh htth://www.anylinkfromtestlinksfileindatafolder.com`. As the result you 
-<br>will get  in the terminal window a json-like text from entered link page. In the **recipes_logging.log** file will 
-<br>be information about all functions ran and steps were made, classification, probability and metrics. 
-<br>In **requirements.txt** you can find applied Python packages.
-<br>In **notebooks_and_drafts** just notebooks and drafts. The project run doesn't touch it.
-<br>In **config.py** all constants (or almost all)
+<br>All functions are wrapped with `@profile` decorator - it prints out into log file time and memory usage during 
+<br>program execution<br>. The code of this utility is in **utils.py** ( in the head project directory).
+<br>The project has only one **recipes_logging.log** file ( in the head project directory). The project has **run.sh**
+<br>file, which you run in CLI's `bash run.sh htth://www.anylinkfromtestlinksfileindatafolder.com`. Consequently, it 
+<br>gives the output in the terminal window a JSON-like text from the entered link page. In **recipes_logging.log** file will 
+<br>be information about all functions ran: steps made, classification, probability, and metrics. 
+<br>**requirements.txt** contains applied Python packages.
+<br>**notebooks_and_drafts**  - just notebooks and drafts. The project run doesn't touch it.
+<br>All constants (or almost all) in **config.py** 
 ## Methodological information
 ### **Scraping data from recipes website**
 
-Unique links for scraping are in **data/all_recipes_links.txt**
-<br>Links without needed content/class-names are in **data/no_recipe_page.txt**
 <br>Scraped data {'Recepie':[text],'INGREDIENTS': text} is in **data/recipes.pkl**
 <br>The scraping part starts from **main_scraper.py**. It extracts all links from a page with all recipes using 
-<br>**extract_all_links.py**,writes down collected links into **data/all_links.txt** file, redact the all_links.txt --> 
-<br>leaves only links with no duplicates and pages with relevant data. Then reads links from a file and calls 
-<br>**extract_one_recipe.py** to collect data from each recipe page. Saves collected data into **data/recipes.pkl** file.
-<br> If you want to continue run the project, then run **preprocess.py**
+<br>_BeautifulSoup_ and asynchronous HTTP requests (_Grequests_). Collects all data into defaultdict, save into pickle file
+<br>**data/new_recipe.pkl/**. Ten first URLs saves into **data/test_links.txt**. If you're going to test the model work 
+<br>using **run.sh** file, then you can use these links.
+<br> To continue run **preprocess.py**
 
-<br>_**IMPORTANT:**_ If you want to take out several links to test the model, you have to uncomment the line 34, 
-<br> in **main_scraper.py** before run it (to stop the program run in the middle) and in hand way take out links from 
-<br> **data/all_links.txt**, then save the file and press enter in terminal. In such way data from these pages won't be 
-<br>collected into data set for training the model.
-<br>If you want just to test the model work using **run.sh** file, then you can use already written links in **data/test_links.txt**
 ### **Preprocessing, modeling, feature engineering**
-Next stage is starting from run `main_preprocess(filename)` in **preprocess.py**.This function load the data after 
-<br>scrapping from **data/recipes.pkl** file. Calling for `load_data_transform_to_set(filename)` to transform into data 
-<br>set with column `paragraph` and `label`,then call for `utils.stratified_split_data(text, label, TEST_SIZE)` and 
-<br>after that preprocess separately train/test sets using `preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')`.
-<br>In  `preprocess_clean_data` function clean the series of text and add new columns with additional features. New 
-<br>sets save into 2 pkl files: **data/train_data_clean.pkl** and **data/test_data_clean.pkl**.
-<br>This is the end of first Data Science part in this project. Next step is in **model_train.py**. After this step we 
-<br>can start to tune the model. This was the reason why preprocessing part is finished exactly here.
+Next stage is starting from run `main_preprocess(filename)` in **preprocess.py**.This function loads the data from 
+<br>**data/recipes.pkl** file. Calls for `load_data_transform_to_set(filename)` to transform into data 
+<br>set with column `paragraph` and `label`.Then calls for `utils.stratified_split_data(text, label, TEST_SIZE)`.
+<br>After splitting, preprocess separately train/test sets with `preprocess_clean_data(train_dataset.as_numpy_iterator(), f'train')`.
+<br>In  `preprocess_clean_data` function cleans the series of text and creates new columns with additional features. New 
+<br>sets saves into two pkl files: **data/train_data_clean.pkl** and **data/test_data_clean.pkl**.
+<br>It is the end of the first Data Science part. The next step is in **model_train.py**.  
 
 ### **Train, tune, evaluation**
-<br>When you run **model_train.py**, at first it will read  just saved on the previous step **data/train_data_clean.pkl** 
+<br>When you run **model_train.py**, at first, it will read **data/train_data_clean.pkl** 
 <br>and **data/test_data_clean.pkl**. Then count `max len sent/sequence` and `vocabulary size`. Next will be call for 
 <br>`preprocess.tfidf(texts, vocab_size) ` function to transform data into sequences. Then split data into nlp and meta 
 <br>sets for test and train sets, call for
@@ -57,19 +49,19 @@ Next stage is starting from run `main_preprocess(filename)` in **preprocess.py**
 file, plot loss vs val_loss, save the model into `config.MODEL_NAME='data/my_model.h5'`. Here is the end of the modeling
 <br>and preprocessing.
 
-And **_the last final stage:_** to run in terminal `bash run.sh htth://www.anylinkfromtestlinksfileindatafolder.com`. 
-It will call **main_task_run.py** which accepts arguments such as your website link. Then it will call for 
-<br>`extract_one_recipe.get_recipe(url_to_get)` from the scraping part to collect needed data from the page. We are
-<br>assuming  that url is valid and that it redirects you to a page where a valid recipe is located. Then it calls the 
-<br>`utils.print_json(url_to_get_recipe, json_file)` function which give you console output in json-like format.
-<br>Next, apply transformation for first part of the json file: from `list` ==> to `string`. Call the function 
-<br>`preprocess.load_data_transform_to_set()` to transform from a dictionary into data set. Preprocess text, engineer 
-<br> new features, save to pikle file using `preprocess.preprocess_clean_data()`. Split into nlp and meta sets and call
-<br> `eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text)` from **run_tensorflow.py**. In log file
-<br> you will find all information about the metrics, model, table with predictions and probability values.
+**_The last final stage:_** to run in terminal `bash run.sh htth://www.anylinkfromtestlinksfileindatafolder.com`. 
+It call **main_task_run.py**. It accepts an URL as arguments . Then it  call for 
+<br>**get_one.py**  to collect needed data from the page. We are
+<br>assuming the url is valid and it redirects you to a page where a valid recipe is located. Next step - calls the 
+<br>`utils.print_json(url_to_get_recipe, json_file)`, function which give you console output in JSON-like format.
+<br>Next, apply transformation for the JSON file: from `list` ==> to `string` each element. Call the function 
+<br>`preprocess.load_data_transform_to_set()` to transform from a defaultdict into data set. Preprocess text, engineer 
+<br> new features, save to pikle file using `preprocess.preprocess_clean_data()`. Split into nlp and meta sets, call
+<br> `eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text)` from **model_train.py**. 
+<br>All information about the metrics, model, table with predictions and probability values writes into log file.
 
 <br>_**IMPORTANT:**_ If you want to test models in **/data** folder on test links, then you have to run **notebooks_and_drafts/list_dir.py**
-<br> In **/data** folder can be several pretrained models. It runs on links from **data/test_links.txt**
+<br> In **/data** folder can be several pretrained models. **notebooks_and_drafts/list_dir.py** runs with URLs from **data/test_links.txt**
 
 ## Data specific information
 
@@ -77,8 +69,8 @@ The data is collected from 'https://www.loveandlemons.com'
 <br>Data is imbalanced 80/20. 
 <br>Paragraph = all lines in ingredients labeled as 1, 
 <br>Paragraph = each `\n` in Instructions labeled as 0.
-<br>Vocabulary size = xxxx words/lemmas. It is changed from 2263 to 2284. It very depends on scrapping part -
-<br>links to scrap each time goes in different order --> when you take out first 10 links from
-<br>all_links.txt it will be 10 different links each scraper run --> the vocabulary every time will be different size
+<br>Vocabulary size = 2474 words/lemmas. It can be changed. It very depends on scrapping part -
+<br>links to scrap each time goes in different order --> when you take out first 10 links  it will be 10 different links
+<br>each scraper run --> the vocabulary every time will be different size
 <br>Test split size = 0.2
-<br>Data from 10 links wasn't included into set (was using for testing **run.sh**) it is in **data/test_links.txt**
+<br>Data from 10 URLs in **data/test_links.txt** wasn't included into set for model train.
