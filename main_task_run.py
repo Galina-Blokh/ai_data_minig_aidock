@@ -4,10 +4,8 @@ import os
 import pandas as pd
 
 from get_one import get_one
-from notebooks_and_drafts.extract_one_recipe import get_recipe
 from config import  VOCAB_SIZE, MODEL_NAME, LOG_FILE
-from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data,tfidf
-from run_tensorflow import eval_on_one_page
+from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf, eval_on_one_page
 from utils import print_json, profile
 
 # log-file will be created in the main dir
@@ -28,16 +26,15 @@ def main_for_one_link():
     parser = argparse.ArgumentParser(description='Print the recipe json from given link')
     parser.add_argument('link')
     args = parser.parse_args()
-    # dict_file = get_recipe(str(args.link).strip())
-    # print_json(str(args.link).strip(), dict_file)
+
     dict_file = get_one(str(args.link).strip())
     print_json(str(args.link).strip(), dict_file)
 
     dict_file['Recipe'] = from_list_to_str(dict_file['Recipe'][0])
     dict_file['INSTRUCTIONS'] = dict_file['INSTRUCTIONS'][0]
+
     # transform to data set (funny tiny dataset;)
     df = load_data_transform_to_set(dict_file)
-
     text = df['paragraph']
 
     one_page_data_path = preprocess_clean_data(df, 'one_page')

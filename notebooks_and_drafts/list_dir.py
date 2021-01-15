@@ -4,9 +4,7 @@ import os
 import pandas as pd
 from config import VOCAB_SIZE, LOG_FILE, TEST_LINKS_FILE
 from get_one import get_one
-from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf
-from run_tensorflow import eval_on_one_page
-from scraper_main import get_all_recipes
+from preprocess import from_list_to_str, load_data_transform_to_set, preprocess_clean_data, tfidf, eval_on_one_page
 from utils import print_json
 # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
@@ -46,14 +44,3 @@ def run_list_dir():
 
 if __name__ == '__main__':
     run_list_dir()
-
-
-
-
-# TODO change constants and model in config and preprocess
-
-
-
-
-
-

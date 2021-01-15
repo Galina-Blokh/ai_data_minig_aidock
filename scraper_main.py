@@ -11,7 +11,7 @@ logging.basicConfig(filename=config.LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-# @profile
+@profile
 def get_all_links_recipes(url_to_get):
     """To collect all recipes links from web site
      :param url_to_get: str

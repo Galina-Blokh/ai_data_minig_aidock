@@ -9,9 +9,9 @@ def get_one(url_to_get):
     :return  json_file: defaultdict('Recipe':list[list[str]], 'INGREDIENTS': list[str]')
     """
     json_file = defaultdict(list)
-    page = [grequests.get(url_to_get)]
 
     # get data from website
+    page = [grequests.get(url_to_get)]
     response = grequests.map(page, size=20)
     for res in response:
         try:

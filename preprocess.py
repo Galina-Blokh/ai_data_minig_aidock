@@ -6,14 +6,10 @@ import sys
 import numpy as np
 import pandas as pd
 import spacy
-import tensorflow
 from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-from tensorflow.python.keras import Input, regularizers
-from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
-from tensorflow.python.keras.models import Model
-from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE, EMBEDDING_DIM
+from config import DATA_FILE, DIGIT_RX, SYMBOL_RX, DOT_RX, LOG_FILE, TEST_SIZE
 from utils import save_data_to_pkl, stratified_split_data, profile
 
 # python3 -m spacy download en_core_web_sm
@@ -95,7 +91,7 @@ def remove_punctuation(series):
     params: series of strings
     return transformed series
     """
-    table = str.maketrans('','', string.punctuation)
+    table = str.maketrans('', '', string.punctuation)
     tokens_punct = series.translate(table).lower()
     tokens_spaces = ' '.join([token.strip() for token in tokens_punct.split() if token != ' '])
     return tokens_spaces
@@ -236,7 +232,8 @@ def preprocess_clean_data(df, name_to_save):
     data['label'] = data.label.apply(int)  # this line (convert list --> int)
 
     data_clean = data[
-        ['paragraph','remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count', 'contains_pron', 'label']]
+        ['paragraph', 'remove_stop_words', 'sent_count', 'num_count', 'clean_paragraph_len', 'verb_count',
+         'contains_pron', 'label']]
     path_to_data = save_data_to_pkl(data_clean, f'new_{name_to_save}_data_clean.pkl')
 
     logging.info(f'Clean data is in {path_to_data}')
@@ -245,7 +242,7 @@ def preprocess_clean_data(df, name_to_save):
     return path_to_data
 
 
-# @profile
+@profile
 def sent2vec(texts, max_sequence_length, vocab_size):
     """
     Create a union train set vocabulary and turn text in set
@@ -280,47 +277,6 @@ def tfidf(texts, vocab_size):
     text_sequences = tokenizer.texts_to_sequences(texts)
 
     return tokenizer.sequences_to_matrix(text_sequences, mode='tfidf')
-
-
-@profile
-def get_model(tf_idf_train, X_meta_train, results, # the copy of this code and model_train.py is in notebooks_and_drafts/LSTM.ipynb
-              embedding_dimensions=EMBEDDING_DIM):  # TODO move it into model_train.py
-    """
-    The function creates the model for 2 different input data:
-    NLP set and additional features not NLP set
-    Layers: Embedding - TFIDF MATRIX Use masking to handle the variable sequence lengths,
-            BiLSTM, concatenation of 2 data types,
-            Dense/fully connected layer with activation function "relu",
-            Dropout layer to avoid overfitting,
-            Dense/fully connected layer with activation function "sigmoid"
-            All hyper-parameters as constants are in config.py
-    :params tf_idf_train: ndArray(ndArray(int)) - a set with tfidf vectors
-    :params X_meta_train: ndArray(int))- a set with non-nlp features
-    :params results: set{str} - word vocabulary of the train set (config.VOCAB_SIZE=2284)
-    :params embedding_dimensions:int hyper-parameter, can be done as = int(len(results)**0.25)
-    :return a model
-    """
-    nlp_input = Input(shape=(tf_idf_train.shape[1],))
-
-    meta_input = Input(shape=(X_meta_train.shape[1],))
-
-    emb = Embedding(output_dim=embedding_dimensions,
-                    input_dim=len(results) + 1,
-                    input_length=tf_idf_train.shape[1],
-                    mask_zero=True)(nlp_input)
-
-    nlp_out = Bidirectional(LSTM(64))(emb)
-
-    concat = tensorflow.concat([nlp_out, meta_input], axis=1)
-
-    classifier = Dense(32, activation='relu')(concat)
-
-    drop = Dropout(0.1)(classifier)
-
-    output = Dense(1, activation='sigmoid')(drop)
-    model = Model(inputs=[nlp_input, meta_input], outputs=[output])
-
-    return model
 
 
 @profile

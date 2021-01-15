@@ -1,10 +1,13 @@
 import logging
 import os
-import tensorflow
+import tensorflow as tf
 import matplotlib.pyplot as plt
 import pandas as pd
-from config import BATCH_SIZE, EPOCHS, MODEL_NAME, TRAIN_DATA_CLEAN, TEST_DATA_CLEAN, LOG_FILE
-from preprocess import get_model, tfidf
+from tensorflow.python.keras import Input, Model
+from tensorflow.python.keras.layers import Bidirectional, LSTM, Embedding, Dense, Dropout
+
+from config import BATCH_SIZE, EPOCHS, MODEL_NAME, TRAIN_DATA_CLEAN, TEST_DATA_CLEAN, LOG_FILE, EMBEDDING_DIM
+from preprocess import  tfidf
 
 # log-file will be created in the main dir
 from utils import profile
@@ -13,7 +16,78 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
                     format='%(asctime)s - %(levelname)s - %(message)s')
 
 
-# @profile
+@profile
+def eval_on_one_page(tfidf_one_page, X_meta_one_page, y_one_page, model, text):
+    """Load model from file and evaluate on data from one page
+    :param tfidf_one_page : ndArray,
+    :param X_meta_one_page: ndArray,
+    :param y_one_page: ndArray,
+    :param model:str - path to the model
+    :param text : ndArray[str]
+    """
+
+    new_model1 = tf.keras.models.load_model(model)
+    preds = new_model1.predict([tfidf_one_page, X_meta_one_page])
+    pred_df = pd.DataFrame(columns=['text', 'pred_label'])
+    pred_df['text'] = text
+
+    pred_df['proba'] = preds
+    pred_df['label'] = y_one_page
+    pred_df['label'] = pred_df['label'].apply(lambda x: 'Instructions' if x == 0 else 'Recepie')
+    pred_df['pred_label'] = pred_df['proba'].apply(lambda x: 'Recepie' if x > THRESHOLD else 'Instructions')
+    logging.info(f'{model}')
+    logging.info(pred_df[['text', 'proba']])
+    logging.info(pred_df[['label', 'pred_label']])
+
+    score = new_model1.evaluate([tfidf_one_page, X_meta_one_page], y_one_page,
+                                batch_size=BATCH_SIZE, verbose=1)
+
+    logging.info(f'Model Loss score: {round(score[0], 4)}')
+    logging.info(f'Model Recall score: {round(score[1], 4)}')
+    logging.info(f'Model Precision score: {round(score[2], 4)}')
+    logging.info(f'Model Accuracy Evaluation : {round(score[3], 4)}')
+    logging.info(f'Model AUC Evaluation : {round(score[4], 4)}')
+
+
+@profile
+def get_model(tf_idf_train, X_meta_train, results,
+              embedding_dimensions=EMBEDDING_DIM):
+    """
+    The function creates the model for 2 different input data:
+    NLP set and additional features not NLP set
+    Layers: Embedding - TFIDF MATRIX Use masking to handle the variable sequence lengths,
+            BiLSTM, concatenation of 2 data types,
+            Dense/fully connected layer with activation function "relu",
+            Dropout layer to avoid overfitting,
+            Dense/fully connected layer with activation function "sigmoid"
+            All hyper-parameters as constants are in config.py
+    :params tf_idf_train: ndArray(ndArray(int)) - a set with tfidf vectors
+    :params X_meta_train: ndArray(int))- a set with non-nlp features
+    :params results: set{str} - word vocabulary of the train set (config.VOCAB_SIZE=2284)
+    :params embedding_dimensions:int hyper-parameter, can be done as = int(len(results)**0.25)
+    :return a model
+    """
+    tf_idf_input = Input(shape=(tf_idf_train.shape[1],))
+    meta_input = Input(shape=(X_meta_train.shape[1],))
+    emb = Embedding(output_dim=embedding_dimensions,
+                     input_dim=len(results) + 1,
+                     input_length=tf_idf_train.shape[1],
+                     mask_zero=True)(tf_idf_input)  # Use masking to handle the variable sequence lengths
+    nlp_out = Bidirectional(LSTM(64))(emb)  #
+    concat = tf.concat([nlp_out, meta_input], axis=1)
+    concat = tf.expand_dims(concat, axis=-1)  # expand dimension to use lstm second time
+    concat_lstm = Bidirectional(LSTM(64))(concat)
+    classifier = Dense(32, activation='relu')(concat_lstm)
+    drop = Dropout(0.2)(classifier)  # to avoid overfitt
+    output = Dense(1, activation='sigmoid')(drop)
+    model = Model(inputs=[tf_idf_input, meta_input], outputs=[output])
+
+    return model
+
+
+
+
+@profile
 def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TEST_DATA_CLEAN):
     """Read train and test data from pkl files
             count max len sent/sequence
@@ -58,11 +132,11 @@ def model_train(train_data_clean_path=TRAIN_DATA_CLEAN, test_data_clean_path=TES
     concat_biLstm = get_model(tf_idf_train, X_meta_train, results)
     concat_biLstm.compile(optimizer='adam',
                           loss='binary_crossentropy',
-                          metrics=[tensorflow.keras.metrics.Recall(),
-                                   tensorflow.keras.metrics.Precision(),
+                          metrics=[tf.keras.metrics.Recall(),
+                                   tf.keras.metrics.Precision(),
                                    'accuracy',
-                                   tensorflow.keras.metrics.AUC()])
-    es = tensorflow.keras.callbacks.EarlyStopping(monitor='val_loss')
+                                   tf.keras.metrics.AUC()])
+    es = tf.keras.callbacks.EarlyStopping(monitor='val_loss')
     history = concat_biLstm.fit([tf_idf_train, X_meta_train],
                                 y_train,
                                 batch_size=BATCH_SIZE,
