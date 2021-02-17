@@ -1,21 +1,12 @@
 import logging
 import os
-import re
-import string
 import sys
 import numpy as np
 import pandas as pd
-import spacy
-from spacy.lang.en.stop_words import STOP_WORDS
 from tensorflow.keras.preprocessing.sequence import pad_sequences
 from tensorflow.keras.preprocessing.text import Tokenizer
-from config import DATA_FILE,LOG_FILE, TEST_SIZE
+from config import DATA_FILE, LOG_FILE, TEST_SIZE
 from utils import save_data_to_pkl, stratified_split_data, profile
-
-# python3 -m spacy download en_core_web_sm
-nlp = spacy.load('en_core_web_sm')
-nlp.Defaults.stop_words |= {" f ", " s ", " etc"}
-stop_words = set([w.lower() for w in list(STOP_WORDS)])
 
 # # log-file will be created in the main dir
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO,
@@ -29,8 +20,6 @@ def from_list_to_str(series):
     return: new series: str
     """
     return ' '.join([words for words in series])
-
-
 
 
 # @profile
@@ -118,8 +107,6 @@ def sent2vec(texts, max_sequence_length, vocab_size):
     # Turn text into  padded sequences (word --> num )
     text_sequences = tokenizer.texts_to_sequences(texts)
     return pad_sequences(text_sequences, maxlen=max_sequence_length, padding="post", value=0)
-
-
 
 
 @profile
